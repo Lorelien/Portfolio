@@ -480,6 +480,130 @@ section {
   text-decoration: underline;
 }
 
+/* =========================
+   Over mij-pagina
+   ========================= */
+
+.about-page {
+  padding-top: 112px;
+}
+
+/* Intro: tekst links, cartoon rechts */
+
+.about-intro-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  align-items: start;
+  gap: clamp(48px, 9vw, 150px);
+  padding-bottom: 80px;
+}
+
+.about-intro-content {
+  max-width: 610px;
+}
+
+.about-intro-content h1 {
+  margin-bottom: 48px;
+}
+
+.about-intro-content p {
+  max-width: 600px;
+  margin-bottom: 28px;
+}
+
+.about-cartoon {
+  width: min(100%, 360px);
+  margin-top: 4px;
+  margin-left: auto;
+  object-fit: contain;
+}
+
+/* Afwisselende inhoudsblokken */
+
+.about-story-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(64px, 12vw, 190px);
+  min-height: 310px;
+  padding: 44px 0;
+}
+
+.about-story-section-reverse {
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+
+.story-content {
+  max-width: 580px;
+}
+
+.story-content h2 {
+  margin-bottom: 36px;
+}
+
+.story-content p {
+  margin-bottom: 24px;
+}
+
+.story-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 230px;
+}
+
+.story-line-drawing {
+  width: 100%;
+  max-width: 360px;
+  object-fit: contain;
+}
+
+.story-line-drawing-work {
+  max-width: 280px;
+}
+
+.story-line-drawing-internship {
+  max-width: 280px;
+}
+
+.story-line-drawing-hobbies {
+  max-width: 400px;
+}
+
+/* Onderste acties / contact */
+
+.about-actions-section {
+  position: relative;
+  display: flex;
+  min-height: 300px;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 48px 0 92px;
+  overflow: hidden;
+}
+
+.actions-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(190px, 260px));
+  gap: 24px 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.actions-list .button {
+  width: 100%;
+}
+
+.contact-line-drawing {
+  position: absolute;
+  right: 8%;
+  bottom: 34px;
+  width: min(40%, 340px);
+  object-fit: contain;
+  pointer-events: none;
+}
 
 /* =========================
    13. Tablet
@@ -509,6 +633,29 @@ section {
 
   .featured-project-image {
     width: 48%;
+  }
+
+    /* Over mij-pagina */
+
+  .about-page {
+    padding-top: 80px;
+  }
+
+  .about-intro-section {
+    gap: 48px;
+  }
+
+  .about-story-section,
+  .about-story-section-reverse {
+    gap: 64px;
+  }
+
+  .story-line-drawing-hobbies {
+    max-width: 320px;
+  }
+
+  .contact-line-drawing {
+    right: 3%;
   }
 }
 
@@ -637,5 +784,81 @@ section {
     grid-template-columns: 1fr;
     gap: 36px;
     padding: 52px 32px;
+  }
+
+    /* Over mij-pagina */
+
+  .about-page {
+    padding-top: 64px;
+  }
+
+  .about-intro-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 56px;
+  }
+
+  .about-intro-content h1 {
+    margin-bottom: 32px;
+  }
+
+  .about-intro-content p {
+    margin-bottom: 20px;
+  }
+
+  .about-cartoon {
+    width: min(78%, 300px);
+    margin: 0 auto;
+  }
+
+  .about-story-section,
+  .about-story-section-reverse {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    min-height: 0;
+    padding: 48px 0;
+  }
+
+  .about-story-section-reverse .story-content {
+    order: 1;
+  }
+
+  .about-story-section-reverse .story-visual {
+    order: 2;
+  }
+
+  .story-content h2 {
+    margin-bottom: 28px;
+  }
+
+  .story-content p {
+    margin-bottom: 20px;
+  }
+
+  .story-visual {
+    min-height: 160px;
+  }
+
+  .story-line-drawing,
+  .story-line-drawing-hobbies {
+    max-width: min(86%, 340px);
+  }
+
+  .about-actions-section {
+    min-height: 420px;
+    align-items: flex-start;
+    padding: 36px 0 56px;
+  }
+
+  .actions-list {
+    grid-template-columns: 1fr;
+    width: min(100%, 320px);
+    gap: 18px;
+  }
+
+  .contact-line-drawing {
+    right: 0;
+    bottom: 24px;
+    width: min(70%, 280px);
   }
 }
