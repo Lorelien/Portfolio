@@ -1,0 +1,641 @@
+/* =========================
+   1. Lettertypes
+   ========================= */
+
+@font-face {
+  font-family: "Mongolian Bali";
+  src: url("../assets/fonts/monbaiti.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* =========================
+   2. Variabelen
+   ========================= */
+
+:root {
+  --color-background-dark: #0a0214;
+  --color-background-purple: #32185f;
+  --color-surface: #493866;
+  --color-button: #70687e;
+  --color-light: #f5f5f5;
+
+  --font-display: "Mongolian Bali", Georgia, serif;
+  --font-body: "Zen Kurenaido", sans-serif;
+
+  --radius-block: 24px;
+  --content-width: 1200px;
+}
+
+
+/* =========================
+   3. Reset
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse 70% 55% at 35% 42%,
+      var(--color-background-purple) 0%,
+      var(--color-background-dark) 72%
+    );
+  background-attachment: fixed;
+  color: var(--color-light);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================
+   4. Algemene tekst
+   ========================= */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3,
+p,
+a {
+  font-family: var(--font-body);
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+p {
+  font-size: 16px;
+}
+
+section {
+  width: min(calc(100% - 112px), var(--content-width));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* =========================
+   5. Navigatie
+   ========================= */
+
+.site-header {
+  width: min(calc(100% - 112px), var(--content-width));
+  margin: 0 auto;
+  padding-top: 32px;
+}
+
+.main-navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.site-logo,
+.navigation-list a {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.navigation-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  gap: clamp(48px, 9vw, 128px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: translate(-50%, -50%);
+}
+
+.site-logo,
+.navigation-list a,
+.button {
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.site-logo:hover,
+.navigation-list a:hover {
+  opacity: 0.7;
+}
+
+
+/* =========================
+   6. Knoppen
+   ========================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 145px;
+  min-height: 42px;
+  padding: 8px 24px;
+  border: 1px solid var(--color-light);
+  border-radius: 12px;
+  background-color: var(--color-button);
+  color: var(--color-light);
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--color-surface);
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   7. Hero
+   ========================= */
+
+.hero-section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 650px;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 92px;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 112px), var(--content-width));
+  text-align: center;
+}
+
+.hero-line-drawing {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: none;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+
+/* =========================
+   8. Over mij
+   ========================= */
+
+.about-section {
+  position: relative;
+  display: flex;
+  min-height: 350px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 40px 70px;
+  overflow: hidden;
+  border: 1px solid var(--color-light);
+  border-radius: var(--radius-block);
+  background-color: var(--color-surface);
+  margin-top: 64px;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.about-content h2 {
+  margin-bottom: 24px;
+}
+
+.about-content p {
+  margin-bottom: 16px;
+}
+
+.about-content .button {
+  margin-top: 8px;
+}
+
+.about-line-drawing {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  z-index: 0;
+  width: 33%;
+  max-width: 330px;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+
+/* =========================
+   9. Wat ik doe
+   ========================= */
+
+.skills-section {
+  padding-top: 136px;
+  padding-bottom: 100px;
+}
+
+.skills-section h2 {
+  margin-bottom: 48px;
+}
+
+.skills-content {
+  position: relative;
+  min-height: 360px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 260px));
+  gap: 64px 72px;
+  width: min(60%, 600px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-item h3 {
+  margin-bottom: 24px;
+}
+
+.skill-item img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.skills-line-drawing {
+  position: absolute;
+  top: -32px;
+  right: 4%;
+  width: 240px;
+  max-width: 30%;
+  pointer-events: none;
+}
+
+
+/* =========================
+   10. Projecten
+   ========================= */
+
+.projects-section {
+  padding-bottom: 72px;
+}
+
+.projects-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.projects-heading h2 {
+  margin-bottom: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  overflow: hidden;
+}
+
+.project-card {
+  overflow: hidden;
+  border: 1px solid var(--color-light);
+  border-radius: var(--radius-block);
+  background-color: var(--color-surface);
+}
+
+.project-card > a {
+  display: block;
+  height: 100%;
+}
+
+.project-card-image {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background-color: #ffffff;
+}
+
+.project-card-image img {
+  width: 100%;
+  max-width: 150px;
+  max-height: 110px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 240ms ease;
+}
+
+.project-card > a:hover .project-card-image img {
+  transform: scale(1.06);
+}
+
+.project-card-content {
+  min-height: 130px;
+  padding: 18px 22px 20px;
+}
+
+.project-card-content h3 {
+  margin-bottom: 12px;
+}
+
+.project-card-content p {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   11. Uitgelicht project
+   ========================= */
+
+.featured-project-section {
+  position: relative;
+  display: flex;
+  width: min(calc(100% - 112px), var(--content-width));
+  margin-bottom: 100px;
+  overflow: hidden;
+  border-radius: var(--radius-block);
+  background-color: #ffffff;
+}
+
+.featured-project-background {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.featured-project-content {
+  position: absolute;
+  top: 68%;
+  left: 9%;
+  z-index: 1;
+  width: 36%;
+  transform: translateY(-50%);
+  color: #202020;
+}
+
+.featured-project-description {
+  margin-bottom: 28px;
+  color: #202020;
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+/* =========================
+   12. Footer
+   ========================= */
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 48px;
+  padding: 72px max(56px, calc((100% - var(--content-width)) / 2));
+  background-color: var(--color-surface);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.footer-column p,
+.footer-column a {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   13. Tablet
+   ========================= */
+
+@media (max-width: 900px) {
+  section,
+  .site-header {
+    width: min(calc(100% - 64px), var(--content-width));
+  }
+
+  .navigation-list {
+    gap: 40px;
+  }
+
+  .about-section {
+    padding: 36px 44px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured-project-section {
+    padding: 40px;
+  }
+
+  .featured-project-image {
+    width: 48%;
+  }
+}
+
+
+/* =========================
+   14. Mobiel
+   ========================= */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  section,
+  .site-header {
+    width: calc(100% - 32px);
+  }
+
+  .site-header {
+    padding-top: 24px;
+  }
+
+  .main-navigation {
+    min-height: 82px;
+  }
+
+  .navigation-list {
+    position: static;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    transform: none;
+  }
+
+  .site-logo,
+  .navigation-list a {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .hero-section {
+    min-height: 420px;
+    padding-top: 72px;
+  }
+
+  .hero-line-drawing {
+    bottom: 24px;
+    width: 180vw;
+  }
+
+  .about-section {
+    display: block;
+    min-height: 0;
+    padding: 32px 24px 180px;
+  }
+
+  .about-line-drawing {
+    right: 16px;
+    bottom: 16px;
+    width: 55%;
+    max-width: 240px;
+  }
+
+  .skills-section {
+    padding-top: 88px;
+    padding-bottom: 72px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 44px 24px;
+    width: 100%;
+  }
+
+  .skills-line-drawing {
+    position: static;
+    width: 140px;
+    max-width: 45%;
+    margin: 48px 0 0 auto;
+  }
+
+  .projects-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 220px;
+  }
+
+  .featured-project-content {
+    top: 50%;
+    left: 7%;
+    width: 42%;
+  }
+
+  .featured-project-description {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .featured-project-content .button {
+    min-width: 100px;
+    min-height: 34px;
+    padding: 6px 14px;
+    font-size: 16px;
+  } 
+
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 52px 32px;
+  }
+}
