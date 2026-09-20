@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Case study van Terwinneke: een toegankelijke mobiele website ontworpen volgens de WCAG-richtlijnen."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Terwinneke | Lorelien Michiels</title>
+</head>
+
+<body>
+  <div id="navigation-placeholder"></div>
+
+  <main class="project-page terwinneke-page">
+
+    <header class="project-intro">
+      <h1>Terwinneke</h1>
+
+      <p>
+        Voor het vak User-Centered Design ontwierp ik een mobiele website voor
+        Terwinneke, een frituur in Denderwindeke. De opdracht was om een
+        bestaande horecazaak te kiezen en hun website opnieuw te ontwerpen,
+        met een sterke focus op toegankelijkheid volgens de WCAG-richtlijnen
+        (niveau AA).
+      </p>
+
+      <p>
+        Het doel was niet alleen een visueel aantrekkelijke website te maken,
+        maar vooral een website die voor iedereen gebruiksvriendelijk is,
+        inclusief mensen met een visuele beperking of die een schermlezer
+        gebruiken.
+      </p>
+
+      <p>
+        Het project liep van eind november tot half december. Ik werkte
+        individueel en gebruikte Figma voor de wireframes, designs en
+        accessibility annotaties.
+      </p>
+    </header>
+
+    <section class="project-information-card" aria-labelledby="project-information-title">
+      <div class="project-information-content">
+        <h2 id="project-information-title">Projectcard</h2>
+
+        <dl class="project-details">
+          <div>
+            <dt>Projectnaam:</dt>
+            <dd>Terwinneke</dd>
+          </div>
+
+          <div>
+            <dt>Type:</dt>
+            <dd>Schoolproject, individueel project</dd>
+          </div>
+
+          <div>
+            <dt>Duur:</dt>
+            <dd>November - december 2025</dd>
+          </div>
+
+          <div>
+            <dt>Tools:</dt>
+            <dd>Figma</dd>
+          </div>
+
+          <div>
+            <dt>Focusgebieden:</dt>
+            <dd>Mobile UX, accessibility, WCAG</dd>
+          </div>
+        </dl>
+      </div>
+
+      <img
+        class="project-information-logo"
+        src="assets/images/terwinneke.jpg"
+        alt="Logo van Terwinneke"
+      >
+    </section>
+
+    <section class="project-text-section assignment-section">
+      <h2>De opdracht</h2>
+
+      <p>
+        De leerkracht gaf ons een duidelijke briefing: ontwerp een website of
+        app voor een café, brasserie of restaurant, waarbij je rekening houdt
+        met de principes van toegankelijk design. De website moest minimaal
+        bestaan uit een startpagina, een pagina met info over de zaak, een
+        menu- of drankenkaart, een bestelmogelijkheid zonder betaaloptie,
+        inclusief happy flow en unhappy flow, en een contactpagina.
+      </p>
+
+      <p>
+        We moesten mobile first werken, starten met wireframes en pas daarna
+        overstappen naar het definitieve design. Tijdens het hele proces
+        moesten we de WCAG-richtlijnen in acht houden en streven naar niveau AA.
+        Daarnaast moesten we echte teksten gebruiken, voldoende aandacht
+        besteden aan lettergrootte en lijnhoogte, minstens één scherm
+        visualiseren in grote lettergrootte, accessibility annotaties toevoegen,
+        tien toegepaste WCAG-succescriteria documenteren en een matrix opstellen
+        die aantoont welke combinaties van brandkleuren voldoen aan WCAG-niveau
+        AA met betrekking tot kleurcontrast.
+      </p>
+    </section>
+
+    <section class="project-timeline-section" aria-labelledby="timeline-title">
+      <h2 id="timeline-title" class="visually-hidden">
+        Tijdlijn van het project
+      </h2>
+
+      <ol class="project-timeline">
+        <li>
+          <time datetime="2025-11-23">23 november</time>
+          <span>Mijlpaal 1:</span>
+          <p>wireframes, design, matrix brandkleuren</p>
+        </li>
+
+        <li>
+          <time datetime="2025-12-07">7 december</time>
+          <span>Mijlpaal 2:</span>
+          <p>accessibility annotaties, brandkleuren</p>
+        </li>
+
+        <li>
+          <time datetime="2025-12-19">19 december</time>
+          <span>Mijlpaal 3:</span>
+          <p>10 succescriteria</p>
+        </li>
+
+        <li>
+          <time datetime="2026-01-05">5 januari</time>
+          <span>Eindresultaat</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="project-text-section website-analysis-section">
+      <h2>Analyse van de bestaande website</h2>
+
+      <p>
+        Voordat ik begon met ontwerpen, bezocht ik de bestaande website van
+        Terwinneke om een beeld te krijgen van de huidige situatie. Al snel
+        merkte ik enkele duidelijke problemen op.
+      </p>
+
+      <p>
+        Op de pagina “Info” stond bijvoorbeeld geen inhoud, waardoor bezoekers
+        niets te weten kwamen over de zaak zelf. Om te kunnen bestellen, moest
+        je eerst een account aanmaken, wat een onnodige drempel vormt voor
+        gebruikers die snel iets willen bestellen.
+      </p>
+
+      <p>
+        Bij het kiezen van sauzen was de interface onoverzichtelijk. Er werd
+        een hele rij sauzen getoond met de belofte van foto’s, maar in
+        werkelijkheid waren er geen afbeeldingen zichtbaar. Gebruikers moesten
+        horizontaal scrollen om alle opties te zien, zonder visuele
+        ondersteuning.
+      </p>
+
+      <p>
+        Dit maakte het moeilijk voor iedereen, maar vooral voor mensen met een
+        visuele beperking of die een schermlezer gebruiken. Deze observaties
+        vormden de basis voor mijn ontwerpbeslissingen.
+      </p>
+
+      <img
+        class="project-line-drawing project-line-drawing-fries"
+        src="assets/images/terwinneke-fries-line-drawing.png"
+        alt=""
+      >
+    </section>
+
+    <section class="project-text-section target-group-section">
+      <h2>Doelgroep</h2>
+
+      <p>
+        De primaire doelgroep van Terwinneke zijn mensen die snel en eenvoudig
+        willen weten wat er te eten is, wat de openingsuren zijn, waar de
+        frituur zich bevindt en hoe ze kunnen bestellen. Dit omvat zowel lokale
+        bewoners als toevallige passanten die op zoek zijn naar een maaltijd.
+      </p>
+
+      <p>
+        Daarnaast wilde ik specifieke aandacht besteden aan gebruikers met een
+        visuele beperking. Dit omvat mensen die volledig blind zijn en een
+        schermlezer gebruiken, maar ook mensen met een beperkt zicht die
+        afhankelijk zijn van groot contrast, grote lettertypes en duidelijke
+        structuur.
+      </p>
+
+      <p>
+        Ik baseerde me op enkele typische gebruiksscenario’s: iemand die snel
+        de openingsuren wil checken, iemand die thuis wil bestellen, iemand die
+        wil weten welke sauzen beschikbaar zijn en iemand die met een
+        schermlezer de website verkent.
+      </p>
+    </section>
+
+    <section class="persona-section" aria-label="Persona van Terwinneke">
+  <img
+    class="persona-image"
+    src="assets/images/terwinneke-persona.jpg"
+    alt="Persona Jan Vermeulen voor het Terwinneke-project"
+    loading="lazy"
+  >
+</section>
+
+    <section class="project-text-section approach-section">
+      <h2>Mijn aanpak</h2>
+
+      <p>
+        Mijn aanpak volgde een gestructureerd proces. Ik begon met het
+        analyseren van de bestaande website en het identificeren van de
+        belangrijkste problemen. Daarna vertaalde ik deze inzichten naar een
+        contentstructuur en user flows.
+      </p>
+
+      <p>
+        Vervolgens werkte ik low-fidelity wireframes uit, waarbij ik al rekening
+        hield met toegankelijkheid. Pas toen ik tevreden was over de structuur,
+        stapte ik over naar high-fidelity designs in Figma.
+      </p>
+
+      <p>
+        Tijdens het hele proces hield ik de WCAG-richtlijnen in het achterhoofd.
+        Ik documenteerde mijn keuzes via accessibility annotaties, stelde een
+        kleurcontrastmatrix op voor de merkkleuren en beschreef tien concrete
+        WCAG-succescriteria die ik toepaste.
+      </p>
+
+      <div class="process-flow" aria-label="Ontwerpproces">
+        <span>Research</span>
+        <span aria-hidden="true">→</span>
+        <span>Wireframes</span>
+        <span aria-hidden="true">→</span>
+        <span>Design</span>
+        <span aria-hidden="true">→</span>
+        <span>Annotaties</span>
+        <span aria-hidden="true">→</span>
+        <span>WCAG-documentatie</span>
+      </div>
+    </section>
+
+    <section class="project-text-section wireframes-section">
+  <h2>Van wireframes naar design</h2>
+
+  <p>
+    Ik startte met mobile-first wireframes, omdat dit de kern van de opdracht
+    was. Door eerst te focussen op de kleinste schermgrootte, moest ik nadenken
+    over welke informatie echt essentieel is en hoe ik deze het duidelijkst kon
+    presenteren.
+  </p>
+
+  <p>
+    De wireframes bevatten alle vereiste pagina’s: startpagina, info over de
+    zaak, menukaart, bestelproces met happy flow en unhappy flow, en een
+    contactpagina. Ik besteedde bijzondere aandacht aan de navigatie, de
+    hiërarchie van informatie en de logische volgorde van elementen.
+  </p>
+
+  <p>
+    Bij het design koos ik voor een heldere visuele stijl met voldoende
+    witruimte, duidelijke typografie en een beperkt kleurenpalet. Ik zorgde
+    ervoor dat de lettergrootte en lijnhoogte voldeden aan de WCAG-richtlijnen
+    en visualiseerde minstens één scherm in een grote lettergrootte.
+  </p>
+
+  <div class="project-image-grid project-image-grid-wireframes">
+    <figure>
+      <img
+        src="assets/images/terwinneke-wireframe-1.png"
+        alt="Wireframe van de startpagina van de Terwinneke-website"
+        loading="lazy"
+      >
+    </figure>
+
+    <figure>
+      <img
+        src="assets/images/terwinneke-wireframe-2.png"
+        alt="Wireframe van de info-pagina van de Terwinneke-website"
+        loading="lazy"
+      >
+    </figure>
+
+    <figure>
+      <img
+        src="assets/images/terwinneke-wireframe-3.png"
+        alt="Wireframe van de menukaart van de Terwinneke-website"
+        loading="lazy"
+      >
+    </figure>
+
+    <figure>
+      <img
+        src="assets/images/terwinneke-wireframe-4.png"
+        alt="Wireframe van de bestelpagina van de Terwinneke-website"
+        loading="lazy"
+      >
+    </figure>
+
+    <figure>
+      <img
+        src="assets/images/terwinneke-brandsheet.png"
+        alt="Brandsheet van Terwinneke met kleuren, typografie en stijlrichtlijnen"
+        loading="lazy"
+      >
+    </figure>
+  </div>
+</section>
+
+    <section class="project-text-section accessibility-section">
+  <h2>Accessibility in de praktijk</h2>
+
+  <p>
+    Toegankelijkheid was de rode draad doorheen dit project. Ik hield rekening
+    met de WCAG-richtlijnen op niveau AA en documenteerde mijn keuzes op
+    verschillende manieren.
+  </p>
+
+  <p>
+    Een belangrijk onderdeel was de reading order. Ik bepaalde zelf de volgorde
+    van principes die in de les werden aangeleerd: van boven naar beneden en
+    van links naar rechts. Dit zorgt ervoor dat schermlezers de inhoud in een
+    logische volgorde voorlezen, ongeacht hoe de visuele layout eruitziet.
+  </p>
+
+  <p>
+    Ik voegde accessibility annotaties toe aan mijn designs om duidelijk te
+    maken wat elk element is. Ik markeerde knoppen, links, afbeeldingen,
+    decoratieve afbeeldingen, h1- en h2-koppen, inputvelden en voorzag waar
+    nodig de accessibility name.
+  </p>
+
+  <p>
+    Daarnaast stelde ik een matrix op voor de brandkleuren. Deze matrix toont
+    welke combinaties van tekstkleur en achtergrondkleur voldoen aan
+    WCAG-niveau AA wat betreft kleurcontrast.
+  </p>
+
+  <div class="project-image-grid project-image-grid-accessibility">
+    <figure>
+      <img
+        src="assets/images/terwinneke-reading-order.png"
+        alt="Reading order van de Terwinneke-website, met de volgorde van elementen voor schermlezers"
+        loading="lazy"
+      >
+    </figure>
+
+    <figure>
+      <img
+        src="assets/images/terwinneke-accessibility-annotations.png"
+        alt="Accessibility-annotaties op de mobiele Terwinneke-interface"
+        loading="lazy"
+      >
+    </figure>
+
+    <figure>
+      <img
+        src="assets/images/terwinneke-contrast-matrix.png"
+        alt="Kleurcontrastmatrix van de Terwinneke-brandkleuren"
+        loading="lazy"
+      >
+    </figure>
+  </div>
+</section>
+
+    <section class="project-text-section result-section">
+      <h2>Resultaat</h2>
+
+      <p>
+        Het eindresultaat is een mobiele website voor Terwinneke die niet alleen
+        visueel aantrekkelijk is, maar vooral toegankelijk en gebruiksvriendelijk
+        voor een breed publiek. De website bevat alle vereiste pagina’s en
+        functionaliteiten, met een duidelijke structuur, logische navigatie en
+        aandacht voor detail.
+      </p>
+
+      <p>
+        Belangrijke verbeteringen ten opzichte van de originele website zijn:
+      </p>
+
+      <ul>
+        <li>Een informatieve “Info”-pagina in plaats van een lege pagina.</li>
+        <li>Een bestelproces zonder verplichte accountregistratie.</li>
+        <li>Een overzichtelijke sauzenkeuze met duidelijke visuele ondersteuning.</li>
+        <li>Een logische reading order voor schermlezers.</li>
+        <li>Voldoende kleurcontrast en duidelijke typografie.</li>
+        <li>Accessibility-annotaties die ontwikkelaars ondersteunen bij de implementatie.</li>
+      </ul>
+
+      <p>
+        Hoewel er geen gebruikerstesten werden uitgevoerd, focuste het project
+        puur op het leren van toegankelijkheidsprincipes en biedt dit ontwerp
+        een solide basis voor een website die voldoet aan WCAG-niveau AA.
+      </p>
+    </section>
+
+    <section
+  class="project-result-visual"
+  aria-label="Video van het eindresultaat van Terwinneke"
+>
+  <img
+    class="result-line-drawing result-line-drawing-left"
+    src="assets/images/terwinneke-drink-line-drawing.png"
+    alt=""
+    loading="lazy"
+  >
+
+  <video
+    class="result-video"
+    controls
+    playsinline
+    preload="metadata"
+  >
+    <source
+      src="assets/videos/terwinneke-final-result.mp4"
+      type="video/mp4"
+    >
+
+    Je browser ondersteunt deze video niet.
+  </video>
+
+  <img
+    class="result-line-drawing result-line-drawing-right"
+    src="assets/images/terwinneke-burger-line-drawing.png"
+    alt=""
+    loading="lazy"
+  >
+</section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/includes.js"></script>
+</body>
+</html>
