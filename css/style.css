@@ -2012,6 +2012,215 @@ section {
 }
 
 /* =========================
+   Figma Learning-pagina
+   ========================= */
+
+/* =========================
+   Figma Learning-pagina
+   ========================= */
+
+.figma-learning-page {
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+/* Intro */
+
+.figma-learning-intro {
+  width: min(calc(100% - 112px), var(--content-width));
+  margin: 0 auto;
+  padding-bottom: 72px;
+}
+
+.figma-learning-intro h1 {
+  margin-bottom: 48px;
+}
+
+.figma-learning-intro p {
+  max-width: 1120px;
+  margin-bottom: 20px;
+}
+
+/* Kaarten en pen line drawing */
+
+.figma-learning-projects {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  width: min(calc(100% - 112px), var(--content-width));
+  min-height: 920px;
+  margin: 0 auto;
+  padding-bottom: 260px;
+}
+
+/* Klikbare kaart */
+
+.figma-project-card {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-block);
+  background-color: #ffffff;
+  color: #111111;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.figma-project-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-6px);
+}
+
+.figma-project-card:focus-visible {
+  outline: 3px solid var(--color-light);
+  outline-offset: 5px;
+}
+
+/* Houdt alle kaartblokken exact even groot */
+
+.figma-project-card {
+  aspect-ratio: 1 / 1;
+}
+
+/* Witte beeldzone in de kaart */
+
+.figma-project-card-image {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 32px 16px;
+}
+
+.figma-project-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Titel onderaan in de witte kaart */
+
+.figma-project-card-title {
+  display: flex;
+  min-height: 90px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px 24px;
+  color: #111111;
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: none;
+}
+
+/* Positie van de laatste kaart en de pen zoals in je ontwerp */
+
+.figma-project-card:nth-child(6) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.figma-learning-pen-line-drawing {
+  position: absolute;
+  right: 6%;
+  bottom: 500px;
+  width: min(42%, 450px);
+  pointer-events: none;
+}
+
+/* =========================
+   Popups / dialogen
+   ========================= */
+
+.figma-project-dialog {
+  width: min(calc(100% - 112px), var(--content-width));
+  max-width: var(--content-width);
+  max-height: calc(100vh - 64px);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-light);
+  border-radius: var(--radius-block);
+  background-color: var(--color-surface);
+  color: var(--color-light);
+}
+
+.figma-project-dialog::backdrop {
+  background-color: rgba(10, 2, 20, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.figma-dialog-content {
+  position: relative;
+  max-height: calc(100vh - 64px);
+  padding: 64px 72px;
+  overflow-y: auto;
+}
+
+.figma-dialog-content h2 {
+  margin-bottom: 28px;
+}
+
+.figma-dialog-content p {
+  max-width: 900px;
+  margin-bottom: 24px;
+}
+
+/* Sluitknop */
+
+.figma-dialog-close {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 auto;
+  border: 1px solid var(--color-light);
+  border-radius: 50%;
+  background-color: var(--color-button);
+  color: var(--color-light);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 32px;
+  line-height: 1;
+}
+
+.figma-dialog-close:hover {
+  background-color: var(--color-background-dark);
+}
+
+/* Extra beelden binnen een popup */
+
+.figma-dialog-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.figma-dialog-gallery img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-block);
+}
+
+/* =========================
    13. Tablet
    ========================= */
 
@@ -2308,6 +2517,48 @@ section {
 
   .jazzzolder-contribution-line-drawing {
     width: min(45%, 390px);
+  }
+
+  /* Figma Learning */
+
+  .figma-learning-page {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .figma-learning-intro,
+  .figma-learning-projects {
+    width: min(calc(100% - 64px), var(--content-width));
+  }
+
+  .figma-learning-projects {
+    gap: 20px;
+    min-height: 760px;
+    padding-bottom: 220px;
+  }
+
+  .figma-project-card-image {
+    padding: 24px 24px 12px;
+  }
+
+  .figma-project-card-title {
+    min-height: 70px;
+    padding: 10px 16px 18px;
+    font-size: 28px;
+  }
+
+  .figma-learning-pen-line-drawing {
+    right: 4%;
+    bottom: 48px;
+    width: min(42%, 340px);
+  }
+
+  .figma-project-dialog {
+    width: min(calc(100% - 64px), var(--content-width));
+  }
+
+  .figma-dialog-content {
+    padding: 52px;
   }
 } 
 
@@ -3112,5 +3363,80 @@ section {
     bottom: 24px;
     width: min(82%, 360px);
     transform: translateX(50%);
+  }
+
+  /* Figma Learning */
+
+  .figma-learning-page {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .figma-learning-intro,
+  .figma-learning-projects {
+    width: calc(100% - 32px);
+  }
+
+  .figma-learning-intro {
+    padding-bottom: 48px;
+  }
+
+  .figma-learning-intro h1 {
+    margin-bottom: 32px;
+  }
+
+  .figma-learning-intro p {
+    margin-bottom: 18px;
+  }
+
+  .figma-learning-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    min-height: 0;
+    padding-bottom: 210px;
+  }
+
+  .figma-project-card:nth-child(6) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .figma-project-card-image {
+    padding: 18px 18px 8px;
+  }
+
+  .figma-project-card-title {
+    min-height: 62px;
+    padding: 8px 10px 14px;
+    font-size: 22px;
+  }
+
+  .figma-learning-pen-line-drawing {
+    right: 50%;
+    bottom: 32px;
+    width: min(75%, 300px);
+    transform: translateX(50%);
+  }
+
+  .figma-project-dialog {
+    width: calc(100% - 32px);
+    max-height: calc(100vh - 32px);
+  }
+
+  .figma-dialog-content {
+    max-height: calc(100vh - 32px);
+    padding: 48px 24px 32px;
+  }
+
+  .figma-dialog-close {
+    width: 38px;
+    height: 38px;
+    font-size: 28px;
+  }
+
+  .figma-dialog-gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 28px;
   }
 }
