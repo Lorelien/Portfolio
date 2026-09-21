@@ -10,6 +10,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Pristina";
+  src: url("../assets/fonts/PRISTINA.TTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /* =========================
    2. Variabelen
@@ -1303,6 +1311,449 @@ section {
 }
 
 /* =========================
+   NEXT-projectpagina
+   ========================= */
+
+/* Projectcard: informatie in twee kolommen */
+
+.next-project-information-card {
+  align-items: center;
+}
+
+.next-project-details {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 64px;
+  row-gap: 22px;
+}
+
+.next-project-details div {
+  display: block;
+}
+
+.next-project-details dd {
+  margin-top: 4px;
+}
+
+/* Tijdlijn: acht mijlpalen */
+
+.next-page .project-timeline {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.next-page .project-timeline li {
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.next-page .project-timeline time,
+.next-page .project-timeline span,
+.next-page .project-timeline p {
+  font-size: 14px;
+}
+
+.next-page .project-timeline p {
+  max-width: 120px;
+}
+
+/* Over NEXT: tekst links, brochure rechts */
+
+.next-about-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.38fr);
+  align-items: center;
+  gap: clamp(48px, 10vw, 160px);
+}
+
+.next-text-column {
+  max-width: 680px;
+}
+
+.next-text-column h2 {
+  margin-bottom: 36px;
+}
+
+.next-text-column p {
+  margin-bottom: 24px;
+}
+
+.next-side-image {
+  margin: 0;
+}
+
+.next-side-image img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-block);
+}
+
+/* Research: brochures links en decoratieve lijntekening rechts */
+
+.next-research-visuals {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 40px 0 36px;
+  padding-right: min(34%, 420px);
+}
+
+.next-research-visuals figure {
+  width: min(28%, 320px);
+  margin: 0;
+}
+
+.next-research-visuals figure img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-block);
+}
+
+.next-line-drawing-research {
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  width: min(28%, 300px);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.next-wide-image {
+  width: min(64%, 760px);
+  margin: 44px 0 48px;
+}
+
+.next-wide-image img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-block);
+}
+
+.research-section {
+  position: relative;
+  padding-right: 0;
+  padding-bottom: 48px;
+}
+
+.research-section > p {
+  max-width: none;
+}
+
+.next-line-drawing-architecture {
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  bottom: auto;
+  width: min(24%, 260px);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+/* Eerste visuele richting */
+
+.next-visual-direction-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.8fr) minmax(140px, 0.42fr);
+  align-items: stretch;
+  gap: 36px;
+  margin-top: 48px;
+}
+
+.next-visual-direction-grid figure,
+.next-logo-ideas {
+  height: 435px;
+  margin: 0;
+}
+
+.next-visual-direction-grid figure {
+  overflow: hidden;
+  border-radius: var(--radius-block);
+}
+
+.next-visual-direction-grid figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-block);
+  object-fit: cover;
+}
+
+.next-logo-ideas {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.next-logo-ideas img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-block);
+  object-fit: contain;
+  background-color: #ffffff;
+}
+
+/* Branding: vier palettes naast elkaar */
+
+.next-branding-palettes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.next-branding-palettes figure,
+.next-logo-iterations figure {
+  margin: 0;
+}
+
+.next-branding-palettes img,
+.next-logo-iterations img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-block);
+}
+
+/* Drie logo-iteraties: twee afbeeldingen links, groot overzicht rechts */
+
+.next-logo-iterations-intro {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.next-logo-iterations {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.next-logo-iterations figure:nth-child(1) {
+  grid-column: 1;
+}
+
+.next-logo-iterations figure:nth-child(2) {
+  grid-column: 1;
+}
+
+.next-logo-iterations figure:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: stretch;
+}
+
+.next-logo-iterations figure:nth-child(3) img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slogan */
+
+.next-slogan-intro {
+  margin-top: 56px;
+  margin-bottom: 18px;
+}
+
+.next-slogan-section {
+  position: relative;
+  display: flex;
+  min-height: 170px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 36px;
+}
+
+.next-slogan-line-drawing {
+  position: absolute;
+  left: 8%;
+  width: min(22%, 230px);
+  pointer-events: none;
+}
+
+.next-slogan {
+  max-width: 700px;
+  margin: 0;
+  color: var(--color-light);
+  font-family: "Pristina", cursive;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* Navigatieheader: volledige contentbreedte */
+
+.information-architecture-section .next-wide-image {
+  width: 100%;
+  max-width: none;
+  margin-top: 48px;
+  margin-bottom: 0;
+}
+
+/* Iteraties */
+
+.next-iterations-grid,
+.next-high-fidelity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 32px;
+  margin-top: 56px;
+}
+
+.next-iterations-grid figure,
+.next-high-fidelity-grid figure {
+  margin: 0;
+}
+
+.next-iterations-grid h3,
+.next-high-fidelity-grid h3 {
+  margin-bottom: 18px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.next-iterations-grid img,
+.next-high-fidelity-grid img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-block);
+}
+
+/* Iteratie 5 centraal en smaller */
+
+.next-iterations-grid figure:nth-child(5) {
+  grid-column: 1 / -1;
+  width: min(52%, 600px);
+  justify-self: center;
+}
+
+/* Feedback: zes even brede pagina-afbeeldingen op één rij */
+
+.next-final-selection {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  gap: 18px;
+  width: 100%;
+  margin: 48px 0 0;
+}
+
+.next-final-selection figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.next-final-selection img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-block);
+}
+
+/* Status: tekst links, line drawing en logo rechts */
+
+.status-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.55fr);
+  align-items: center;
+  gap: clamp(48px, 10vw, 160px);
+}
+
+.next-status-content {
+  max-width: 650px;
+}
+
+.next-status-content h2 {
+  margin-bottom: 36px;
+}
+
+.next-status-content p {
+  margin-bottom: 24px;
+}
+
+.next-status-visual {
+  position: relative;
+  display: flex;
+  min-height: 260px;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-status-line-drawing {
+  position: absolute;
+  left: -40%;
+  width: min(78%, 320px);
+  pointer-events: none;
+}
+
+.next-status-logo {
+  position: relative;
+  z-index: 1;
+  width: min(34%, 140px);
+  margin-left: 35%;
+  border-radius: var(--radius-block);
+}
+
+/* Mijn bijdrage: tekst links, vier beelden rechts.
+   De vier afbeeldingen krijgen dezelfde breedte als de zes afbeeldingen
+   binnen Feedback en finale selectie. */
+
+.contribution-section {
+  display: block;
+}
+
+.next-contribution-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  align-items: start;
+  gap: clamp(48px, 8vw, 120px);
+}
+
+.next-contribution-content {
+  max-width: 650px;
+}
+
+.next-contribution-content h2 {
+  margin-bottom: 36px;
+}
+
+.next-contribution-content p {
+  margin-bottom: 24px;
+}
+
+.next-contribution-images figure {
+  margin: 0;
+}
+
+.next-contribution-wireframes img,
+.next-contribution-pages img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-block);
+}
+
+.next-contribution-wireframes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+.next-contribution-pages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: min(58%, 660px);
+  margin-top: -600px;
+}
+
+.next-contribution-pages figure {
+  margin: 0;
+}
+
+/* =========================
    13. Tablet
    ========================= */
 
@@ -1477,6 +1928,73 @@ section {
 
   .project-result-videos {
     gap: 72px;
+  }
+
+    /* NEXT-projectpagina */
+
+  .next-project-details {
+    column-gap: 32px;
+  }
+
+  .next-page .project-timeline time,
+  .next-page .project-timeline span,
+  .next-page .project-timeline p {
+    font-size: 12px;
+  }
+
+  .next-about-section {
+    gap: 56px;
+  }
+
+  .next-research-visuals {
+    padding-right: min(28%, 240px);
+  }
+
+  .next-research-visuals figure {
+    width: min(27%, 210px);
+  }
+
+  .next-line-drawing-research {
+    right: 2%;
+    width: min(25%, 210px);
+  }
+
+  .research-section {
+    padding-right: min(25%, 220px);
+  }
+
+  .next-line-drawing-architecture {
+    width: min(21%, 190px);
+  }
+
+  .next-visual-direction-grid {
+    gap: 24px;
+  }
+
+  .next-branding-palettes {
+    gap: 16px;
+  }
+
+  .next-logo-iterations {
+    gap: 20px;
+  }
+
+  .next-slogan {
+    font-size: 54px;
+  }
+
+  .next-final-selection {
+    gap: 10px;
+  }
+
+  .status-section,
+  .contribution-section {
+    gap: 56px;
+  }
+
+  .next-contribution-images,
+  .next-contribution-wireframes {
+    gap: 18px;
   }
 } 
 
@@ -2008,5 +2526,178 @@ section {
   .project-result-videos h3 {
     margin-bottom: 16px;
     font-size: 22px;
+  }
+
+    /* NEXT-projectpagina */
+
+  .next-project-details {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+
+  .next-page .project-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .next-about-section,
+  .status-section,
+  .contribution-section {
+    display: block;
+  }
+
+  .next-side-image {
+    width: min(78%, 320px);
+    margin: 32px auto 0;
+  }
+
+  .research-section {
+    padding-right: 0;
+    padding-bottom: 190px;
+  }
+
+  .next-research-visuals {
+    padding-right: 0;
+  }
+
+  .next-research-visuals figure {
+    width: calc(50% - 8px);
+  }
+
+  .next-line-drawing-research {
+    top: auto;
+    right: 50%;
+    bottom: -150px;
+    width: min(72%, 280px);
+    transform: translateX(50%);
+  }
+
+  .next-wide-image {
+    width: 100%;
+  }
+
+  .next-line-drawing-architecture {
+    right: 50%;
+    bottom: 20px;
+    width: min(70%, 270px);
+    transform: translateX(50%);
+  }
+
+  .next-visual-direction-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .next-visual-direction-grid figure,
+  .next-logo-ideas {
+    height: auto;
+  }
+
+  .next-visual-direction-grid figure img {
+    height: auto;
+  }
+
+  .next-logo-ideas {
+    grid-template-rows: none;
+  }
+
+  .next-logo-ideas img {
+    height: auto;
+  }
+
+  .next-branding-palettes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .next-logo-iterations {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .next-logo-iterations figure:nth-child(1),
+  .next-logo-iterations figure:nth-child(2),
+  .next-logo-iterations figure:nth-child(3) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .next-logo-iterations figure:nth-child(3) img {
+    height: auto;
+  }
+
+  .next-slogan-section {
+    min-height: 220px;
+    align-items: flex-end;
+    padding-bottom: 16px;
+  }
+
+  .next-slogan-line-drawing {
+    top: 12px;
+    left: 0;
+    width: min(42%, 160px);
+  }
+
+  .next-slogan {
+    font-size: 40px;
+  }
+
+  .next-iterations-grid,
+  .next-high-fidelity-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 40px;
+  }
+
+  .next-iterations-grid figure:nth-child(5) {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  /* De zes finale pagina's worden op mobiel een horizontaal scrollbare rij,
+     zodat elke pagina leesbaar genoeg blijft. */
+
+  .next-final-selection {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+  }
+
+  .next-final-selection figure {
+    width: 150px;
+    flex: 0 0 150px;
+  }
+
+  .next-status-visual {
+    min-height: 210px;
+    margin-top: 32px;
+  }
+
+  .next-status-line-drawing {
+    left: -4%;
+    width: min(72%, 270px);
+  }
+
+  .next-status-logo {
+    width: 104px;
+  }
+
+  .next-contribution-images {
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .next-contribution-top {
+    display: block;
+  }
+
+  .next-contribution-pages {
+    width: 100%;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .next-contribution-wireframes {
+    gap: 16px;
   }
 }
