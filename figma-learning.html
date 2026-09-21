@@ -6,16 +6,21 @@
 
   <meta
     name="description"
-    content="Figma Learning New Skills: een verzameling van illustraties, line icons, animaties en line drawings van Lorelien Michiels."
+    content="Figma Learning New Skills: een verzameling illustraties, line icons, animaties en line drawings van Lorelien Michiels."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Mongolian+Baiti&display=swap"
     rel="stylesheet"
   >
+
+  <link
+  href="https://fonts.googleapis.com/css2?family=Mongolian+Baiti&family=Zen+Kurenaido&display=swap"
+  rel="stylesheet"
+>
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -31,22 +36,27 @@
       <h1>Figma learning new skills</h1>
 
       <p>
-        Dit project is een persoonlijk oefenboek waarin ik mijn visuele en
+        Dit project is een persoonlijk oefenlab waarin ik mijn visuele en
         technische vaardigheden in Figma verder ontwikkel. Ik volg hiervoor
         tutorials op YouTube en vertaal de geleerde technieken naar eigen
-        illustraties en animaties.
+        illustraties en animaties. De focus ligt niet op het maken van volledige
+        UX-projecten, maar op het opbouwen van een sterke basis in
+        vectorillustratie, compositie en micro-interactions.
       </p>
 
       <p>
-        De focus ligt niet op het maken van volledige UX-projecten, maar op
-        het opbouwen van een sterke basis in vectorillustratie, compositie en
-        micro-interactions.
+        Ik werk vooral met de Pen Tool, boolean operations zoals union en
+        subtract, het gebruik van vormen, masking en het opbouwen van complexere
+        beelden uit simpele shapes. Daarnaast experimenteer ik met animaties in
+        Figma om beweging en timing beter te begrijpen. Sommige oefeningen
+        verliepen vlot, bij andere moest ik zelf oplossingen zoeken wanneer
+        bepaalde functies, zoals “Use as mask”, niet werkten zoals verwacht.
       </p>
 
       <p>
-        Ik werk onder andere met de Pen Tool, boolean operations, vormen,
-        masking en animaties. Deze verzameling toont hoe ik stap voor stap meer
-        vertrouwd raak met Figma.
+        Deze verzameling toont hoe ik stap voor stap mijn comfort met Figma
+        vergroot, met als doel om later zelfstandig iconen, illustraties en
+        visuele assets te kunnen maken voor UX/UI-projecten.
       </p>
     </header>
 
@@ -58,8 +68,8 @@
       <button
         class="figma-project-card"
         type="button"
-        command="show-modal"
-        commandfor="ruimte-tekeningen-popup"
+        data-dialog-target="ruimte-tekeningen-popup"
+        aria-haspopup="dialog"
       >
         <span class="figma-project-card-image">
           <img
@@ -76,8 +86,8 @@
       <button
         class="figma-project-card"
         type="button"
-        command="show-modal"
-        commandfor="line-icons-popup"
+        data-dialog-target="line-icons-popup"
+        aria-haspopup="dialog"
       >
         <span class="figma-project-card-image">
           <img
@@ -94,8 +104,8 @@
       <button
         class="figma-project-card"
         type="button"
-        command="show-modal"
-        commandfor="kampvuur-popup"
+        data-dialog-target="kampvuur-popup"
+        aria-haspopup="dialog"
       >
         <span class="figma-project-card-image">
           <img
@@ -112,8 +122,8 @@
       <button
         class="figma-project-card"
         type="button"
-        command="show-modal"
-        commandfor="zeemeermin-popup"
+        data-dialog-target="zeemeermin-popup"
+        aria-haspopup="dialog"
       >
         <span class="figma-project-card-image">
           <img
@@ -130,8 +140,8 @@
       <button
         class="figma-project-card"
         type="button"
-        command="show-modal"
-        commandfor="carrousel-animatie-popup"
+        data-dialog-target="carrousel-animatie-popup"
+        aria-haspopup="dialog"
       >
         <span class="figma-project-card-image">
           <img
@@ -148,8 +158,8 @@
       <button
         class="figma-project-card"
         type="button"
-        command="show-modal"
-        commandfor="line-drawings-popup"
+        data-dialog-target="line-drawings-popup"
+        aria-haspopup="dialog"
       >
         <span class="figma-project-card-image">
           <img
@@ -164,265 +174,443 @@
       </button>
 
       <img
-  class="figma-learning-pen-line-drawing"
-  src="assets/images/figma-learning-pen-line-drawing.png"
-  alt=""
-  loading="lazy"
->
+        class="figma-learning-pen-line-drawing"
+        src="assets/images/figma-learning-pen-line-drawing.png"
+        alt=""
+        loading="lazy"
+      >
     </section>
 
+    <!-- Popup: Ruimte tekeningen -->
     <dialog
       class="figma-project-dialog"
       id="ruimte-tekeningen-popup"
       aria-labelledby="ruimte-tekeningen-popup-title"
     >
       <div class="figma-dialog-content">
-        <button
-          class="figma-dialog-close"
-          type="button"
-          command="close"
-          commandfor="ruimte-tekeningen-popup"
-          aria-label="Sluit Ruimte tekeningen"
-        >
-          ×
-        </button>
+        <form method="dialog" class="figma-dialog-close-form">
+          <button
+            class="figma-dialog-close"
+            type="submit"
+            aria-label="Sluit Ruimte tekeningen"
+          >
+            ×
+          </button>
+        </form>
 
         <h2 id="ruimte-tekeningen-popup-title">
           Ruimte tekeningen
         </h2>
 
         <p>
-          In deze oefening experimenteerde ik met eenvoudige vormen, lagen,
-          compositie en kleur om een illustratie met een ruimtelijk thema op te
-          bouwen.
+          In deze reeks maakte ik zes ruimte-gerelateerde illustraties met
+          dezelfde aanpak: opbouwen uit basisvormen, werken met de Pen Tool en
+          boolean operations zoals union en subtract. Het doel was om
+          consistentie te krijgen in mijn vectorstijl en om complexere beelden
+          stap voor stap op te bouwen uit simpele shapes.
         </p>
 
-        <div class="figma-dialog-gallery">
+        <div class="popup-image-grid popup-image-grid--three">
           <img
             src="assets/images/ruimte-tekeningen-popup-1.png"
-            alt="Eerste ruimte-illustratie gemaakt in Figma"
+            alt="Ruimte-illustratie van een astronaut"
             loading="lazy"
           >
 
           <img
             src="assets/images/ruimte-tekeningen-popup-2.png"
-            alt="Tweede ruimte-illustratie gemaakt in Figma"
+            alt="Ruimte-illustratie van een satelliet"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/ruimte-tekeningen-popup-3.png"
+            alt="Ruimte-illustratie van een vliegende schotel"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/ruimte-tekeningen-popup-4.png"
+            alt="Ruimte-illustratie van een planeet met ringen"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/ruimte-tekeningen-popup-5.png"
+            alt="Ruimte-illustratie van een telescoop"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/ruimte-tekeningen-popup-6.png"
+            alt="Ruimte-illustratie van een raket"
             loading="lazy"
           >
         </div>
       </div>
     </dialog>
 
+    <!-- Popup: Line icons -->
     <dialog
       class="figma-project-dialog"
       id="line-icons-popup"
       aria-labelledby="line-icons-popup-title"
     >
       <div class="figma-dialog-content">
-        <button
-          class="figma-dialog-close"
-          type="button"
-          command="close"
-          commandfor="line-icons-popup"
-          aria-label="Sluit Line icons"
-        >
-          ×
-        </button>
+        <form method="dialog" class="figma-dialog-close-form">
+          <button
+            class="figma-dialog-close"
+            type="submit"
+            aria-label="Sluit Line icons"
+          >
+            ×
+          </button>
+        </form>
 
         <h2 id="line-icons-popup-title">
           Line icons
         </h2>
 
         <p>
-          Deze oefening draaide rond het tekenen van eenvoudige iconen met
-          duidelijke lijnen. Ik onderzocht hoe herkenbaarheid ontstaat door
-          vormen te vereenvoudigen.
+          Deze icon set bestaat uit 11 line icons die ik volledig in Figma heb
+          getekend. Ik oefende hiermee met consistente lijndikte, eenvoudige
+          vormen en een herkenbare stijl. Het doel is om later zelf iconen te
+          kunnen maken voor interfaces, in plaats van telkens bestaande icon
+          libraries te gebruiken.
         </p>
 
-        <div class="figma-dialog-gallery">
+        <div class="popup-image-grid popup-image-grid--five">
           <img
             src="assets/images/line-icons-popup-1.png"
-            alt="Eerste verzameling line icons gemaakt in Figma"
+            alt="Line icon van een grafiek en slot"
             loading="lazy"
           >
 
           <img
             src="assets/images/line-icons-popup-2.png"
-            alt="Tweede verzameling line icons gemaakt in Figma"
+            alt="Line icon van een vergrootglas met vinkje"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-icons-popup-3.png"
+            alt="Line icon van een staafgrafiek"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-icons-popup-4.png"
+            alt="Line icon van een klok met instellingen"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-icons-popup-5.png"
+            alt="Line icon van een browservenster"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-icons-popup-6.png"
+            alt="Line icon van een locatiepin met instellingen"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-icons-popup-7.png"
+            alt="Line icon van een document met gebruiker"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-icons-popup-8.png"
+            alt="Line icon van een document met potlood"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-icons-popup-9.png"
+            alt="Line icon van een browservenster met potlood"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-icons-popup-10.png"
+            alt="Line icon van een badge met vinkje"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-icons-popup-11.png"
+            alt="Line icon van een oogscanner"
             loading="lazy"
           >
         </div>
       </div>
     </dialog>
 
+    <!-- Popup: Kampvuur -->
     <dialog
       class="figma-project-dialog"
       id="kampvuur-popup"
       aria-labelledby="kampvuur-popup-title"
     >
       <div class="figma-dialog-content">
-        <button
-          class="figma-dialog-close"
-          type="button"
-          command="close"
-          commandfor="kampvuur-popup"
-          aria-label="Sluit Kampvuur"
-        >
-          ×
-        </button>
+        <form method="dialog" class="figma-dialog-close-form">
+          <button
+            class="figma-dialog-close"
+            type="submit"
+            aria-label="Sluit Kampvuur"
+          >
+            ×
+          </button>
+        </form>
 
         <h2 id="kampvuur-popup-title">
           Kampvuur
         </h2>
 
         <p>
-          Voor deze illustratie werkte ik met eenvoudige vormen, lagen en
-          kleurvlakken. Het doel was om met een beperkt aantal elementen een
-          duidelijke kampeeromgeving te creëren.
+          In deze campfire scene combineer ik alles wat ik tot nu toe geleerd
+          heb: werken met basisvormen, union en subtract, en de Pen Tool voor
+          details. De scène is volledig opgebouwd uit vector shapes in Figma.
+          Ik gebruikte geen externe illustraties, maar bouwde elk element zelf
+          op, van de vlam tot de houtblokken en de omgeving.
         </p>
 
-        <div class="figma-dialog-gallery">
-          <img
-            src="assets/images/kampvuur-popup-1.png"
-            alt="Detail van de kampvuurillustratie"
-            loading="lazy"
-          >
-
-          <img
-            src="assets/images/kampvuur-popup-2.png"
-            alt="Variatie van de kampvuurillustratie"
-            loading="lazy"
-          >
-        </div>
+        <img
+          class="popup-feature-image"
+          src="assets/images/kampvuur-popup-1.png"
+          alt="Illustratie van een kampvuur met tent, bomen en vuur"
+          loading="lazy"
+        >
       </div>
     </dialog>
 
+    <!-- Popup: Zeemeermin -->
     <dialog
       class="figma-project-dialog"
       id="zeemeermin-popup"
       aria-labelledby="zeemeermin-popup-title"
     >
       <div class="figma-dialog-content">
-        <button
-          class="figma-dialog-close"
-          type="button"
-          command="close"
-          commandfor="zeemeermin-popup"
-          aria-label="Sluit Zeemeermin"
-        >
-          ×
-        </button>
+        <form method="dialog" class="figma-dialog-close-form">
+          <button
+            class="figma-dialog-close"
+            type="submit"
+            aria-label="Sluit Zeemeermin"
+          >
+            ×
+          </button>
+        </form>
 
         <h2 id="zeemeermin-popup-title">
           Zeemeermin
         </h2>
 
         <p>
-          Deze illustratie was een oefening in het combineren van vormen,
-          kleuren en karakterdetails. Ik werkte stap voor stap aan het figuur,
-          de houding en de kleurrijke staart.
+          Bij deze zeemeermin-illustratie liep ik tegen een technisch probleem
+          aan: de “Use as mask”-functie werkte niet zoals verwacht in mijn
+          Figma-bestand. In de YouTube-tutorial werd deze functie gebruikt om
+          bepaalde delen van de tekening af te maskeren, maar bij mij gaf dit
+          onverwachte resultaten.
         </p>
 
-        <div class="figma-dialog-gallery">
+        <p>
+          In plaats van de tutorial exact te volgen, zocht ik een eigen
+          oplossing. Ik werkte met alternatieve methodes, zoals het opdelen in
+          losse lagen, het gebruik van extra shapes en het handmatig afknippen
+          van paden. Hierdoor leerde ik niet alleen meer over masking, maar ook
+          hoe ik flexibel kan blijven wanneer een bepaalde techniek niet werkt
+          zoals gepland.
+        </p>
+
+        <div class="popup-white-image-block">
           <img
             src="assets/images/zeemeermin-popup-1.png"
-            alt="Detail van de zeemeerminillustratie"
-            loading="lazy"
-          >
-
-          <img
-            src="assets/images/zeemeermin-popup-2.png"
-            alt="Volledige zeemeerminillustratie in een andere pose"
+            alt="Kleurrijke zeemeerminillustratie"
             loading="lazy"
           >
         </div>
       </div>
     </dialog>
 
+    <!-- Popup: Carrousel animatie -->
     <dialog
       class="figma-project-dialog"
       id="carrousel-animatie-popup"
       aria-labelledby="carrousel-animatie-popup-title"
     >
       <div class="figma-dialog-content">
-        <button
-          class="figma-dialog-close"
-          type="button"
-          command="close"
-          commandfor="carrousel-animatie-popup"
-          aria-label="Sluit Carrousel animatie"
-        >
-          ×
-        </button>
+        <form method="dialog" class="figma-dialog-close-form">
+          <button
+            class="figma-dialog-close"
+            type="submit"
+            aria-label="Sluit Carrousel animatie"
+          >
+            ×
+          </button>
+        </form>
 
         <h2 id="carrousel-animatie-popup-title">
           Carrousel animatie
         </h2>
 
         <p>
-          In deze oefening werkte ik met componenten, varianten en interactieve
-          prototyping in Figma. Ik onderzocht hoe een carrousel reageert op
-          interacties en hoe beweging de gebruikerservaring kan ondersteunen.
+          In dit experiment heb ik een interactieve “Choose your character”-
+          carrousel gemaakt in Figma met Smart Animate en component states. Bij
+          het selecteren van een personage klapt de kaart vloeiend uit naar een
+          uitgelichte weergave terwijl de andere kaarten meeschalen. Deze
+          oefening gaf me meer inzicht in timing, interactie en
+          micro-interactions binnen interfaces.
         </p>
 
-        <div class="figma-dialog-gallery">
-          <img
-            src="assets/images/carrousel-animatie-popup-1.png"
-            alt="Eerste scherm van de carrouselanimatie"
-            loading="lazy"
-          >
+        <video
+  class="popup-feature-video"
+  controls
+  preload="metadata"
+  poster="assets/images/carrousel-animatie-poster.png"
+  aria-label="Video van de interactieve carrouselanimatie"
+>
+  <source
+    src="assets/videos/carrousel-animatie-popup.mp4"
+    type="video/mp4"
+  >
 
-          <img
-            src="assets/images/carrousel-animatie-popup-2.png"
-            alt="Tweede scherm van de carrouselanimatie"
-            loading="lazy"
-          >
-        </div>
+  Je browser kan deze video niet afspelen.
+</video>
       </div>
     </dialog>
 
+    <!-- Popup: Line drawings -->
     <dialog
       class="figma-project-dialog"
       id="line-drawings-popup"
       aria-labelledby="line-drawings-popup-title"
     >
       <div class="figma-dialog-content">
-        <button
-          class="figma-dialog-close"
-          type="button"
-          command="close"
-          commandfor="line-drawings-popup"
-          aria-label="Sluit Line drawings"
-        >
-          ×
-        </button>
+        <form method="dialog" class="figma-dialog-close-form">
+          <button
+            class="figma-dialog-close"
+            type="submit"
+            aria-label="Sluit Line drawings"
+          >
+            ×
+          </button>
+        </form>
 
         <h2 id="line-drawings-popup-title">
           Line drawings
         </h2>
 
         <p>
-          Deze line drawings vormen een persoonlijke visuele stijl die ik in
-          mijn portfolio gebruik. Ik teken met één doorlopende lijn en
-          experimenteer met herkenbare silhouetten en eenvoudige beweging.
+          Ik maak in Figma line drawings met de Pen Tool om mijn portfolio meer
+          persoonlijkheid en visuele samenhang te geven. De illustraties, zoals
+          katten en bergen, gebruik ik als decoratieve elementen op
+          verschillende pagina’s. Zo combineer ik mijn Figma-oefeningen met het
+          ontwikkelen van een eigen illustratiestijl.
         </p>
 
-        <div class="figma-dialog-gallery">
+        <div class="popup-image-grid popup-image-grid--three">
           <img
             src="assets/images/line-drawings-popup-1.png"
-            alt="Eerste line drawing gemaakt in Figma"
+            alt="Line drawing van bergen"
             loading="lazy"
           >
 
           <img
             src="assets/images/line-drawings-popup-2.png"
-            alt="Tweede line drawing gemaakt in Figma"
+            alt="Line drawing van een zittende kat"
             loading="lazy"
           >
 
           <img
             src="assets/images/line-drawings-popup-3.png"
-            alt="Derde line drawing gemaakt in Figma"
+            alt="Line drawing van een strekkende kat"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-4.png"
+            alt="Line drawing van een open boek"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-5.png"
+            alt="Line drawing van een pen"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-6.png"
+            alt="Line drawing van een kaars"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-7.png"
+            alt="Line drawing van een violist"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-8.png"
+            alt="Line drawing van een trompet"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-9.png"
+            alt="Line drawing van een saxofoon"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-10.png"
+            alt="Line drawing van muzieknoten"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-11.png"
+            alt="Line drawing van een enkele muzieknoot"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-12.png"
+            alt="Line drawing van een vioolsleutel"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-13.png"
+            alt="Line drawing van een filmklapper"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-14.png"
+            alt="Line drawing van een veer"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-15.png"
+            alt="Line drawing van bewegende pijlen"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-16.png"
+            alt="Line drawing van bewegende pijlen 2"
+            loading="lazy"
+          >
+
+          <img
+            src="assets/images/line-drawings-popup-17.png"
+            alt="Line drawing van bewegende pijlen 3"
             loading="lazy"
           >
         </div>
@@ -434,5 +622,6 @@
   <div id="footer-placeholder"></div>
 
   <script src="js/includes.js"></script>
+  <script src="js/figma-learning-dialogs.js"></script>
 </body>
 </html>
