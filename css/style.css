@@ -1,25 +1,4 @@
 /* =========================
-   1. Lettertypes
-   ========================= */
-
-@font-face {
-  font-family: "Mongolian Bali";
-  src: url("../assets/fonts/monbaiti.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Pristina";
-  src: url("../assets/fonts/PRISTINA.TTF") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-/* =========================
    2. Variabelen
    ========================= */
 
@@ -27,10 +6,10 @@
   --color-background-dark: #0a0214;
   --color-background-purple: #32185f;
   --color-surface: #493866;
-  --color-button: #70687e;
+  --color-button: #61596e;
   --color-light: #f5f5f5;
 
-  --font-display: "Mongolian Bali", Georgia, serif;
+  --font-display: "Zen Loop", sans-serif;
   --font-body: "Zen Kurenaido", sans-serif;
 
   --radius-block: 24px;
@@ -99,35 +78,34 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--font-display);
   font-weight: 400;
-  line-height: 1.15;
-  text-transform: uppercase;
+  line-height: 1.1;
+  text-transform: none;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 80px;
 }
 
 h2 {
+  font-size: 54px;
+}
+
+h3 {
   font-size: 40px;
 }
 
-h3,
 p,
 a {
   font-family: var(--font-body);
 }
 
-h3 {
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 1.15;
-}
-
 p {
-  font-size: 16px;
+  font-size: 24px;
+  line-height: 1.4;
 }
 
 section {
@@ -156,9 +134,9 @@ section {
 .site-logo,
 .navigation-list a {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 40px;
   line-height: 1;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .navigation-list {
@@ -187,6 +165,19 @@ section {
   opacity: 0.7;
 }
 
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-logo img {
+  display: block;
+  width: auto;
+  max-width: 132px;
+  max-height: 54px;
+  object-fit: contain;
+}
+
 
 /* =========================
    6. Knoppen
@@ -198,10 +189,10 @@ section {
   justify-content: center;
   min-width: 145px;
   min-height: 42px;
-  padding: 8px 24px;
+  padding: 10px 24px;
   border: 1px solid var(--color-light);
   border-radius: 12px;
-  background-color: var(--color-button);
+  background-color: #61596e;
   color: var(--color-light);
   font-family: var(--font-body);
   font-size: 20px;
@@ -226,15 +217,17 @@ section {
   min-height: 650px;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 92px;
+  padding-top: 118px;
   overflow: hidden;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
   width: min(calc(100% - 112px), var(--content-width));
-  text-align: center;
+  gap: 80px;
 }
 
 .hero-line-drawing {
@@ -246,6 +239,25 @@ section {
   max-width: none;
   transform: translateX(-50%);
   pointer-events: none;
+}
+
+.hero-title,
+.hero-role {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.hero-title {
+  max-width: 540px;
+  text-align: left;
+}
+
+.hero-role {
+  max-width: 420px;
+  text-align: left;
 }
 
 
@@ -275,15 +287,15 @@ section {
 }
 
 .about-content h2 {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .about-content p {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .about-content .button {
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .about-line-drawing {
@@ -299,16 +311,27 @@ section {
 
 
 /* =========================
-   9. Wat ik doe
+   9. Wat ik doe + Mijn skills
    ========================= */
 
 .skills-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 88px;
+  align-items: start;
   padding-top: 136px;
   padding-bottom: 100px;
 }
 
+.skills-what-i-do,
+.skills-progress-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
 .skills-section h2 {
-  margin-bottom: 48px;
+  margin: 0;
 }
 
 .skills-content {
@@ -318,9 +341,9 @@ section {
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(180px, 260px));
-  gap: 64px 72px;
-  width: min(60%, 600px);
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 64px 60px;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -328,6 +351,9 @@ section {
 
 .skill-item h3 {
   margin-bottom: 24px;
+  font-family: var(--font-body);
+  font-size: 24px;
+  line-height: 1.2;
 }
 
 .skill-item img {
@@ -336,15 +362,71 @@ section {
   object-fit: contain;
 }
 
+/* Kat komt dichter bij de vier vaardigheden */
+
 .skills-line-drawing {
   position: absolute;
-  top: -32px;
-  right: 4%;
-  width: 240px;
-  max-width: 30%;
+  top: 22px;
+  right: 0;
+  width: 190px;
+  max-width: 32%;
   pointer-events: none;
 }
 
+/* Hard en soft skills */
+
+.skills-progress-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.skills-progress-column {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.skill-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-progress p {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background-color: var(--color-light);
+}
+
+.skill-bar span {
+  display: block;
+  width: var(--skill-level);
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--color-surface);
+}
+
+/* Houd de tweede kolom van "Wat ik doe" links van de kat */
+
+.skills-list {
+  grid-template-columns: repeat(2, minmax(130px, 190px));
+  column-gap: 44px;
+}
+
+.skills-line-drawing {
+  right: 8px;
+  width: 165px;
+  max-width: 28%;
+}
 
 /* =========================
    10. Projecten
@@ -408,16 +490,35 @@ section {
 }
 
 .project-card-content {
-  min-height: 130px;
-  padding: 18px 22px 20px;
+  display: flex;
+  min-height: 236px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px 24px 24px;
 }
 
 .project-card-content h3 {
-  margin-bottom: 12px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1;
 }
 
 .project-card-content p {
-  margin-bottom: 0;
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.project-card-link {
+  margin-top: auto;
+  color: var(--color-light);
+  font-family: var(--font-body);
+  font-size: 24px;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 
@@ -456,8 +557,8 @@ section {
 .featured-project-description {
   margin-bottom: 28px;
   color: #202020;
-  font-size: 20px;
-  line-height: 1.45;
+  font-size: 24px;
+  line-height: 1.4;
 }
 
 /* =========================
@@ -479,14 +580,17 @@ section {
 }
 
 .footer-column h2 {
-  margin-bottom: 24px;
-  font-size: 24px;
+  margin-bottom: 28px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .footer-column p,
 .footer-column a {
-  margin-bottom: 12px;
-  font-size: 20px;
+  margin-bottom: 16px;
+  font-size: 24px;
 }
 
 .footer-column a:hover {
@@ -2471,6 +2575,112 @@ section {
     width: 48%;
   }
 
+    /* Nieuwe grotere typografie */
+
+  h1,
+  .hero-title,
+  .hero-role {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 46px;
+  }
+
+  h3,
+  .project-card-content h3 {
+    font-size: 36px;
+  }
+
+  p,
+  .project-card-content p,
+  .project-card-link,
+  .featured-project-description,
+  .footer-column p,
+  .footer-column a {
+    font-size: 22px;
+  }
+
+  /* Navigatie */
+
+  .site-logo,
+  .navigation-list a {
+    font-size: 32px;
+  }
+
+  .site-logo img {
+    max-width: 118px;
+    max-height: 48px;
+  }
+
+  /* Hero met tekst aan beide kanten */
+
+  .hero-section {
+    min-height: 570px;
+    padding-top: 100px;
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .hero-title,
+  .hero-role {
+    max-width: 48%;
+  }
+
+  /* Wat ik doe + Mijn skills onder elkaar */
+
+  .skills-section {
+    grid-template-columns: 1fr;
+    gap: 80px;
+    padding-top: 112px;
+    padding-bottom: 88px;
+  }
+
+  .skills-what-i-do,
+  .skills-progress-section {
+    gap: 40px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(2, minmax(150px, 220px));
+    column-gap: 56px;
+    row-gap: 52px;
+    width: 70%;
+  }
+
+  .skills-line-drawing {
+    top: 0;
+    right: 8%;
+    width: 200px;
+    max-width: 28%;
+  }
+
+  .skills-progress-columns {
+    gap: 56px;
+  }
+
+  /* Projecten */
+
+  .project-card-content {
+    min-height: 250px;
+  }
+
+  /* NEXT */
+
+  .featured-project-description {
+    font-size: 22px;
+  }
+
+  /* Footer */
+
+  .footer-column h2 {
+    font-size: 36px;
+  }
+
     /* Over mij-pagina */
 
   .about-page {
@@ -2858,26 +3068,63 @@ section {
   }
 
   .site-logo,
-  .navigation-list a {
-    font-size: 20px;
-  }
+.navigation-list a {
+  font-size: 26px;
+}
 
-  h1 {
-    font-size: 36px;
-  }
+.site-logo img {
+  max-width: 105px;
+  max-height: 42px;
+}
 
-  h2 {
-    font-size: 32px;
-  }
+  h1,
+.hero-title,
+.hero-role {
+  font-size: 48px;
+}
 
-  h3 {
-    font-size: 26px;
-  }
+h2 {
+  font-size: 42px;
+}
 
-  .hero-section {
-    min-height: 420px;
-    padding-top: 72px;
-  }
+h3,
+.project-card-content h3 {
+  font-size: 34px;
+}
+
+p,
+.project-card-content p,
+.project-card-link,
+.featured-project-description,
+.footer-column p,
+.footer-column a {
+  font-size: 20px;
+}
+
+ .hero-section {
+  min-height: 520px;
+  padding-top: 80px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero-title,
+.hero-role {
+  max-width: 100%;
+}
+
+.hero-title {
+  text-align: left;
+}
+
+.hero-role {
+  align-self: flex-end;
+  text-align: right;
+}
 
   .hero-line-drawing {
     bottom: 24px;
@@ -2898,22 +3145,56 @@ section {
   }
 
   .skills-section {
-    padding-top: 88px;
-    padding-bottom: 72px;
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  padding-top: 88px;
+  padding-bottom: 72px;
+}
 
-  .skills-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 44px 24px;
-    width: 100%;
-  }
+.skills-what-i-do,
+.skills-progress-section {
+  gap: 36px;
+}
 
-  .skills-line-drawing {
-    position: static;
-    width: 140px;
-    max-width: 45%;
-    margin: 48px 0 0 auto;
-  }
+.skills-content {
+  min-height: 0;
+}
+
+.skills-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 44px 24px;
+  width: 100%;
+}
+
+.skills-line-drawing {
+  position: static;
+  display: block;
+  width: 140px;
+  max-width: 45%;
+  margin: 42px 0 0 auto;
+}
+
+.skills-progress-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.skills-progress-column {
+  gap: 24px;
+}
+
+.skill-progress {
+  gap: 10px;
+}
+
+.skill-progress p {
+  font-size: 20px;
+}
+
+.skill-bar {
+  height: 10px;
+}
 
   .projects-heading {
     align-items: flex-start;
@@ -2923,6 +3204,15 @@ section {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .project-card-content {
+  min-height: 0;
+  gap: 16px;
+}
+
+.project-card-link {
+  font-size: 20px;
+}
 
   .project-card img {
     height: 220px;
@@ -2935,23 +3225,34 @@ section {
   }
 
   .featured-project-description {
-    margin-bottom: 16px;
-    font-size: 12px;
-    line-height: 1.35;
-  }
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 1.35;
+}
 
-  .featured-project-content .button {
-    min-width: 100px;
-    min-height: 34px;
-    padding: 6px 14px;
-    font-size: 16px;
-  } 
+.featured-project-content .button {
+  min-width: 120px;
+  min-height: 38px;
+  padding: 8px 16px;
+  font-size: 20px;
+}
 
   .site-footer {
     grid-template-columns: 1fr;
     gap: 36px;
     padding: 52px 32px;
   }
+
+  .footer-column h2 {
+  margin-bottom: 20px;
+  font-size: 34px;
+}
+
+.footer-column p,
+.footer-column a {
+  margin-bottom: 14px;
+  font-size: 20px;
+}
 
     /* Over mij-pagina */
 

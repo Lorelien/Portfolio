@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
-  href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Loop&display=swap"
   rel="stylesheet"
 >
     <link rel="stylesheet" href="css/style.css">
@@ -24,11 +24,16 @@
   <main>
     <section class="hero-section" id="home">
       <div class="hero-content">
-        <h1 class="hero-title">
-          Hallo, ik ben<br>
-          Lorelien Michiels
-        </h1>
-      </div>
+  <h1 class="hero-title">
+    Hallo, ik ben<br>
+    Lorelien Michiels
+  </h1>
+
+  <p class="hero-role">
+    Ik ben een<br>
+    UX/UI Designer
+  </p>
+</div>
 
       <img
         class="hero-line-drawing"
@@ -69,52 +74,220 @@
     </section>
 
     <section class="skills-section" id="vaardigheden">
-      <div class="section-heading">
-        <h2>Wat ik doe</h2>
+  <div class="skills-what-i-do">
+    <div class="section-heading">
+      <h2>Wat ik doe</h2>
+    </div>
+
+    <div class="skills-content">
+      <ul class="skills-list">
+        <li class="skill-item">
+          <h3>Web design</h3>
+
+          <img
+            src="assets/icons/web-design.svg"
+            alt=""
+          >
+        </li>
+
+        <li class="skill-item">
+          <h3>Illustration</h3>
+
+          <img
+            src="assets/icons/illustration.svg"
+            alt=""
+          >
+        </li>
+
+        <li class="skill-item">
+          <h3>UI/UX design</h3>
+
+          <img
+            src="assets/icons/ui-ux-design.svg"
+            alt=""
+          >
+        </li>
+
+        <li class="skill-item">
+          <h3>Branding</h3>
+
+          <img
+            src="assets/icons/branding.svg"
+            alt=""
+          >
+        </li>
+      </ul>
+
+      <img
+        class="skills-line-drawing"
+        src="assets/images/skills-line-drawing.png"
+        alt=""
+      >
+    </div>
+  </div>
+
+  <div class="skills-progress-section">
+    <h2>Mijn skills</h2>
+
+    <div class="skills-progress-columns">
+
+      <div class="skills-progress-column">
+        <div class="skill-progress">
+          <p>Figma illustration</p>
+
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="Figma illustration"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="70"
+          >
+            <span style="--skill-level: 70%;"></span>
+          </div>
+        </div>
+
+        <div class="skill-progress">
+          <p>User-centered design</p>
+
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="User-centered design"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="80"
+          >
+            <span style="--skill-level: 80%;"></span>
+          </div>
+        </div>
+
+        <div class="skill-progress">
+          <p>User testing</p>
+
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="User testing"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="65"
+          >
+            <span style="--skill-level: 65%;"></span>
+          </div>
+        </div>
+
+        <div class="skill-progress">
+          <p>UX research</p>
+
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="UX research"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="75"
+          >
+            <span style="--skill-level: 75%;"></span>
+          </div>
+        </div>
+
+        <div class="skill-progress">
+          <p>Prototyping</p>
+
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="Prototyping"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="85"
+          >
+            <span style="--skill-level: 85%;"></span>
+          </div>
+        </div>
       </div>
 
-      <div class="skills-content">
-        <ul class="skills-list">
-          <li class="skill-item">
-            <h3>Web design</h3>
-            <img
-              src="assets/icons/web-design.svg"
-              alt=""
-            >
-          </li>
+      <div class="skills-progress-column">
+        <div class="skill-progress">
+          <p>Oog voor detail</p>
 
-          <li class="skill-item">
-            <h3>Illustration</h3>
-            <img
-              src="assets/icons/illustration.svg"
-              alt=""
-            >
-          </li>
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="Oog voor detail"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="70"
+          >
+            <span style="--skill-level: 70%;"></span>
+          </div>
+        </div>
 
-          <li class="skill-item">
-            <h3>UI/UX design</h3>
-            <img
-              src="assets/icons/ui-ux-design.svg"
-              alt=""
-            >
-          </li>
+        <div class="skill-progress">
+          <p>Zelfstandig werken</p>
 
-          <li class="skill-item">
-            <h3>Branding</h3>
-            <img
-              src="assets/icons/branding.svg"
-              alt=""
-            >
-          </li>
-        </ul>
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="Zelfstandig werken"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="80"
+          >
+            <span style="--skill-level: 80%;"></span>
+          </div>
+        </div>
 
-        <img
-          class="skills-line-drawing"
-          src="assets/images/skills-line-drawing.png"
-          alt=""
-        >
+        <div class="skill-progress">
+          <p>Empathisch</p>
+
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="Empathisch"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="85"
+          >
+            <span style="--skill-level: 85%;"></span>
+          </div>
+        </div>
+
+        <div class="skill-progress">
+          <p>Kritisch denken</p>
+
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="Kritisch denken"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="70"
+          >
+            <span style="--skill-level: 70%;"></span>
+          </div>
+        </div>
+
+        <div class="skill-progress">
+          <p>Gestructureerd</p>
+
+          <div
+            class="skill-bar"
+            role="progressbar"
+            aria-label="Gestructureerd"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="90"
+          >
+            <span style="--skill-level: 90%;"></span>
+          </div>
+        </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
 
     <section class="projects-section" id="projecten">
       <div class="section-heading projects-heading">
@@ -144,6 +317,10 @@
           Een interactieve cinema-app met focus op UX laws, dark mode
           en variabelen.
         </p>
+
+        <span class="project-card-link">
+  Bekijk project →
+</span>
       </div>
     </a>
   </article>
@@ -164,6 +341,10 @@
           Een overzichtelijk website-redesign en WordPress-concept
           voor een Mechelen jazzclub.
         </p>
+
+        <span class="project-card-link">
+  Bekijk project →
+</span>
       </div>
     </a>
   </article>
@@ -184,6 +365,10 @@
           Een toegankelijke mobiele website ontworpen volgens de
           WCAG-richtlijnen.
         </p>
+
+        <span class="project-card-link">
+  Bekijk project →
+</span>
       </div>
     </a>
   </article>
@@ -204,6 +389,10 @@
           Een creatieve verzameling van zelfgemaakte illustraties,
           iconen en animaties.
         </p>
+
+        <span class="project-card-link">
+  Bekijk project →
+</span>
       </div>
     </a>
   </article>
@@ -223,7 +412,7 @@
     </p>
 
     <a class="button" href="next.html">
-      Lees meer
+      Bekijk project ->
     </a>
   </div>
 </section>
