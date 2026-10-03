@@ -845,6 +845,36 @@ section {
   pointer-events: none;
 } 
 
+/* ========================================
+   OVER MIJ — SCROLL ANIMATIES
+   ======================================== */
+
+.about-page [data-reveal] {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.about-page [data-reveal="left"] {
+  transform: translateX(-2rem);
+}
+
+.about-page [data-reveal="right"] {
+  transform: translateX(2rem);
+}
+
+.about-page [data-reveal="up"] {
+  transform: translateY(2rem);
+}
+
+.about-page [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
 /* =========================
    Projecten-pagina
    ========================= */
@@ -3374,6 +3404,24 @@ section {
     right: 3%;
   }
 
+  /* Over mij — scroll animaties tablet */
+
+.about-page [data-reveal] {
+  transform: translateY(1.5rem);
+}
+
+.about-page [data-reveal="left"] {
+  transform: translateX(-1.5rem);
+}
+
+.about-page [data-reveal="right"] {
+  transform: translateX(1.5rem);
+}
+
+.about-page [data-reveal].is-visible {
+  transform: translate(0);
+}
+
   /* Projecten-pagina */
 
   .projects-page {
@@ -4255,6 +4303,19 @@ p,
     bottom: 24px;
     width: min(70%, 280px);
   } 
+
+  /* Over mij — scroll animaties mobiel */
+
+.about-page [data-reveal],
+.about-page [data-reveal="left"],
+.about-page [data-reveal="right"],
+.about-page [data-reveal="up"] {
+  transform: translateY(1.25rem);
+}
+
+.about-page [data-reveal].is-visible {
+  transform: translateY(0);
+}
 
     /* Projecten-pagina */
 

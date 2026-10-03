@@ -27,7 +27,7 @@
 
   <main class="about-page">
     <section class="about-intro-section">
-      <div class="about-intro-content">
+      <div class="about-intro-content" data-reveal="left">
         <h1>Hallo, ik ben Lorelien!</h1>
 
         <p>
@@ -51,13 +51,14 @@
 
       <img
         class="about-cartoon"
+        data-reveal="right"
         src="assets/images/about-cartoon.png"
         alt="Illustratie van Lorelien met een kop koffie"
       >
     </section>
 
     <section class="about-story-section">
-      <div class="story-visual">
+      <div class="story-visual" data-reveal="left">
         <img
           class="story-line-drawing story-line-drawing-work"
           src="assets/images/work-line-drawing.png"
@@ -65,7 +66,7 @@
         >
       </div>
 
-      <div class="story-content">
+      <div class="story-content" data-reveal="right">
         <h2>Hoe ik werk</h2>
 
         <p>
@@ -86,7 +87,7 @@
     </section>
 
     <section class="about-story-section about-story-section-reverse">
-      <div class="story-content">
+      <div class="story-content" data-reveal="left">
         <h2>Op zoek naar een stage<br>(februari - mei 2027)</h2>
 
         <p>
@@ -105,7 +106,7 @@
         </p>
       </div>
 
-      <div class="story-visual">
+      <div class="story-visual" data-reveal="right">
         <img
           class="story-line-drawing story-line-drawing-internship"
           src="assets/images/internship-line-drawing.png"
@@ -115,7 +116,7 @@
     </section>
 
     <section class="about-story-section">
-      <div class="story-visual">
+      <div class="story-visual" data-reveal="left">
         <img
           class="story-line-drawing story-line-drawing-hobbies"
           src="assets/images/hobbies-line-drawing.png"
@@ -123,7 +124,7 @@
         >
       </div>
 
-      <div class="story-content">
+      <div class="story-content" data-reveal="right">
         <h2>Buiten het ontwerpen</h2>
 
         <p>
@@ -142,19 +143,22 @@
 
     <section class="about-actions-section" aria-label="Contact en documenten">
       <div class="actions-list">
-        <a class="button" href="projecten.html">
+        <a class="button" href="projecten.html" data-reveal="up"
+  style="--reveal-delay: 0ms">
           Bekijk mijn projecten
         </a>
 
         <a
           class="button"
           href="assets/documents/lorelien-michiels-cv.pdf"
-          download
+          download data-reveal="up"
+  style="--reveal-delay: 100ms"
         >
           Download mijn cv (pdf)
         </a>
 
-        <a class="button" href="mailto:lorelien10@gmail.com">
+        <a class="button" href="mailto:lorelien10@gmail.com" data-reveal="up"
+  style="--reveal-delay: 200ms">
           Neem contact op
         </a>
 
@@ -162,14 +166,18 @@
           class="button"
           href="https://www.linkedin.com/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer" 
+          data-reveal="up"
+          style="--reveal-delay: 300ms"
         >
           Linked-In
         </a>
       </div>
 
       <img
-        class="contact-line-drawing"
+        class="contact-line-drawing" 
+        data-reveal="right"
+  style="--reveal-delay: 200ms"
         src="assets/images/contact-line-drawing.png"
         alt=""
       >
@@ -182,5 +190,6 @@
 
   <div id="footer-placeholder"></div>
   <script src="js/includes.js"></script>
+  <script src="js/scroll-animations.js"></script>
 </body>
 </html>
