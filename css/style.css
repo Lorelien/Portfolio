@@ -5900,5 +5900,147 @@ video,
 .project-result-videos video {
   border-radius: var(--radius-video) !important; /* 40px */
   overflow: hidden;
-  -webkit-transform: translateZ(0); /* Zorgt voor zuivere afronding in Safari/iOS */
+}
+
+/* ========================================
+   INTERACTIEVE FIGMA PROTOTYPE EMBED
+   ======================================== */
+
+.figma-prototype-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: min(100%, 1000px);
+  margin: clamp(2.5rem, 4vw, 4rem) auto 0;
+  border-radius: var(--radius-block);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: var(--color-surface);
+}
+
+/* Voor mobiele apps (zoals Lumière / Terwinneke) */
+.figma-prototype-iframe {
+  display: block;
+  width: 100%;
+  height: 720px;
+  border: 0;
+  background-color: transparent;
+}
+
+/* Tablet & mobiel */
+@media (max-width: 900px) {
+  .figma-prototype-iframe {
+    height: 580px;
+  }
+}
+
+@media (max-width: 600px) {
+  .figma-prototype-iframe {
+    height: 480px;
+  }
+}
+
+/* ========================================
+   FIGMA PROTOTYPE EMBEDS (Responsive)
+   ======================================== */
+
+.figma-embed-frame {
+  position: relative;
+  border-radius: var(--radius-block);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: var(--color-surface);
+}
+
+.figma-embed-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background-color: transparent;
+}
+
+/* 1. Mobiele prototypes (Lumière & Terwinneke) */
+.figma-embed-mobile {
+  width: min(100%, 360px);
+  height: 720px;
+  margin: 0 auto;
+}
+
+/* Lumière: Twee mobiele prototypes naast elkaar */
+.project-result-prototypes {
+  display: flex;
+  justify-content: center;
+  gap: clamp(48px, 8vw, 120px);
+  margin-top: 56px;
+  width: 100%;
+}
+
+.prototype-embed-card {
+  width: min(44%, 380px);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prototype-embed-card h3 {
+  margin-bottom: 24px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: none;
+}
+
+/* Terwinneke: Centraal mobiel prototype */
+.result-prototype-mobile {
+  position: relative;
+  z-index: 1;
+  width: min(36%, 360px);
+  height: 720px;
+}
+
+/* 2. Desktop website prototype (Project NEXT) */
+.figma-embed-desktop {
+  width: 100%;
+  height: 780px;
+  margin: 48px auto 0;
+}
+
+/* Tablet & Mobiel media queries */
+@media (max-width: 900px) {
+  .project-result-prototypes {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .prototype-embed-card {
+    width: 100%;
+  }
+
+  .figma-embed-mobile,
+  .result-prototype-mobile {
+    width: min(90%, 340px);
+    height: 640px;
+  }
+
+  .figma-embed-desktop {
+    height: 560px;
+  }
+}
+
+@media (max-width: 600px) {
+  .figma-embed-mobile,
+  .result-prototype-mobile {
+    width: 100%;
+    height: 540px;
+  }
+
+  .figma-embed-desktop {
+    height: 420px;
+  }
 }
