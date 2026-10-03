@@ -27,7 +27,7 @@
 
   <main class="project-page terwinneke-page">
 
-    <header class="project-intro">
+    <header class="project-intro" data-reveal="up">
       <h1>Terwinneke</h1>
 
       <p>
@@ -39,7 +39,7 @@
       </p>
     </header>
 
-    <section class="project-information-card">
+    <section class="project-information-card" data-reveal="up">
   <div class="project-information-content">
 
         <dl class="project-details">
@@ -77,7 +77,7 @@
       >
     </section>
 
-    <section class="project-text-section assignment-section">
+    <section class="project-text-section assignment-section" data-reveal="up">
       <h2>De opdracht</h2>
 
       <p>
@@ -94,7 +94,7 @@
         Tijdlijn van het project
       </h2>
 
-      <ol class="project-timeline">
+      <ol class="project-timeline" data-reveal="up">
         <li>
           <time datetime="2025-11-23">23 november</time>
           <span>Mijlpaal 1:</span>
@@ -120,7 +120,7 @@
       </ol>
     </section>
 
-    <section class="project-text-section website-analysis-section">
+    <section class="project-text-section website-analysis-section" data-reveal="left">
       <h2>Analyse van de bestaande website</h2>
 
       <p>
@@ -133,12 +133,14 @@
 
       <img
         class="project-line-drawing project-line-drawing-fries"
+        data-reveal="right"
+  style="--reveal-delay: 160ms"
         src="assets/images/terwinneke-fries-line-drawing.png"
         alt=""
       >
     </section>
 
-    <section class="project-text-section target-group-section">
+    <section class="project-text-section target-group-section" data-reveal="up">
       <h2>Doelgroep</h2>
 
       <p>
@@ -150,7 +152,7 @@
       </p>
     </section>
 
-    <section class="persona-section" aria-label="Persona van Terwinneke">
+    <section class="persona-section" aria-label="Persona van Terwinneke" data-reveal="up">
   <img
     class="persona-image"
     src="assets/images/terwinneke-persona.jpg"
@@ -159,7 +161,7 @@
   >
 </section>
 
-    <section class="project-text-section approach-section">
+    <section class="project-text-section approach-section" data-reveal="up">
       <h2>Mijn aanpak</h2>
 
       <p>
@@ -170,7 +172,8 @@
         Toegankelijkheid bleef gedurende het hele proces centraal staan. Ik documenteerde mijn keuzes met accessibility annotaties, een kleurcontrastmatrix en tien toegepaste WCAG-succescriteria. Het resultaat is een mobile-first ontwerp dat gericht is op WCAG niveau AA.
       </p> 
 
-      <div class="process-flow" aria-label="Ontwerpproces">
+      <div class="process-flow" aria-label="Ontwerpproces" data-reveal="up"
+  style="--reveal-delay: 160ms">
         <span>Research</span>
         <span aria-hidden="true">→</span>
         <span>Wireframes</span>
@@ -183,7 +186,7 @@
       </div>
     </section>
 
-    <section class="project-text-section wireframes-section">
+    <section class="project-text-section wireframes-section" data-reveal="up">
   <h2>Van wireframes naar design</h2>
 
   <p>
@@ -198,7 +201,8 @@
     Ik controleerde lettergrootte, lijnhoogte en kleurcontrast volgens WCAG niveau AA. Daarnaast visualiseerde ik een scherm met extra grote tekst om de ervaring voor bezoekers met beperkt zicht zichtbaar te maken.
   </p>
 
-  <div class="project-image-grid project-image-grid-wireframes">
+  <div class="project-image-grid project-image-grid-wireframes" data-reveal="up"
+  style="--reveal-delay: 160ms">
     <figure>
       <img
         src="assets/images/terwinneke-wireframe-1.png"
@@ -241,7 +245,7 @@
   </div>
 </section>
 
-    <section class="project-text-section accessibility-section">
+    <section class="project-text-section accessibility-section" data-reveal="up">
   <h2>Accessibility in de praktijk</h2>
 
   <p>
@@ -256,7 +260,8 @@
     Ik maakte ook een kleurcontrastmatrix voor de brandkleuren en documenteerde tien toegepaste WCAG-succescriteria. Daarbij hield ik onder meer rekening met contrast, duidelijke labels, focusvolgorde en alternatieve tekst voor informatieve afbeeldingen. 
   </p>
 
-  <div class="project-image-grid project-image-grid-accessibility">
+  <div class="project-image-grid project-image-grid-accessibility" data-reveal="up"
+  style="--reveal-delay: 160ms">
     <figure>
       <img
         src="assets/images/terwinneke-reading-order.png"
@@ -283,7 +288,7 @@
   </div>
 </section>
 
-    <section class="project-text-section result-section">
+    <section class="project-text-section result-section" data-reveal="up">
       <h2>Resultaat</h2>
 
       <p>
@@ -313,7 +318,8 @@
   aria-label="Video van het eindresultaat van Terwinneke"
 >
   <img
-    class="result-line-drawing result-line-drawing-left"
+    class="result-line-drawing result-line-drawing-left" 
+    data-reveal="left"
     src="assets/images/terwinneke-drink-line-drawing.png"
     alt=""
     loading="lazy"
@@ -324,6 +330,8 @@
     controls
     playsinline
     preload="metadata"
+    data-reveal="up"
+  style="--reveal-delay: 100ms"
   >
     <source
       src="assets/videos/terwinneke-final-result.mp4"
@@ -338,6 +346,8 @@
     src="assets/images/terwinneke-burger-line-drawing.png"
     alt=""
     loading="lazy"
+    data-reveal="right"
+  style="--reveal-delay: 200ms"
   >
 </section>
 
@@ -350,5 +360,6 @@
   <div id="footer-placeholder"></div>
 
   <script src="js/includes.js"></script>
+  <script src="js/scroll-animations.js"></script>
 </body>
 </html>

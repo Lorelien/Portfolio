@@ -1444,6 +1444,44 @@ section {
   font-family: var(--font-body);
 }
 
+/* ========================================
+   TERWINNEKE — SCROLL ANIMATIES
+   ======================================== */
+
+.terwinneke-page [data-reveal] {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* Tekst of beeld komt rustig van links in */
+
+.terwinneke-page [data-reveal="left"] {
+  transform: translateX(-2rem);
+}
+
+/* Tekening of beeld komt rustig van rechts in */
+
+.terwinneke-page [data-reveal="right"] {
+  transform: translateX(2rem);
+}
+
+/* Standaard reveal van onder */
+
+.terwinneke-page [data-reveal="up"] {
+  transform: translateY(2rem);
+}
+
+/* Zichtbare toestand die scroll-animations.js toevoegt */
+
+.terwinneke-page [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
 /* =========================
    Lumière-projectpagina
    ========================= */
@@ -3589,6 +3627,24 @@ section {
     margin-top: 4rem;
   }
 
+  /* Terwinneke — scroll animaties tablet */
+
+.terwinneke-page [data-reveal] {
+  transform: translateY(1.5rem);
+}
+
+.terwinneke-page [data-reveal="left"] {
+  transform: translateX(-1.5rem);
+}
+
+.terwinneke-page [data-reveal="right"] {
+  transform: translateX(1.5rem);
+}
+
+.terwinneke-page [data-reveal].is-visible {
+  transform: translate(0);
+}
+
     /* Lumière-projectpagina */
 
   .lumiere-page .benchmark-section {
@@ -4639,6 +4695,19 @@ p,
     right: 1%;
     width: min(29%, 125px);
   }
+
+  /* Terwinneke — scroll animaties mobiel */
+
+.terwinneke-page [data-reveal],
+.terwinneke-page [data-reveal="left"],
+.terwinneke-page [data-reveal="right"],
+.terwinneke-page [data-reveal="up"] {
+  transform: translateY(1.25rem);
+}
+
+.terwinneke-page [data-reveal].is-visible {
+  transform: translateY(0);
+}
 
     /* Lumière-projectpagina */
 
