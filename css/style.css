@@ -1480,22 +1480,74 @@ section {
 
 /* Projectcard: informatie in twee kolommen */
 
-.next-project-information-card {
+.next-page .next-project-information-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
   align-items: center;
+  gap: clamp(48px, 8vw, 120px);
+  min-height: 360px;
+  padding: 52px 70px;
+  border: 1px solid var(--color-light);
+  border-radius: var(--radius-block);
+  background-color: var(--color-surface);
 }
 
-.next-project-details {
+.next-page .next-project-information-card .project-information-content {
+  width: 100%;
+}
+
+.next-page .next-project-details {
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 64px;
   row-gap: 22px;
+  margin: 0;
 }
 
-.next-project-details div {
+.next-page .next-project-details div {
   display: block;
 }
 
-.next-project-details dd {
-  margin-top: 4px;
+.next-project-information-content {
+  width: min(100%, 700px);
+}
+
+.next-page .next-project-details dt,
+.next-page .next-project-details dd {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.next-page .next-project-details dt {
+  margin-bottom: 4px;
+}
+
+.next-page .next-project-logo {
+  justify-self: center;
+  width: min(100%, 320px);
+  max-height: 250px;
+  padding: 18px;
+  border-radius: var(--radius-block);
+  background-color: #ffffff;
+  object-fit: contain;
+}
+
+.next-team-links a {
+  color: var(--color-light);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition:
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+.next-team-links a:hover {
+  color: #ffffff;
+  opacity: 0.7;
 }
 
 /* Tijdlijn: acht mijlpalen */
@@ -1509,14 +1561,37 @@ section {
   padding-left: 6px;
 }
 
+/* Alle tijdlijntekst: Zen Kurenaido, 20px */
+
 .next-page .project-timeline time,
 .next-page .project-timeline span,
 .next-page .project-timeline p {
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.3;
 }
 
+/* Maanden behouden hun gewone schrijfwijze:
+   Februari, Maart, April, Mei, Juni */
+
+.next-page .project-timeline time {
+  text-transform: none;
+}
+
+/* Standaardbreedte van de toelichtende tekst */
+
 .next-page .project-timeline p {
-  max-width: 120px;
+  max-width: 140px;
+}
+
+/* Eerste mijlpaal:
+   “Februari / Informatie van NEXT en bezoek aan NEXT”
+   krijgt extra breedte en meer afstand van de horizontale lijn */
+
+.next-page .project-timeline li:first-child {
+  width: 240px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /* Over NEXT: tekst links, brochure rechts */
@@ -1604,7 +1679,7 @@ section {
 
 .next-line-drawing-architecture {
   position: absolute;
-  top: 80%;
+  top: 88%;
   right: 10%;
   bottom: auto;
   width: min(24%, 260px);
@@ -1738,7 +1813,7 @@ section {
   max-width: 700px;
   margin: 0;
   color: var(--color-light);
-  font-family: "Pristina", cursive;
+  font-family: var(--font-body);
   font-size: 64px;
   font-weight: 400;
   line-height: 1.1;
@@ -1758,25 +1833,27 @@ section {
 
 .next-iterations-grid,
 .next-high-fidelity-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 36px 32px;
-  margin-top: 56px;
+  display: grid; 
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  gap: 40px; 
+  margin-top: 56px; 
 }
 
 .next-iterations-grid figure,
 .next-high-fidelity-grid figure {
+  min-width: 0;
   margin: 0;
 }
 
 .next-iterations-grid h3,
 .next-high-fidelity-grid h3 {
-  margin-bottom: 18px;
+  margin: 0 0 24px;
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 400;
+  line-height: 1.1;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .next-iterations-grid img,
@@ -1785,15 +1862,6 @@ section {
   width: 100%;
   border-radius: var(--radius-block);
 }
-
-/* Iteratie 5 centraal en smaller */
-
-.next-iterations-grid figure:nth-child(5) {
-  grid-column: 1 / -1;
-  width: min(52%, 600px);
-  justify-self: center;
-}
-
 /* Feedback: zes even brede pagina-afbeeldingen op één rij */
 
 .next-final-selection {
@@ -1847,7 +1915,7 @@ section {
 
 .next-status-line-drawing {
   position: absolute;
-  left: -40%;
+  left: -50%;
   width: min(78%, 320px);
   pointer-events: none;
 }
@@ -1855,9 +1923,11 @@ section {
 .next-status-logo {
   position: relative;
   z-index: 1;
-  width: min(34%, 140px);
-  margin-left: 35%;
+  width: min(58%, 260px);
+  max-height: 280px;
+  margin-left: 22%;
   border-radius: var(--radius-block);
+  object-fit: contain;
 }
 
 /* Mijn bijdrage: tekst links, vier beelden rechts.
@@ -1910,11 +1980,40 @@ section {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
   width: min(58%, 660px);
-  margin-top: -600px;
+  margin-top: -350px;
 }
 
 .next-contribution-pages figure {
   margin: 0;
+}
+
+/* ========================================
+   NEXT — TYPOGRAFIE
+   ======================================== */
+
+.next-page .project-intro h1 {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.next-page .project-text-section h2 {
+  font-family: var(--font-display);
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.next-page p,
+.next-page li,
+.next-page dt,
+.next-page dd {
+  font-family: var(--font-body);
+  font-size: 24px;
+  line-height: 1.45;
 }
 
 /* =========================
@@ -3004,6 +3103,71 @@ section {
     gap: 18px;
   }
 
+    .next-page .project-intro h1 {
+    font-size: 54px;
+  }
+
+  .next-page .project-text-section h2 {
+    font-size: 46px;
+  }
+
+  .next-page p,
+  .next-page li,
+  .next-page dt,
+  .next-page dd {
+    font-size: 22px;
+  }
+
+  .next-page .project-timeline time,
+  .next-page .project-timeline span,
+  .next-page .project-timeline p {
+    font-size: 18px;
+  }
+
+
+  .next-iterations-grid h3,
+  .next-high-fidelity-grid h3 {
+    font-size: 34px;
+  }
+
+  .next-status-logo {
+    width: min(58%, 220px);
+    margin-left: 20%;
+  }
+
+    .next-page .next-project-information-card {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.38fr);
+    gap: 48px;
+    padding: 44px 48px;
+  }
+
+  .next-page .next-project-details {
+    column-gap: 32px;
+  }
+
+  .next-page .next-project-logo {
+    width: min(100%, 250px);
+  }
+
+  .next-page .project-timeline li:first-child time,
+  .next-page .project-timeline li:first-child span,
+  .next-page .project-timeline li:first-child p {
+    width: 130px;
+    max-width: 130px;
+  }
+
+  .next-page .project-timeline li:first-child {
+    padding-top: 112px;
+  }
+
+  .next-page .next-slogan {
+    font-size: 54px;
+  }
+
+  .next-contribution-pages {
+    margin-top: 64px;
+  }
+
     /* Jazzzolder-projectpagina */
 
   .jazzzolder-project-details {
@@ -3799,7 +3963,7 @@ p,
 
     /* NEXT-projectpagina */
 
-  .next-project-details {
+  .next-page .next-project-details {
     grid-template-columns: 1fr;
     row-gap: 16px;
   }
@@ -3910,11 +4074,57 @@ p,
     font-size: 40px;
   }
 
+    .next-page .project-intro h1 {
+    font-size: 48px;
+  }
+
+  .next-page .project-text-section h2 {
+    font-size: 42px;
+  }
+
+  .next-page p,
+  .next-page li,
+  .next-page dt,
+  .next-page dd {
+    font-size: 20px;
+  }
+
+  .next-page .project-timeline time,
+  .next-page .project-timeline span,
+  .next-page .project-timeline p {
+    font-size: 18px;
+  }
+
+  .next-project-details {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+
+  .next-project-logo {
+    width: min(70%, 240px);
+    margin: 32px auto 0;
+  }
+
   .next-iterations-grid,
   .next-high-fidelity-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 40px;
     margin-top: 40px;
+  }
+
+  .next-iterations-grid h3,
+  .next-high-fidelity-grid h3 {
+    margin-bottom: 18px;
+    font-size: 32px;
+  }
+
+  .next-slogan {
+    font-size: 40px;
+  }
+
+  .next-status-logo {
+    width: 190px;
+    margin-left: 0;
   }
 
   .next-iterations-grid figure:nth-child(5) {
@@ -3968,6 +4178,43 @@ p,
 
   .next-contribution-wireframes {
     gap: 16px;
+  }
+
+    .next-page .next-project-information-card {
+    display: block;
+    min-height: 0;
+    padding: 32px 24px;
+  }
+
+  .next-page .next-project-details {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+
+  .next-page .next-project-logo {
+    display: block;
+    width: min(70%, 240px);
+    margin: 32px auto 0;
+  }
+
+  .next-page .project-timeline li:first-child {
+    padding-top: 0;
+  }
+
+  .next-page .project-timeline li:first-child time,
+  .next-page .project-timeline li:first-child span,
+  .next-page .project-timeline li:first-child p {
+    width: auto;
+    max-width: none;
+  }
+
+  .next-page .next-slogan {
+    font-size: 40px;
+  }
+
+  .next-contribution-pages {
+    width: 100%;
+    margin-top: 48px;
   }
 
     /* Jazzzolder-projectpagina */
