@@ -13,6 +13,7 @@
   --font-body: "Zen Kurenaido", sans-serif;
 
   --radius-block: 24px;
+  --radius-video: 40px;
   --content-width: 1200px;
 }
 
@@ -5840,4 +5841,64 @@ img.zoomable-image:focus-visible {
     max-height: 85vh;
     width: 92vw;
   }
+}
+
+/* ========================================
+   GLOBALE BORDER RADIUS: FOTO'S (24px) & VIDEO'S (40px)
+   ======================================== */
+
+/* 1. Alle portfolio- en inhoudsfoto's (24px) */
+main figure,
+main figure img,
+main .project-image-grid img,
+main .popup-image-grid img,
+main .jazzzolder-club-gallery img,
+main .jazzzolder-page-gallery img,
+main .next-research-visuals img,
+main .next-visual-direction-grid img,
+main .next-branding-palettes img,
+main .next-logo-iterations img,
+main .next-iterations-grid img,
+main .next-high-fidelity-grid img,
+main .next-final-selection img,
+main .next-contribution-wireframes img,
+main .next-contribution-pages img,
+main .jazzzolder-contribution-images img,
+main .popup-white-image-block,
+main .popup-white-image-block img,
+main .popup-feature-image,
+main .persona-image,
+main .next-side-image img,
+main .next-wide-image img,
+main .project-single-image img,
+main .project-user-stories-image img,
+.project-card,
+.figma-project-card,
+.project-information-logo {
+  border-radius: var(--radius-block); /* 24px */
+}
+
+/* Uitzondering: decoratieve transparante line drawings en iconen krijgen géén border-radius */
+.project-line-drawing,
+.hero-line-drawing,
+.about-line-drawing,
+.skills-line-drawing,
+.contact-line-drawing,
+.story-line-drawing,
+.result-line-drawing,
+.skill-item img,
+.site-logo img {
+  border-radius: 0 !important;
+}
+
+/* 2. Alle video's op alle pagina's en in popups (40px) */
+video,
+.result-video,
+.jazzzolder-wordpress-video,
+.popup-feature-video,
+.project-video-grid video,
+.project-result-videos video {
+  border-radius: var(--radius-video) !important; /* 40px */
+  overflow: hidden;
+  -webkit-transform: translateZ(0); /* Zorgt voor zuivere afronding in Safari/iOS */
 }
