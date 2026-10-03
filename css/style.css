@@ -2796,7 +2796,7 @@ section {
 .jazzzolder-feedback-line-drawing {
   position: absolute;
   right: 2%;
-  bottom: 300px;
+  bottom: 200px;
   width: min(42%, 460px);
   pointer-events: none;
 }
@@ -2907,6 +2907,36 @@ section {
 /* Projectcard na de introductie */
 .jazzzolder-page .jazzzolder-project-information-card {
   margin-top: clamp(6rem, 10vw, 10rem);
+}
+
+/* ========================================
+   JAZZZOLDER — SCROLL ANIMATIES
+   ======================================== */
+
+.jazzzolder-page [data-reveal] {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.jazzzolder-page [data-reveal="left"] {
+  transform: translateX(-2rem);
+}
+
+.jazzzolder-page [data-reveal="right"] {
+  transform: translateX(2rem);
+}
+
+.jazzzolder-page [data-reveal="up"] {
+  transform: translateY(2rem);
+}
+
+.jazzzolder-page [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0);
 }
 
 /* =========================
@@ -4048,6 +4078,24 @@ section {
   .jazzzolder-contribution-line-drawing {
     width: min(45%, 390px);
   }
+
+  /* Jazzzolder — scroll animaties tablet */
+
+.jazzzolder-page [data-reveal] {
+  transform: translateY(1.5rem);
+}
+
+.jazzzolder-page [data-reveal="left"] {
+  transform: translateX(-1.5rem);
+}
+
+.jazzzolder-page [data-reveal="right"] {
+  transform: translateX(1.5rem);
+}
+
+.jazzzolder-page [data-reveal].is-visible {
+  transform: translate(0);
+}
 
   /* Figma Learning */
 
@@ -5343,6 +5391,19 @@ p,
     width: min(82%, 360px);
     transform: translateX(50%);
   }
+
+  /* Jazzzolder — scroll animaties mobiel */
+
+.jazzzolder-page [data-reveal],
+.jazzzolder-page [data-reveal="left"],
+.jazzzolder-page [data-reveal="right"],
+.jazzzolder-page [data-reveal="up"] {
+  transform: translateY(1.25rem);
+}
+
+.jazzzolder-page [data-reveal].is-visible {
+  transform: translateY(0);
+}
 
   /* Figma Learning */
 
