@@ -27,7 +27,7 @@
 
   <main class="figma-learning-page">
 
-    <header class="figma-learning-intro">
+    <header class="figma-learning-intro" data-reveal="up">
       <h1>Figma learning new skills</h1>
 
       <p>
@@ -46,6 +46,8 @@
 
       <button
         class="figma-project-card"
+        data-reveal="up"
+  style="--reveal-delay: 0ms"
         type="button"
         data-dialog-target="ruimte-tekeningen-popup"
         aria-haspopup="dialog"
@@ -64,6 +66,10 @@
 
       <button
         class="figma-project-card"
+        data-reveal="up"
+  style="--reveal-delay: 100ms"
+        data-dialog-target="line-icons-popup"
+  aria-haspopup="dialog"
         type="button"
         data-dialog-target="line-icons-popup"
         aria-haspopup="dialog"
@@ -82,6 +88,10 @@
 
       <button
         class="figma-project-card"
+        data-reveal="up"
+  style="--reveal-delay: 200ms"
+        data-dialog-target="kampvuur-popup"
+  aria-haspopup="dialog"
         type="button"
         data-dialog-target="kampvuur-popup"
         aria-haspopup="dialog"
@@ -100,6 +110,10 @@
 
       <button
         class="figma-project-card"
+        data-reveal="up"
+  style="--reveal-delay: 0ms"
+        data-dialog-target="zeemeermin-popup"
+  aria-haspopup="dialog"
         type="button"
         data-dialog-target="zeemeermin-popup"
         aria-haspopup="dialog"
@@ -118,6 +132,10 @@
 
       <button
         class="figma-project-card"
+        data-reveal="up"
+  style="--reveal-delay: 100ms"
+        data-dialog-target="carrousel-animatie-popup"
+  aria-haspopup="dialog"
         type="button"
         data-dialog-target="carrousel-animatie-popup"
         aria-haspopup="dialog"
@@ -136,6 +154,10 @@
 
       <button
         class="figma-project-card"
+        data-reveal="up"
+  style="--reveal-delay: 200ms"
+        data-dialog-target="line-drawings-popup"
+  aria-haspopup="dialog"
         type="button"
         data-dialog-target="line-drawings-popup"
         aria-haspopup="dialog"
@@ -157,6 +179,8 @@
         src="assets/images/figma-learning-pen-line-drawing.png"
         alt=""
         loading="lazy"
+        data-reveal="right"
+  style="--reveal-delay: 220ms"
       >
     </section>
 
@@ -580,5 +604,6 @@
 
   <script src="js/includes.js"></script>
   <script src="js/figma-learning-dialogs.js"></script>
+  <script src="js/scroll-animations.js"></script>
 </body>
 </html>
