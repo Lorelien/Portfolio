@@ -23,7 +23,7 @@
 
   <main>
     <section class="hero-section" id="home">
-      <div class="hero-content">
+      <div class="hero-content" data-reveal="hero">
   <h1 class="hero-title">
     Hallo, ik ben<br>
     Lorelien Michiels
@@ -36,14 +36,15 @@
 </div>
 
       <img
-        class="hero-line-drawing"
+        class="hero-line-drawing" 
+        data-reveal="drawing"
         src="assets/images/hero-line-drawing.png"
         alt=""
       >
     </section>
 
     <section class="about-section" id="over-mij">
-      <div class="about-content">
+      <div class="about-content" data-reveal="left">
         <h2>Over mij</h2>
 
         <p>
@@ -68,6 +69,7 @@
 
       <img
         class="about-line-drawing"
+        data-reveal="right"
         src="assets/images/about-line-drawing.png"
         alt=""
       >
@@ -75,13 +77,13 @@
 
     <section class="skills-section" id="vaardigheden">
   <div class="skills-what-i-do">
-    <div class="section-heading">
+    <div class="section-heading" data-reveal="up">
       <h2>Wat ik doe</h2>
     </div>
 
     <div class="skills-content">
       <ul class="skills-list">
-        <li class="skill-item">
+        <li class="skill-item" data-reveal="up" style="--reveal-delay: 0ms">
           <h3>Web design</h3>
 
           <img
@@ -90,7 +92,7 @@
           >
         </li>
 
-        <li class="skill-item">
+        <li class="skill-item" data-reveal="up" style="--reveal-delay: 100ms">
           <h3>Illustration</h3>
 
           <img
@@ -99,7 +101,7 @@
           >
         </li>
 
-        <li class="skill-item">
+        <li class="skill-item" data-reveal="up" style="--reveal-delay: 200ms">
           <h3>UI/UX design</h3>
 
           <img
@@ -108,7 +110,7 @@
           >
         </li>
 
-        <li class="skill-item">
+        <li class="skill-item" data-reveal="up" style="--reveal-delay: 300ms">
           <h3>Branding</h3>
 
           <img
@@ -120,19 +122,20 @@
 
       <img
         class="skills-line-drawing"
+        data-reveal="right"
         src="assets/images/skills-line-drawing.png"
         alt=""
       >
     </div>
   </div>
 
-  <div class="skills-progress-section">
+  <div class="skills-progress-section" data-reveal="up">
     <h2>Mijn skills</h2>
 
     <div class="skills-progress-columns">
 
       <div class="skills-progress-column">
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>Figma illustration</p>
 
           <div
@@ -147,7 +150,7 @@
           </div>
         </div>
 
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>User-centered design</p>
 
           <div
@@ -162,7 +165,7 @@
           </div>
         </div>
 
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>User testing</p>
 
           <div
@@ -177,7 +180,7 @@
           </div>
         </div>
 
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>UX research</p>
 
           <div
@@ -192,7 +195,7 @@
           </div>
         </div>
 
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>Prototyping</p>
 
           <div
@@ -209,7 +212,7 @@
       </div>
 
       <div class="skills-progress-column">
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>Oog voor detail</p>
 
           <div
@@ -224,7 +227,7 @@
           </div>
         </div>
 
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>Zelfstandig werken</p>
 
           <div
@@ -239,7 +242,7 @@
           </div>
         </div>
 
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>Empathisch</p>
 
           <div
@@ -254,7 +257,7 @@
           </div>
         </div>
 
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>Kritisch denken</p>
 
           <div
@@ -269,7 +272,7 @@
           </div>
         </div>
 
-        <div class="skill-progress">
+        <div class="skill-progress" data-skill-progress>
           <p>Gestructureerd</p>
 
           <div
@@ -290,7 +293,7 @@
 </section>
 
     <section class="projects-section" id="projecten">
-      <div class="section-heading projects-heading">
+      <div class="section-heading projects-heading" data-reveal="up">
         <h2>Mijn projecten</h2>
 
         <a class="button button-secondary" href="projecten.html">
@@ -301,7 +304,8 @@
 
       <div class="projects-grid">
 
-  <article class="project-card">
+  <article class="project-card" data-reveal="up"
+  style="--reveal-delay: 0ms">
     <a href="lumière.html">
       <div class="project-card-image">
         <img
@@ -325,7 +329,8 @@
     </a>
   </article>
 
-  <article class="project-card">
+  <article class="project-card" data-reveal="up"
+  style="--reveal-delay: 100ms">
     <a href="jazzzolder.html">
       <div class="project-card-image">
         <img
@@ -349,7 +354,8 @@
     </a>
   </article>
 
-  <article class="project-card">
+  <article class="project-card" data-reveal="up"
+  style="--reveal-delay: 200ms">
     <a href="terwinneke.html">
       <div class="project-card-image">
         <img
@@ -373,7 +379,8 @@
     </a>
   </article>
 
-  <article class="project-card">
+  <article class="project-card" data-reveal="up"
+  style="--reveal-delay: 300ms">
     <a href="figma-learning.html">
       <div class="project-card-image">
         <img
@@ -406,7 +413,7 @@
     alt="Project NEXT, met een smartphone waarop de website van NEXT wordt getoond"
   >
 
-  <div class="featured-project-content">
+  <div class="featured-project-content" data-reveal="left">
     <p class="featured-project-description">
       Een warme branding en website voor een organisatie die jongeren ondersteunt.
     </p>
@@ -425,5 +432,6 @@
   <div id="footer-placeholder"></div>
 
 <script src="js/includes.js"></script>
+<script src="js/scroll-animations.js"></script>
 </body>
 </html>
