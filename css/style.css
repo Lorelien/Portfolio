@@ -1128,7 +1128,7 @@ section {
 .project-details dd {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.35;
 }
@@ -1485,6 +1485,68 @@ section {
 /* =========================
    Lumière-projectpagina
    ========================= */
+
+   .lumiere-page .project-information-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(40px, 6vw, 80px);
+  width: min(calc(100% - 112px), var(--content-width));
+  min-height: 340px;
+  margin: clamp(5rem, 8vw, 8rem) auto 0;
+  padding: 48px 64px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-light);
+  border-radius: var(--radius-block);
+}
+
+.lumiere-page .project-information-content {
+  flex: 1;
+  min-width: 0;
+  max-width: 620px;
+}
+
+.lumiere-page .project-details {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+}
+
+.lumiere-page .project-details div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lumiere-page .project-details dt,
+.lumiere-page .project-details dd {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-light);
+}
+
+.lumiere-page .project-details dt {
+  text-transform: none;
+  font-weight: 500;
+}
+
+/* Witte afgeronde achtergrond voor het Lumière-logo */
+.lumiere-page .project-information-logo {
+  display: block;
+  flex-shrink: 0;
+  width: min(38%, 320px);
+  max-width: 320px;
+  max-height: 220px;
+  height: auto;
+  margin: 0;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: var(--radius-block);
+  object-fit: contain;
+}
 
 /* De Lumière-tijdlijn heeft zes mijlpalen in plaats van vier */
 
