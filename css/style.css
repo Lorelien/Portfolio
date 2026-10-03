@@ -5636,3 +5636,24 @@ p,
     transition: none;
   }
 }
+
+/* ========================================
+   CURSOR LINE TRAIL (Vast schermoverlay)
+   ======================================== */
+
+#global-cursor-trail-canvas {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  #global-cursor-trail-canvas {
+    display: none;
+  }
+}
