@@ -2388,6 +2388,36 @@ section {
   margin-top: -350px;
 }
 
+/* ========================================
+   NEXT — SCROLL ANIMATIES
+   ======================================== */
+
+.next-page [data-reveal] {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.next-page [data-reveal="left"] {
+  transform: translateX(-2rem);
+}
+
+.next-page [data-reveal="right"] {
+  transform: translateX(2rem);
+}
+
+.next-page [data-reveal="up"] {
+  transform: translateY(2rem);
+}
+
+.next-page [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
 /* =========================
    Jazzzolder-projectpagina
    ========================= */
@@ -3913,6 +3943,24 @@ section {
   margin-top: 4rem;
 }
 
+/* NEXT — scroll animaties tablet */
+
+.next-page [data-reveal] {
+  transform: translateY(1.5rem);
+}
+
+.next-page [data-reveal="left"] {
+  transform: translateX(-1.5rem);
+}
+
+.next-page [data-reveal="right"] {
+  transform: translateX(1.5rem);
+}
+
+.next-page [data-reveal].is-visible {
+  transform: translate(0);
+}
+
     /* Jazzzolder-projectpagina */
 
   .jazzzolder-page .jazzzolder-project-details {
@@ -5150,6 +5198,19 @@ p,
   .next-page .next-slogan {
     font-size: 40px;
   }
+
+  /* NEXT — scroll animaties mobiel */
+
+.next-page [data-reveal],
+.next-page [data-reveal="left"],
+.next-page [data-reveal="right"],
+.next-page [data-reveal="up"] {
+  transform: translateY(1.25rem);
+}
+
+.next-page [data-reveal].is-visible {
+  transform: translateY(0);
+}
 
     /* Jazzzolder-projectpagina */
 
