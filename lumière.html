@@ -27,7 +27,7 @@
 
   <main class="project-page lumiere-page">
 
-    <header class="project-intro">
+    <header class="project-intro" data-reveal="up">
       <h1>Lumière cinema Mechelen</h1>
 
       <p>
@@ -39,7 +39,7 @@
       </p>
     </header>
 
-    <section class="project-information-card">
+    <section class="project-information-card" data-reveal="up">
       <div class="project-information-content">
 
         <dl class="project-details">
@@ -79,7 +79,7 @@
       >
     </section>
 
-    <section class="project-text-section assignment-section">
+    <section class="project-text-section assignment-section" data-reveal="up">
       <h2>De opdracht</h2>
 
       <p>
@@ -103,7 +103,7 @@
         Tijdlijn van het project
       </h2>
 
-      <ol class="project-timeline">
+      <ol class="project-timeline" data-reveal="up">
         <li>
           <time datetime="2025-02-18">18 - 25 februari</time>
           <span>Research en benchmark</span>
@@ -139,7 +139,7 @@
       </ol>
     </section>
 
-    <section class="project-text-section benchmark-section">
+    <section class="project-text-section benchmark-section" data-reveal="left">
       <h2>Benchmark bestaande website</h2>
 
       <p>
@@ -159,17 +159,20 @@
         src="assets/images/lumiere-candle-line-drawing.png"
         alt=""
         loading="lazy"
+        data-reveal="right"
+  style="--reveal-delay: 150ms"
       >
     </section>
 
-    <section class="project-text-section user-stories-section">
+    <section class="project-text-section user-stories-section" data-reveal="up">
       <h2>User stories en flowchart (groepsfase)</h2>
 
       <p>
         Om gebruikersbehoeften concreet te maken, stelden we als groep user stories op. Die hielpen ons bepalen welke schermen, informatie en acties prioriteit moesten krijgen in de app. 
       </p>
 
-      <figure class="project-single-image project-user-stories-image">
+      <figure class="project-single-image project-user-stories-image" data-reveal="up"
+  style="--reveal-delay: 150ms">
   <img
     src="assets/images/lumiere-userstories.png"
     alt="Overzicht van de user stories voor de Lumière-app"
@@ -185,7 +188,8 @@
         De flowchart gaf ons één gedeelde structuur voordat we aan de wireframes begonnen. Het maakte duidelijk waar knopen in de flow zitten, waar gebruikers mogelijk vastlopen en welke schermen logisch op elkaar moeten volgen. 
       </p>
 
-      <figure class="project-single-image">
+      <figure class="project-single-image" data-reveal="left"
+  style="--reveal-delay: 150ms">
         <img
           src="assets/images/lumiere-flowchart.png"
           alt="Flowchart van de belangrijkste gebruikersroutes in de Lumière-app"
@@ -198,17 +202,20 @@
         src="assets/images/lumiere-clapperboard-line-drawing.png"
         alt=""
         loading="lazy"
+        data-reveal="right"
+  style="--reveal-delay: 250ms"
       >
     </section>
 
-    <section class="project-text-section group-wireframes-section">
+    <section class="project-text-section group-wireframes-section" data-reveal="up">
       <h2>Van groepswireframes naar individueel design</h2>
 
       <p>
         Na de benchmark maakten we als groep wireframes voor onder meer de startpagina, registratie, login, films, instellingen, FAQ, contact, accountbeheer en de ticketflow. Ik werkte de schermen ‘Nu in de bioscoop’ en ‘Wordt verwacht’ uit. 
       </p>
 
-      <figure class="project-single-image project-single-image-wide">
+      <figure class="project-single-image project-single-image-wide" data-reveal="up"
+  style="--reveal-delay: 150ms">
         <img
           src="assets/images/lumiere-group-wireframes.png"
           alt="Overzicht van de groepswireframes voor de Lumière-app"
@@ -221,7 +228,7 @@
       </p>
     </section>
 
-    <section class="project-text-section functionality-section">
+    <section class="project-text-section functionality-section" data-reveal="up">
       <h2>Functionaliteiten en interacties</h2>
 
       <p>
@@ -232,7 +239,8 @@
         Ik ontwierp ook feedback-pop-ups voor geen internetverbinding, een succesvol verzonden contactformulier en het verlaten van de ticketflow. Deze meldingen geven de gebruiker duidelijkheid en helpen onbedoelde acties voorkomen. 
       </p>
 
-      <div class="project-video-grid project-video-grid-functionality">
+      <div class="project-video-grid project-video-grid-functionality" data-reveal="up"
+  style="--reveal-delay: 150ms">
         <figure>
           <video controls playsinline preload="metadata">
             <source
@@ -291,7 +299,7 @@
     </section>
 
     <section class="project-text-section variables-section">
-      <div class="variables-text">
+      <div class="variables-text" data-reveal="left">
         <h2>Werken met variables</h2>
 
         <p>
@@ -303,7 +311,8 @@
         </p>
       </div>
 
-      <div class="project-video-grid project-video-grid-variables">
+      <div class="project-video-grid project-video-grid-variables" data-reveal="right"
+  style="--reveal-delay: 150ms">
         <figure>
           <video controls playsinline preload="metadata">
             <source
@@ -328,7 +337,7 @@
       </div>
     </section>
 
-    <section class="project-text-section result-section">
+    <section class="project-text-section result-section" data-reveal="up">
       <h2>Resultaat</h2>
 
       <p>
@@ -339,7 +348,8 @@
         Ik ontwierp twee gebruikerservaringen: een ervaren gebruiker krijgt snel toegang tot persoonlijke content, terwijl een nieuwe gebruiker duidelijke begeleiding krijgt. Voor die nieuwe gebruiker maakte ik empty states voor meldingen, favorieten en gekochte tickets, met geanimeerde iconen die uitnodigen om de functies te ontdekken. 
       </p>
 
-      <div class="project-result-videos">
+      <div class="project-result-videos" data-reveal="up"
+  style="--reveal-delay: 150ms">
         <figure>
           <h3>Gebruiker van 1 jaar</h3>
 
@@ -375,5 +385,6 @@
   <div id="footer-placeholder"></div>
 
   <script src="js/includes.js"></script>
+  <script src="js/scroll-animations.js"></script>
 </body>
 </html>

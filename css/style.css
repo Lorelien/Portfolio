@@ -1704,6 +1704,36 @@ section {
   object-fit: cover;
 }
 
+/* ========================================
+   LUMIÈRE — SCROLL ANIMATIES
+   ======================================== */
+
+.lumiere-page [data-reveal] {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.lumiere-page [data-reveal="left"] {
+  transform: translateX(-2rem);
+}
+
+.lumiere-page [data-reveal="right"] {
+  transform: translateX(2rem);
+}
+
+.lumiere-page [data-reveal="up"] {
+  transform: translateY(2rem);
+}
+
+.lumiere-page [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
 /* =========================
    NEXT-projectpagina
    ========================= */
@@ -3692,6 +3722,24 @@ section {
   font-size: 34px;
 }
 
+/* Lumière — scroll animaties tablet */
+
+.lumiere-page [data-reveal] {
+  transform: translateY(1.5rem);
+}
+
+.lumiere-page [data-reveal="left"] {
+  transform: translateX(-1.5rem);
+}
+
+.lumiere-page [data-reveal="right"] {
+  transform: translateX(1.5rem);
+}
+
+.lumiere-page [data-reveal].is-visible {
+  transform: translate(0);
+}
+
     /* NEXT-projectpagina */
 
   .next-page .next-project-details {
@@ -4799,6 +4847,19 @@ p,
   .project-result-videos h3 {
   margin-bottom: 16px;
   font-size: 30px;
+}
+
+/* Lumière — scroll animaties mobiel */
+
+.lumiere-page [data-reveal],
+.lumiere-page [data-reveal="left"],
+.lumiere-page [data-reveal="right"],
+.lumiere-page [data-reveal="up"] {
+  transform: translateY(1.25rem);
+}
+
+.lumiere-page [data-reveal].is-visible {
+  transform: translateY(0);
 }
 
     /* NEXT-projectpagina */
