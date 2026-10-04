@@ -367,13 +367,10 @@ section {
 
 .about-line-drawing {
   position: absolute;
-  right: 24px;
-  bottom: 20px;
-  z-index: 0;
-  width: 33%;
-  max-width: 330px;
-  opacity: 0.95;
-  pointer-events: none;
+  right: 32px;
+  bottom: 24px;
+  width: min(33%, 600px);
+  height: auto;
 }
 
 
@@ -1303,21 +1300,26 @@ section {
   padding-top: 72px;
 }
 
-.process-flow {
+.terwinneke-page .process-flow {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  margin-top: 64px;
-  font-family: var(--font-body);
-  font-size: 16px;
-  text-transform: uppercase;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  gap: clamp(16px, 2.5vw, 24px);
+  margin-top: clamp(3rem, 5vw, 4rem);
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 1.5rem; /* 24px */
+  font-weight: 400;
+  line-height: 1.45;
+  text-transform: none; /* Geen hoofdletters meer */
+  color: var(--color-light);
 }
 
-.process-flow span[aria-hidden="true"] {
-  font-size: 32px;
+.terwinneke-page .process-flow span[aria-hidden="true"] {
+  font-size: 1.5rem;
   line-height: 1;
+  color: var(--color-light);
+  opacity: 0.7;
 }
 
 /* Afbeeldingsgrids */
@@ -1424,7 +1426,7 @@ section {
   position: absolute;
   bottom: 34px;
   width: min(18%, 180px);
-  max-height: 300px;
+  max-height: 500px;
   object-fit: contain;
   pointer-events: none;
 }
@@ -1434,7 +1436,10 @@ section {
 }
 
 .result-line-drawing-right {
-  right: 12%;
+  right: 6%;
+  bottom: 34px;
+  width: min(22%, 400px);
+  height: auto;
 }
 
 .terwinneke-page .project-intro p,
@@ -2448,7 +2453,7 @@ section {
    de twee uitgewerkte pagina's staan 80px onder de tekst */
 
 .next-page .next-contribution-pages {
-  margin-top: -350px;
+  margin-top: 0px;
 }
 
 /* ========================================
@@ -2844,7 +2849,7 @@ section {
 .jazzzolder-line-drawing-music {
   position: absolute;
   right: 8%;
-  bottom: 60px;
+  bottom: -50px;
   width: min(30%, 340px);
   pointer-events: none;
 }
