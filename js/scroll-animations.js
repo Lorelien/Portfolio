@@ -46,3 +46,18 @@ if (prefersReducedMotion) {
     skillsObserver.observe(element);
   });
 }
+
+// Back to top zonder hash in URL
+document.addEventListener('DOMContentLoaded', function() {
+  const backToTopBtn = document.getElementById('backToTop');
+  
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
