@@ -6214,3 +6214,24 @@ p + a.button,
 .jazzzolder-contribution-content p:last-child {
   margin-bottom: 0;
 }
+
+/* ========================================
+   INTERNE PROJECT NAVIGATIE (SEO & UX)
+   ======================================== */
+
+.next-project-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem auto 2rem;
+  text-align: center;
+}
+
+.next-project-nav p {
+  margin-bottom: 1.5rem;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 1.25rem;
+  color: var(--color-light);
+  opacity: 0.8;
+}
