@@ -358,11 +358,7 @@ section {
 }
 
 .about-content p {
-  margin-bottom: 24px;
-}
-
-.about-content .button {
-  margin-top: 12px;
+  margin-bottom: 1.5rem !important;
 }
 
 .about-line-drawing {
@@ -610,7 +606,7 @@ section {
 
 .featured-project-content {
   position: absolute;
-  top: 68%;
+  top: 57%;
   left: 9%;
   z-index: 1;
   width: 36%;
@@ -619,10 +615,14 @@ section {
 }
 
 .featured-project-description {
-  margin-bottom: 28px;
+  margin-bottom: 1.5rem !important;
   color: #202020;
   font-size: 24px;
   line-height: 1.4;
+}
+
+.button {
+  margin-top: 0 !important;
 }
 
 /* =========================
@@ -820,6 +820,13 @@ section {
   justify-content: space-between;
   padding: 48px 0 92px;
   overflow: hidden;
+  padding-bottom: 8rem !important; /* 128px ademruimte */
+}
+
+/* Zorg voor minstens 80px (5rem) marge boven Terug naar boven */
+.about-page .back-to-top {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
 }
 
 .actions-list {
@@ -882,7 +889,7 @@ section {
 }
 
 .projects-intro-section {
-  padding-bottom: 112px;
+  padding-bottom: 0 !important;
 }
 
 .projects-intro-section h1 {
@@ -1605,6 +1612,8 @@ section {
 .project-user-stories-image {
   width: min(100%, 1000px);
   margin: 40px 0 48px;
+  margin-top: 5rem; /* 80px vanaf de tekst erboven */
+  margin-bottom: 2.5rem; /* 40px naar de paragraaf eronder */
 }
 
 .project-user-stories-image img {
@@ -3021,7 +3030,7 @@ section {
 .figma-learning-intro {
   width: min(calc(100% - 112px), var(--content-width));
   margin: 0 auto;
-  padding-bottom: 72px;
+  padding-bottom: 0 !important;
 }
 
 .figma-learning-page .figma-learning-intro h1 {
@@ -3049,6 +3058,7 @@ section {
   min-height: 920px;
   margin: 0 auto;
   padding-bottom: 260px;
+  margin-top: 5rem !important; /* 80px */
 }
 
 /* Klikbare kaart */
@@ -6048,4 +6058,159 @@ video,
   .figma-embed-desktop {
     height: 420px;
   }
+}
+
+/* ========================================
+   TIJDLIJNEN — FORMAAT & GEEN HOOFDLETTERS
+   ======================================== */
+
+/* 1. Algemene tijdlijnteksten (Terwinneke, Lumière, Jazzzolder) */
+.project-timeline time,
+.project-timeline span,
+.project-timeline p,
+.jazzzolder-page .project-timeline time,
+.jazzzolder-page .project-timeline span,
+.jazzzolder-page .project-timeline p,
+.lumiere-page .project-timeline time,
+.lumiere-page .project-timeline span,
+.lumiere-page .project-timeline p,
+.terwinneke-page .project-timeline time,
+.terwinneke-page .project-timeline span,
+.terwinneke-page .project-timeline p {
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 1rem !important; /* 16px: perfect compact voor 4, 6 en 8 kolommen */
+  font-weight: 400;
+  line-height: 1.35;
+  text-transform: none !important; /* Geen uppercase/hoofdletters */
+}
+
+/* 2. NEXT tijdlijnteksten (iets groter op 20px) */
+.next-page .project-timeline time,
+.next-page .project-timeline span,
+.next-page .project-timeline p {
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 1.25rem !important; /* 20px */
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: none !important; /* Geen uppercase/hoofdletters */
+}
+
+/* 3. Zorg dat de algemene p-regel van 24px de tijdlijn nooit meer raakt */
+.project-timeline li p,
+.project-timeline p {
+  font-size: 1rem !important;
+  margin-bottom: 0 !important;
+}
+
+.next-page .project-timeline li p,
+.next-page .project-timeline p {
+  font-size: 1.25rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* =======================================================
+   DESKTOP SPACING SYSTEEM (24px, 40px, 80px, 160px)
+   ======================================================= */
+
+/* -------------------------------------------------------
+   1. TITEL NAAR PARAGRAAF = 40px (2.5rem)
+   ------------------------------------------------------- */
+h1,
+h2,
+h3,
+.hero-title,
+.hero-role,
+.project-intro h1,
+.project-text-section h2,
+.about-content h2,
+.story-content h2,
+.figma-learning-intro h1,
+.projects-intro-section h1 {
+  margin-top: 0;
+  margin-bottom: 2.5rem; /* 40px */
+}
+
+/* -------------------------------------------------------
+   2. TUSSEN PARAGRAFEN / ALINEA'S = 24px (1.5rem)
+   ------------------------------------------------------- */
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+/* -------------------------------------------------------
+   3. PARAGRAAF NAAR BUTTON = 40px (2.5rem)
+   ------------------------------------------------------- */
+p + .button,
+p + a.button,
+.about-content .button,
+.featured-project-description + .button {
+  margin-top: 2.5rem; /* 40px */
+}
+
+/* -------------------------------------------------------
+   4. PARAGRAAF NAAR FOTO'S / TIJDLIJN / GRIDS = 80px (5rem)
+   ------------------------------------------------------- */
+
+/* Laatste paragraaf vóór een afbeelding, tijdlijn of raster */
+.project-text-section > p:last-of-type,
+.about-section p:last-of-type,
+.figma-learning-intro p:last-of-type,
+.projects-intro-section p:last-of-type {
+  margin-bottom: 5rem; /* 80px */
+}
+
+/* Afbeeldingen, tijdlijnen en rasters die na tekst komen */
+.project-timeline-section,
+.project-image-grid,
+.project-video-grid,
+.project-result-visual,
+.project-result-videos,
+.project-result-prototypes,
+.persona-section,
+.process-flow,
+.jazzzolder-club-gallery,
+.jazzzolder-page-gallery,
+.jazzzolder-wordpress-video,
+.jazzzolder-contribution-images,
+.next-research-visuals,
+.next-visual-direction-grid,
+.next-branding-palettes,
+.next-logo-iterations,
+.next-iterations-grid,
+.next-high-fidelity-grid,
+.next-final-selection,
+.next-wide-image,
+.next-slogan-intro,
+.next-contribution-pages,
+.projects-page-grid,
+.figma-learning-projects {
+  margin-top: 5rem; /* 80px */
+}
+
+/* -------------------------------------------------------
+   5. TUSSEN SECTIES OP PROJECTPAGINA'S = 160px (10rem)
+   (tussentitel + paragraaf + foto's = 1 sectie)
+   ------------------------------------------------------- */
+.project-page .project-text-section,
+.about-story-section,
+.about-actions-section {
+  padding-top: 10rem; /* 160px */
+  padding-bottom: 0;
+}
+
+/* Projectcard na de intro = 160px (10rem) */
+.project-information-card,
+.next-project-information-card,
+.jazzzolder-project-information-card {
+  margin-top: 10rem; /* 160px */
+}
+
+/* Uitzondering: Laatste paragraaf in een 2-kolom layout zonder onderliggend beeld */
+.next-about-section .next-text-column p:last-child,
+.next-status-content p:last-child,
+.next-contribution-content p:last-child,
+.jazzzolder-text-content p:last-child,
+.jazzzolder-contribution-content p:last-child {
+  margin-bottom: 0;
 }
