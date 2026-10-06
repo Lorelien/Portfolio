@@ -6404,3 +6404,59 @@ p + a.button,
   outline-offset: 4px;
   border-radius: 2px;
 }
+
+/* ========================================
+   TAALWISSELAAR
+   ======================================== */
+
+.language-switcher {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transform: translateY(-50%);
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.language-switcher a {
+  color: var(--color-light);
+  font-family: var(--font-body);
+  text-decoration: none;
+  opacity: 0.65;
+  transition: opacity 180ms ease;
+}
+
+.language-switcher a:hover,
+.language-switcher a:focus-visible,
+.language-switcher a[aria-current="page"] {
+  opacity: 1;
+}
+
+.language-switcher a:focus-visible {
+  outline: 2px solid var(--color-light);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.language-switcher span {
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .language-switcher {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .language-switcher {
+    top: 0;
+    right: 0;
+    transform: none;
+    font-size: 1rem;
+  }
+}

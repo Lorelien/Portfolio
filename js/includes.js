@@ -2,7 +2,7 @@ async function loadComponent(placeholderId, componentPath) {
   const placeholder = document.getElementById(placeholderId);
 
   if (!placeholder) {
-    return;
+    return Promise.resolve();
   }
 
   try {
@@ -17,7 +17,27 @@ async function loadComponent(placeholderId, componentPath) {
   } catch (error) {
     console.error(error);
   }
+
+  return Promise.resolve();
 }
 
-loadComponent("navigation-placeholder", "components/navigation.html");
-loadComponent("footer-placeholder", "components/footer.html");
+const isEnglishPage = window.location.pathname.includes("/en/");
+
+const navigationPath = isEnglishPage
+  ? "../components/navigation-en.html"
+  : "components/navigation.html";
+
+const footerPath = isEnglishPage
+  ? "../components/footer-en.html"
+  : "components/footer.html";
+
+// Laad navigatie en footer
+Promise.all([
+  loadComponent("navigation-placeholder", navigationPath),
+  loadComponent("footer-placeholder", footerPath)
+]).then(() => {
+  // Zodra beide geladen zijn, roep de taalwisselaar aan
+  if (typeof updateLanguageSwitcher === "function") {
+    updateLanguageSwitcher();
+  }
+});
