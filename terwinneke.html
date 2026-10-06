@@ -20,7 +20,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Loop&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="https://t.contentsquare.net/uxa/971df162322f7.js"></script>
 
   <script type="application/ld+json">
 {
@@ -377,5 +376,43 @@
   <script src="js/includes.js"></script>
   <script src="js/scroll-animations.js"></script>
   <script src="js/lightbox.js"></script>
+
+  <!-- Cookiebanner -->
+<div
+  class="cookie-banner"
+  id="cookieBanner"
+  role="dialog"
+  aria-labelledby="cookieBannerTitle"
+  aria-describedby="cookieBannerText"
+  aria-modal="false"
+  hidden
+>
+  <div class="cookie-banner-content">
+    <h2 id="cookieBannerTitle">Cookies en privacy</h2>
+
+    <p id="cookieBannerText">
+      Ik gebruik Contentsquare om anoniem te begrijpen hoe bezoekers mijn portfolio
+      gebruiken, bijvoorbeeld door klik- en scrollgedrag te analyseren. Je kunt deze
+      analytische cookies accepteren of weigeren.
+    </p>
+
+    <p class="cookie-banner-link">
+      Lees meer in mijn
+      <a href="cookiebeleid.html">cookiebeleid</a>.
+    </p>
+  </div>
+
+  <div class="cookie-banner-actions">
+    <button class="button cookie-button-reject" id="rejectCookies" type="button">
+      Weigeren
+    </button>
+
+    <button class="button cookie-button-accept" id="acceptCookies" type="button">
+      Accepteren
+    </button>
+  </div>
+</div>
+
+<script src="js/cookie-consent.js"></script>
 </body>
 </html>
