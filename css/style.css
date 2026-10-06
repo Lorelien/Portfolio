@@ -181,7 +181,6 @@ section {
   object-fit: contain;
 }
 
-
 /* =========================
    5. Navigatie
    ========================= */
@@ -1072,7 +1071,7 @@ section {
   position: relative;
   width: min(calc(100% - 112px), var(--content-width));
   margin: 0 auto;
-  padding-top: clamp(6rem, 10vw, 10rem);
+  padding-top: 40px;
   padding-bottom: 0;
 }
 
@@ -1107,7 +1106,7 @@ section {
   gap: 64px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 10rem;
+  margin-top: 40px;
   padding: 52px 70px;
   border: 1px solid var(--color-light);
   border-radius: var(--radius-block);
@@ -1158,8 +1157,8 @@ section {
 .project-timeline-section {
   width: min(calc(100% - 112px), var(--content-width));
   margin: 0 auto;
-  padding-top: clamp(5rem, 8vw, 7rem);
-  padding-bottom: clamp(5rem, 8vw, 7rem);
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .project-timeline {
@@ -1292,7 +1291,7 @@ section {
 .persona-section {
   width: min(calc(100% - 112px), var(--content-width));
   margin: 8px auto 40px;
-  margin-top: 5rem;
+  margin-top: 40px;
 }
 
 .persona-image {
@@ -1304,7 +1303,7 @@ section {
 /* Aanpak en procesflow */
 
 .approach-section {
-  padding-top: 72px;
+  padding-top: 40px;
 }
 
 .terwinneke-page .process-flow {
@@ -1334,7 +1333,7 @@ section {
 .project-image-grid {
   display: grid;
   gap: 18px;
-  margin-top: clamp(4rem, 5vw, 5rem);
+  margin-top: 40px;
 }
 
 .project-image-grid figure {
@@ -1506,7 +1505,7 @@ section {
   gap: clamp(40px, 6vw, 80px);
   width: min(calc(100% - 112px), var(--content-width));
   min-height: 340px;
-  margin: clamp(5rem, 8vw, 8rem) auto 0;
+  margin: 40px auto 0; 
   padding: 48px 64px;
   background-color: var(--color-surface);
   border: 1px solid var(--color-light);
@@ -1611,9 +1610,7 @@ section {
 
 .project-user-stories-image {
   width: min(100%, 1000px);
-  margin: 40px 0 48px;
-  margin-top: 5rem; /* 80px vanaf de tekst erboven */
-  margin-bottom: 2.5rem; /* 40px naar de paragraaf eronder */
+  margin: 40px 0;
 }
 
 .project-user-stories-image img {
@@ -1623,11 +1620,11 @@ section {
   object-fit: contain;
 }
 
-/* Flowchart en groepswireframes */
+/* Flowchart */
 
 .project-single-image {
   width: min(72%, 815px);
-  margin: 40px 0 48px;
+  margin: 40px 0 0;
 }
 
 .project-single-image img {
@@ -1641,45 +1638,42 @@ section {
    Flowchart en clapperboard staan naast elkaar. */
 
 .user-stories-section {
+  display: block;
+  padding: 0;
+}
+
+.flowchart-clapperboard-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 0.32fr);
-  column-gap: clamp(48px, 8vw, 120px);
   align-items: center;
-  padding-right: 0;
+  column-gap: clamp(48px, 8vw, 120px);
+  margin-top: 40px 0 0;
 }
 
-/* Titel, tekst, lijst en user-stories-afbeelding:
-   volledige breedte van de sectie */
-
-.user-stories-section h2,
-.user-stories-section > p,
-.user-stories-section > ul,
-.user-stories-section .project-user-stories-image {
-  grid-column: 1 / -1;
-}
-
-/* Flowchart links op de laatste rij */
-
-.user-stories-section .project-single-image {
-  grid-column: 1;
-  grid-row: auto;
+.flowchart-clapperboard-grid .project-single-image {
   width: 100%;
-  margin: 48px 0 0;
+  margin: 0;
 }
 
-/* Clapperboard rechts naast de flowchart */
+.flowchart-clapperboard-grid .project-single-image img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-block);
+}
 
-.project-line-drawing-clapperboard {
-  position: static;
-  grid-column: 2;
-  grid-row: auto;
-  align-self: center;
-  justify-self: center;
+.flowchart-clapperboard-grid .project-line-drawing-clapperboard {
+  display: block;
   width: min(100%, 300px);
-  aspect-ratio: 191 / 93;
+  margin: 0;
+  justify-self: center;
   object-fit: contain;
   pointer-events: none;
-  transform: none;
+}
+
+/* Lumière: groepswireframes met 40px boven en onder */
+.lumiere-page .group-wireframes-section .project-single-image {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 /* Functionaliteiten: vijf verticale video's naast elkaar */
@@ -1687,7 +1681,7 @@ section {
 .project-video-grid {
   display: grid;
   gap: 18px;
-  margin-top: 48px;
+  margin-top: 40px;
 }
 
 .project-video-grid figure {
@@ -1754,7 +1748,7 @@ section {
   display: flex;
   justify-content: center;
   gap: clamp(56px, 12vw, 180px);
-  margin-top: 56px;
+  margin-top: 40px;
 }
 
 .project-result-videos figure {
@@ -1979,7 +1973,7 @@ section {
   display: flex;
   align-items: center;
   gap: 32px;
-  margin: 40px 0 36px;
+  margin: 40px 0;
   padding-right: min(34%, 420px);
 }
 
@@ -2005,7 +1999,7 @@ section {
 
 .next-wide-image {
   width: min(64%, 760px);
-  margin: 44px 0 48px;
+  margin: 40px 0;
 }
 
 .next-wide-image img {
@@ -2041,7 +2035,7 @@ section {
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.8fr) minmax(140px, 0.42fr);
   align-items: stretch;
   gap: 36px;
-  margin-top: 48px;
+  margin-top: 40px;
 }
 
 .next-visual-direction-grid figure,
@@ -2084,8 +2078,8 @@ section {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 28px;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .next-branding-palettes figure,
@@ -2111,7 +2105,7 @@ section {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
   gap: 32px;
-  margin-top: 56px;
+  margin-top: 40px;
 }
 
 .next-logo-iterations figure:nth-child(1) {
@@ -2136,7 +2130,7 @@ section {
 /* Slogan */
 
 .next-slogan-intro {
-  margin-top: 56px;
+  margin-top: 40px;
   margin-bottom: 18px;
 }
 
@@ -2177,7 +2171,7 @@ section {
   display: grid; 
   grid-template-columns: repeat(2, minmax(0, 1fr)); 
   gap: 40px; 
-  margin-top: 56px; 
+  margin-top: 40px; 
 }
 
 .next-iterations-grid figure,
@@ -2211,7 +2205,7 @@ section {
   align-items: start;
   gap: 18px;
   width: 100%;
-  margin: 48px 0 0;
+  margin: 40px 0 0;
 }
 
 .next-final-selection figure {
@@ -2365,104 +2359,6 @@ section {
   font-weight: 400;
   line-height: 1.1;
   text-align: center;
-}
-
-/* ========================================
-   NEXT — RESPONSIVE SPACING
-   ======================================== */
-
-/* Titel → eerste paragraaf:
-   maximaal ongeveer 40px op desktop */
-
-.next-page .project-text-section h2,
-.next-page .next-text-column h2,
-.next-page .next-status-content h2,
-.next-page .next-contribution-content h2 {
-  margin-bottom: clamp(2rem, 3vw, 2.5rem);
-}
-
-/* Ruimte tussen gewone paragrafen */
-
-.next-page .project-text-section p,
-.next-page .next-text-column p,
-.next-page .next-status-content p,
-.next-page .next-contribution-content p {
-  margin-bottom: 1.5rem;
-}
-
-/* Laatste paragraaf vóór een afbeelding, grid,
-   tijdlijn of andere visuele content:
-   ongeveer 80px op desktop */
-
-.next-page .project-text-section > p:last-of-type {
-  margin-bottom: clamp(4rem, 5vw, 5rem);
-}
-
-/* Elke tekstsectie begint na de vorige sectie:
-   maximaal ongeveer 160px op desktop */
-
-.next-page .project-text-section {
-  padding-top: clamp(6rem, 10vw, 10rem);
-  padding-bottom: 0;
-}
-
-/* Projectcard na de intro */
-
-.next-page .next-project-information-card {
-  margin-top: clamp(6rem, 10vw, 10rem);
-}
-
-/* Tijdlijn na 'De opdracht':
-   ongeveer 80px tussen de tekst en de tijdlijn */
-
-.next-page .project-timeline-section {
-  padding-top: clamp(4rem, 5vw, 5rem);
-  padding-bottom: 0;
-}
-
-/* Afbeeldingen/grids na tekst:
-   ongeveer 80px tussen tekst en beeld */
-
-.next-page .next-research-visuals,
-.next-page .next-visual-direction-grid,
-.next-page .next-branding-palettes,
-.next-page .next-logo-iterations,
-.next-page .next-iterations-grid,
-.next-page .next-high-fidelity-grid,
-.next-page .next-final-selection {
-  margin-top: clamp(4rem, 5vw, 5rem);
-}
-
-/* De navigatieheader-afbeelding, flowchart en andere brede afbeeldingen */
-
-.next-page .next-wide-image,
-.next-page .information-architecture-section .next-wide-image {
-  margin-top: clamp(4rem, 5vw, 5rem);
-}
-
-/* Slogan krijgt ruimte na de logo-iteraties */
-
-.next-page .next-slogan-intro {
-  margin-top: clamp(4rem, 5vw, 5rem);
-}
-
-.next-page .next-slogan-section {
-  margin-top: 0;
-  margin-bottom: clamp(4rem, 5vw, 5rem);
-}
-
-/* De persona-/brochurefoto naast 'Over Project NEXT'
-   volgt de tekstlayout en heeft geen extra verticale marge nodig */
-
-.next-page .next-side-image {
-  margin: 0;
-}
-
-/* Mijn bijdrage:
-   de twee uitgewerkte pagina's staan 80px onder de tekst */
-
-.next-page .next-contribution-pages {
-  margin-top: 0px;
 }
 
 /* ========================================
@@ -2621,7 +2517,7 @@ section {
 /* Tijdlijn met acht mijlpalen */
 
 .jazzzolder-page .project-timeline-section {
-  padding-top: 5rem;
+  padding-top: 40px;
   padding-bottom: 0;
 }
 
@@ -2743,7 +2639,7 @@ section {
   grid-template-rows: 180px 180px;
   gap: 20px 48px;
   width: 808px;
-  margin-top: 48px;
+  margin-top: 40px;
 }
 
 .jazzzolder-club-gallery figure {
@@ -2834,7 +2730,7 @@ section {
   align-items: start;
   gap: 14px;
   width: 100%;
-  margin-top: 48px;
+  margin-top: 40px;
 }
 
 .jazzzolder-page-gallery figure {
@@ -2884,7 +2780,7 @@ section {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 48px;
+  margin-top: 40px;
   border-radius: var(--radius-block);
   background-color: #000000;
 }
@@ -2965,27 +2861,6 @@ section {
   line-height: 1.45;
 }
 
-/* Titel → eerste paragraaf */
-.jazzzolder-page .project-text-section h2 {
-  margin-bottom: clamp(2rem, 3vw, 2.5rem);
-}
-
-/* Paragraaf → foto, video of tijdlijn */
-.jazzzolder-page .project-text-section > p:last-of-type {
-  margin-bottom: clamp(4rem, 5vw, 5rem);
-}
-
-/* Sectie → volgende sectie */
-.jazzzolder-page .project-text-section {
-  padding-top: clamp(6rem, 10vw, 10rem);
-  padding-bottom: 0;
-}
-
-/* Projectcard na de introductie */
-.jazzzolder-page .jazzzolder-project-information-card {
-  margin-top: clamp(6rem, 10vw, 10rem);
-}
-
 /* ========================================
    JAZZZOLDER — SCROLL ANIMATIES
    ======================================== */
@@ -3058,7 +2933,7 @@ section {
   min-height: 920px;
   margin: 0 auto;
   padding-bottom: 260px;
-  margin-top: 5rem !important; /* 80px */
+  margin-top: 40px !important;
 }
 
 /* Klikbare kaart */
@@ -3858,8 +3733,8 @@ section {
 }
 
   .project-user-stories-image {
-  width: 100%;
-  margin: 36px 0 44px;
+  width: min(100%, 1000px);
+  margin: 40px 0 0;
 }
 
   .user-stories-section {
@@ -4241,7 +4116,7 @@ section {
 }
 
 .figma-learning-page .figma-learning-intro h1 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 20px;
   font-family: "Zen Loop", cursive;
   font-size: 3.375rem;
   font-weight: 400;
@@ -5007,21 +4882,17 @@ p,
 
   .project-user-stories-image {
   width: 100%;
-  margin: 32px 0 36px;
+  margin: 40px 0;
 }
 
   .user-stories-section {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0;
-  padding-right: 0;
-  padding-bottom: 0;
+  display: block;
+  width: calc(100% - 32px);
 }
 
   .project-single-image {
     width: 100%;
-    margin: 32px 0 36px;
+    margin: 40px 0 0;
   }
 
   .project-line-drawing-clapperboard {
@@ -5560,7 +5431,7 @@ p,
 }
 
   .figma-learning-intro p {
-    margin-bottom: 18px;
+    margin-bottom: 24px;
   }
 
   .figma-learning-projects {
@@ -6108,28 +5979,6 @@ video,
   margin-bottom: 0 !important;
 }
 
-/* =======================================================
-   DESKTOP SPACING SYSTEEM (24px, 40px, 80px, 160px)
-   ======================================================= */
-
-/* -------------------------------------------------------
-   1. TITEL NAAR PARAGRAAF = 40px (2.5rem)
-   ------------------------------------------------------- */
-h1,
-h2,
-h3,
-.hero-title,
-.hero-role,
-.project-intro h1,
-.project-text-section h2,
-.about-content h2,
-.story-content h2,
-.figma-learning-intro h1,
-.projects-intro-section h1 {
-  margin-top: 0;
-  margin-bottom: 2.5rem; /* 40px */
-}
-
 /* -------------------------------------------------------
    2. TUSSEN PARAGRAFEN / ALINEA'S = 24px (1.5rem)
    ------------------------------------------------------- */
@@ -6188,33 +6037,6 @@ p + a.button,
   margin-top: 5rem; /* 80px */
 }
 
-/* -------------------------------------------------------
-   5. TUSSEN SECTIES OP PROJECTPAGINA'S = 160px (10rem)
-   (tussentitel + paragraaf + foto's = 1 sectie)
-   ------------------------------------------------------- */
-.project-page .project-text-section,
-.about-story-section,
-.about-actions-section {
-  padding-top: 10rem; /* 160px */
-  padding-bottom: 0;
-}
-
-/* Projectcard na de intro = 160px (10rem) */
-.project-information-card,
-.next-project-information-card,
-.jazzzolder-project-information-card {
-  margin-top: 10rem; /* 160px */
-}
-
-/* Uitzondering: Laatste paragraaf in een 2-kolom layout zonder onderliggend beeld */
-.next-about-section .next-text-column p:last-child,
-.next-status-content p:last-child,
-.next-contribution-content p:last-child,
-.jazzzolder-text-content p:last-child,
-.jazzzolder-contribution-content p:last-child {
-  margin-bottom: 0;
-}
-
 /* ========================================
    INTERNE PROJECT NAVIGATIE (SEO & UX)
    ======================================== */
@@ -6256,4 +6078,144 @@ p + a.button,
 
 .project-breadcrumb a:hover {
   opacity: 1;
+}
+
+/* ========================================
+   UNIFORM SPACING SYSTEEM
+   40px tussen alle inhoudsblokken
+   24px alleen tussen opeenvolgende alinea's
+   ======================================== */
+
+/* ----------------------------------------
+   1. Titel → eerste paragraaf / inhoud
+   ---------------------------------------- */
+
+h1,
+h2,
+h3,
+.hero-title,
+.hero-role,
+.project-intro h1,
+.project-text-section h2,
+.about-content h2,
+.story-content h2,
+.figma-learning-intro h1,
+.projects-intro-section h1 {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* ----------------------------------------
+   2. Paragraaf → volgende paragraaf
+   ---------------------------------------- */
+
+p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* Alleen de laatste paragraaf voor een nieuw
+   inhoudsblok krijgt 40px ruimte. */
+
+.project-text-section > p:last-of-type,
+.about-content > p:last-of-type,
+.about-intro-content > p:last-of-type,
+.story-content > p:last-of-type,
+.figma-learning-intro > p:last-of-type,
+.projects-intro-section > p:last-of-type,
+.next-text-column > p:last-of-type,
+.next-status-content > p:last-of-type,
+.next-contribution-content > p:last-of-type,
+.jazzzolder-text-content > p:last-of-type,
+.jazzzolder-contribution-content > p:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* ----------------------------------------
+   3. Tekst → button
+   ---------------------------------------- */
+
+p + .button,
+p + a.button,
+.about-content .button,
+.featured-project-description + .button {
+  margin-top: 16px;
+}
+
+/* Samen met de 24px onder de paragraaf
+   is dit in totaal 40px naar de button. */
+
+.button {
+  margin-top: 0;
+}
+
+/* ----------------------------------------
+   4. Tekst → beeld, video, grid, tijdlijn
+   ---------------------------------------- */
+
+.project-timeline-section,
+.project-image-grid,
+.project-video-grid,
+.project-result-visual,
+.project-result-videos,
+.project-result-prototypes,
+.persona-section,
+.process-flow,
+.project-user-stories-image,
+.project-single-image,
+.jazzzolder-club-gallery,
+.jazzzolder-page-gallery,
+.jazzzolder-wordpress-video,
+.jazzzolder-contribution-images,
+.next-research-visuals,
+.next-visual-direction-grid,
+.next-branding-palettes,
+.next-logo-iterations,
+.next-iterations-grid,
+.next-high-fidelity-grid,
+.next-final-selection,
+.next-wide-image,
+.next-slogan-intro,
+.next-contribution-pages,
+.projects-page-grid,
+.figma-learning-projects,
+.figma-prototype-wrapper,
+.project-result-prototypes {
+  margin-top: 40px;
+}
+
+/* ----------------------------------------
+   5. Tussen secties en projectcards
+   ---------------------------------------- */
+
+.project-page .project-text-section,
+.about-story-section,
+.about-actions-section {
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+
+.project-information-card,
+.next-project-information-card,
+.jazzzolder-project-information-card {
+  margin-top: 40px;
+}
+
+/* ----------------------------------------
+   6. Uitzonderingen:
+   geen extra marge wanneer tekst naast beeld staat
+   ---------------------------------------- */
+
+.next-about-section .next-text-column p:last-child,
+.next-status-content p:last-child,
+.next-contribution-content p:last-child,
+.jazzzolder-text-content p:last-child,
+.jazzzolder-contribution-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lumière: user stories-afbeelding met 40px spacing boven en onder */
+.lumiere-page .project-user-stories-image {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
