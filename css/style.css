@@ -251,18 +251,18 @@ section {
 
 .button {
   display: inline-flex;
+  min-width: 145px;
+  min-height: 0;
   align-items: center;
   justify-content: center;
-  min-width: 145px;
-  min-height: 42px;
-  padding: 10px 24px;
+  padding: 6px 24px 9px 24px;
   border: 1px solid var(--color-light);
   border-radius: 12px;
   background-color: #61596e;
   color: var(--color-light);
   font-family: var(--font-body);
   font-size: 20px;
-  line-height: 1;
+  line-height: 29px;
   text-align: center;
 }
 
@@ -343,7 +343,7 @@ section {
   border: 1px solid var(--color-light);
   border-radius: var(--radius-block);
   background-color: var(--color-surface);
-  margin-top: 64px;
+  margin-top: 24px;
 }
 
 .about-content {
@@ -514,6 +514,17 @@ section {
   overflow: hidden;
 }
 
+/* Homepagina: vier kaarten per rij */
+.projects-section .projects-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Projectenpagina: drie kaarten per rij */
+.projects-page-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 72px 36px;
+}
+
 .project-card {
   overflow: hidden;
   border: 1px solid var(--color-light);
@@ -553,8 +564,9 @@ section {
   min-height: 236px;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   gap: 16px;
-  padding: 22px 24px 24px;
+  padding: 24px;
 }
 
 .project-card-content h3 {
@@ -571,13 +583,22 @@ section {
 }
 
 .project-card-link {
-  margin-top: auto;
+  margin-top: 0;
   color: var(--color-light);
   font-family: var(--font-body);
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 29px;
   text-decoration: underline;
   text-underline-offset: 5px;
+}
+
+.projects-section .project-card > a {
+  display: block;
+  height: auto;
+}
+
+.projects-section .project-card-content {
+  min-height: 236px;
 }
 
 /* =========================
@@ -957,8 +978,7 @@ section {
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 16px;
+  gap: 20px;
   min-height: 160px;
   padding: 24px 28px 28px;
 }
@@ -1059,6 +1079,37 @@ section {
 .projects-page [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ========================================
+   PROJECTCATEGORIEËN
+   ======================================== */
+
+.project-card-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+}
+
+.project-category {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 0;
+  padding: 5px 24px 8px 24px;
+  border: 2px solid #f5f5f5;
+  border-radius: 12px;
+  background-color: #33244d;
+  color: #f5f5f5;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* =========================
