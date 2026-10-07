@@ -580,7 +580,6 @@ section {
   text-underline-offset: 5px;
 }
 
-
 /* =========================
    11. Uitgelicht project
    ========================= */
@@ -925,6 +924,9 @@ section {
   display: flex;
   flex: 1;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
   min-height: 160px;
   padding: 24px 28px 28px;
 }
@@ -933,6 +935,7 @@ section {
 
 .projects-page-grid .project-card-content p {
   margin-bottom: 0;
+  margin-top: 0;
   color: var(--color-light);
   font-family: "Zen Kurenaido", sans-serif;
   font-size: 1.5rem;
@@ -956,6 +959,7 @@ section {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.1;
+  margin-bottom: 0;
 }
 
 /* Beschrijvende tekst: Zen Kurenaido, 24px */
@@ -965,13 +969,14 @@ section {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.45;
+  margin-top: 0;
 }
 
 /* Alleen de zichtbare CTA krijgt een onderlijn */
 
 .projects-page .project-card-cta {
   display: inline-block;
-  margin-top: 1.5rem;
+  margin-top: 0;
   color: var(--color-light);
   font-family: var(--font-body);
   font-size: 1.25rem;
@@ -2932,7 +2937,6 @@ section {
   width: min(calc(100% - 112px), var(--content-width));
   min-height: 920px;
   margin: 0 auto;
-  padding-bottom: 260px;
   margin-top: 40px !important;
 }
 
@@ -2955,6 +2959,7 @@ section {
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
+  margin-top: 24px !important;
 }
 
 .figma-project-card:hover {
@@ -3018,7 +3023,7 @@ section {
 .figma-learning-pen-line-drawing {
   position: absolute;
   right: 6%;
-  bottom: 500px;
+  bottom: 250px;
   width: min(42%, 450px);
   pointer-events: none;
 }
@@ -6069,7 +6074,7 @@ p + a.button,
 
 .project-breadcrumb a {
   font-family: "Zen Kurenaido", sans-serif;
-  font-size: 1rem;
+  font-size: 24px;
   color: var(--color-light);
   text-decoration: none;
   opacity: 0.7;
