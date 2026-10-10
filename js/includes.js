@@ -14,8 +14,13 @@ async function loadComponent(placeholderId, componentPath) {
 
     const componentHtml = await response.text();
     placeholder.innerHTML = componentHtml;
-  } catch (error) {
-    console.error(error);
+
+    if (placeholderId === "navigation-placeholder") {
+      document.dispatchEvent(new Event("componentsLoaded"));
+    }
+    
+    } catch (error) {
+      console.error(error);
   }
 
   return Promise.resolve();
