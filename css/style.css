@@ -244,7 +244,6 @@ section {
   object-fit: contain;
 }
 
-/* Op desktop en tablet: toon de navigatielinks zoals voorheen */
 .mobile-menu {
   position: static;
 }
@@ -2295,6 +2294,10 @@ section {
   margin: 0;
 }
 
+.tablet-line-break {
+  display: none;
+}
+
 /* Navigatieheader: volledige contentbreedte */
 
 .information-architecture-section .next-wide-image {
@@ -3489,7 +3492,7 @@ section {
 }
 
 /* =========================
-   13. Tablet
+   13. Tablet 900px
    ========================= */
 
 @media (max-width: 900px) {
@@ -3778,114 +3781,114 @@ section {
   transform: translateY(0);
 }
 
-    /* Terwinneke-projectpagina */
+/* Terwinneke-projectpagina */
 
-  .project-page {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+.project-page {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 
-  .project-intro,
-  .project-text-section,
-  .project-information-card,
-  .project-timeline-section,
-  .persona-section,
-  .project-result-visual {
-    width: min(calc(100% - 64px), var(--content-width));
-  }
+.project-intro,
+.project-text-section,
+.project-information-card,
+.project-timeline-section,
+.persona-section,
+.project-result-visual {
+  width: min(calc(100% - 64px), var(--content-width));
+}
 
-  .persona-section {
+.persona-section {
   margin-top: 5rem;
   margin-bottom: 0;
 }
 
-  .project-information-card {
-    padding: 44px 48px;
-  }
+.project-information-card {
+  padding: 44px 48px;
+}
 
-  .project-timeline {
-    gap: 8px;
-  }
+.project-timeline {
+  gap: 8px;
+}
 
-  .project-timeline li {
-    padding-right: 6px;
-    padding-left: 6px;
-  }
+.project-timeline li {
+  padding-right: 6px;
+  padding-left: 6px;
+}
 
-  .process-flow {
-    gap: 16px;
-    font-size: 14px; 
-    margin-top: clamp(4rem, 5vw, 5rem); 
-  }
+.process-flow {
+  gap: 16px;
+  font-size: 14px; 
+  margin-top: clamp(4rem, 5vw, 5rem); 
+}
 
-  .project-image-grid-wireframes {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+.project-image-grid-wireframes {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 
-  .project-image-grid-wireframes figure:last-child {
-    grid-column: span 2;
-  }
+.project-image-grid-wireframes figure:last-child {
+  grid-column: span 2;
+}
 
-  .project-result-visual {
-    min-height: 460px;
-  }
+.project-result-visual {
+  min-height: 460px;
+}
 
-  .result-video {
-    width: min(42%, 340px);
-  }
+.result-video {
+  width: min(42%, 340px);
+}
 
-  .result-line-drawing-left {
-    left: 3%;
-  }
+.result-line-drawing-left {
+  left: 3%;
+}
 
-  .result-line-drawing-right {
-    right: 3%;
-  }
+.result-line-drawing-right {
+  right: 3%;
+}
 
-    .terwinneke-page .project-intro h1 {
-    font-size: 3.5rem;
-  }
+.terwinneke-page .project-intro h1 {
+  font-size: 3.5rem;
+}
 
-  .terwinneke-page .project-text-section h2 {
-    font-size: 3rem;
-    margin-bottom: 2.25rem;
-  }
+.terwinneke-page .project-text-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2.25rem;
+}
 
-  .terwinneke-page .project-intro p,
-  .terwinneke-page .project-text-section p,
-  .terwinneke-page .result-section li {
-    font-size: 22px;
-  }
+.terwinneke-page .project-intro p,
+.terwinneke-page .project-text-section p,
+.terwinneke-page .result-section li {
+  font-size: 22px;
+}
 
-  .terwinneke-page .project-text-section {
-    padding-top: 7rem;
-    padding-bottom: 0;
-  }
+.terwinneke-page .project-text-section {
+  padding-top: 7rem;
+  padding-bottom: 0;
+}
 
-  .terwinneke-page .project-information-card {
-    gap: 40px;
-    margin-top: 7rem;
-    padding: 44px 48px;
-  }
+.terwinneke-page .project-information-card {
+  gap: 40px;
+  margin-top: 7rem;
+  padding: 44px 48px;
+}
 
-  .terwinneke-page .project-information-logo {
-    width: min(34%, 260px);
-  }
+.terwinneke-page .project-information-logo {
+  width: min(34%, 260px);
+}
 
-  .terwinneke-page .project-details dt,
-  .terwinneke-page .project-details dd {
-    font-size: 18px;
-  }
+.terwinneke-page .project-details dt,
+.terwinneke-page .project-details dd {
+  font-size: 18px;
+}
 
-  .terwinneke-page .project-image-grid {
-    margin-top: 4rem;
-  }
+.terwinneke-page .project-image-grid {
+  margin-top: 4rem;
+}
 
-  .terwinneke-page .persona-section {
-    margin-top: 4rem;
-  }
+.terwinneke-page .persona-section {
+  margin-top: 4rem;
+}
 
-  /* Terwinneke — scroll animaties tablet */
+/* Terwinneke — scroll animaties tablet */
 
 .terwinneke-page [data-reveal] {
   transform: translateY(1.5rem);
@@ -3903,9 +3906,9 @@ section {
   transform: translate(0);
 }
 
-    /* Lumière-projectpagina */
+/* Lumière-projectpagina */
 
-  .lumiere-page .benchmark-section {
+.lumiere-page .benchmark-section {
   grid-template-columns: minmax(0, 1fr) minmax(160px, 0.28fr);
   column-gap: 40px;
 }
@@ -3914,12 +3917,12 @@ section {
   width: min(100%, 190px);
 }
 
-  .project-user-stories-image {
+.project-user-stories-image {
   width: min(100%, 1000px);
   margin: 40px 0 0;
 }
 
-  .user-stories-section {
+.user-stories-section {
   grid-template-columns: minmax(0, 1fr) minmax(160px, 0.28fr);
   column-gap: 40px;
   padding-right: 0;
@@ -3929,25 +3932,35 @@ section {
   width: min(100%, 210px);
 }
 
-  .project-video-grid-functionality {
-    gap: 12px;
-  }
+.project-video-grid-functionality {
+  gap: 12px;
+}
 
-  .lumiere-page .variables-section {
-    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
-    gap: 40px;
-  }
+.lumiere-page .variables-section {
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+  gap: 40px;
+}
 
-  .variables-section .project-video-grid {
-    gap: 16px;
-  }
+.variables-section .project-video-grid {
+  gap: 16px;
+}
 
-  .project-result-videos {
-    gap: 72px;
-  }
+.project-result-videos {
+  gap: 72px;
+}
 
-  .project-result-videos h3 {
+.project-result-videos h3 {
   font-size: 34px;
+}
+
+/* Decoratieve tekeningen mogen geen interactie afvangen */
+.project-line-drawing,
+.result-line-drawing,
+.jazzzolder-line-drawing-music,
+.jazzzolder-feedback-line-drawing,
+.next-line-drawing-research,
+.next-line-drawing-architecture {
+  pointer-events: none;
 }
 
 /* Lumière — scroll animaties tablet */
@@ -3968,7 +3981,7 @@ section {
   transform: translate(0);
 }
 
-    /* NEXT-projectpagina */
+/* NEXT-projectpagina */
 
   .next-page .next-project-details {
     grid-template-columns: minmax(11rem, 0.75fr) minmax(0, 1.45fr);
@@ -4056,53 +4069,122 @@ section {
     font-size: 22px;
   }
 
-  .next-page .project-timeline time,
-  .next-page .project-timeline span,
-  .next-page .project-timeline p {
-    font-size: 18px;
-  }
+.next-page .project-timeline time,
+.next-page .project-timeline span,
+.next-page .project-timeline p {
+  font-size: 18px;
+}
 
 
-  .next-iterations-grid h3,
-  .next-high-fidelity-grid h3 {
-    font-size: 34px;
-  }
+.next-iterations-grid h3,
+.next-high-fidelity-grid h3 {
+  font-size: 34px;
+}
 
-  .next-status-logo {
-    width: min(58%, 220px);
-    margin-left: 20%;
-  }
+.next-status-logo {
+  width: min(58%, 220px);
+  margin-left: 20%;
+}
 
-    .next-page .next-project-information-card {
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.38fr);
-    gap: 48px;
-    padding: 44px 48px;
-  }
+.next-page .next-project-information-card {
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.38fr);
+  column-gap: 32px;
+  align-items: center;
+  padding: 40px 44px;
+}
 
-  .next-page .next-project-logo {
-    width: min(100%, 250px);
-  }
+.next-page .next-project-details {
+  grid-template-columns: minmax(130px, 0.8fr) minmax(0, 1.25fr);
+  column-gap: 28px;
+  row-gap: 18px;
+}
 
-  .next-page .project-timeline li:first-child time,
-  .next-page .project-timeline li:first-child span,
-  .next-page .project-timeline li:first-child p {
-    width: 130px;
-    max-width: 130px;
-  }
+.next-page .next-detail-item {
+  min-width: 0;
+}
 
-  .next-page .project-timeline li:first-child {
-    padding-top: 112px;
-  }
+.next-page .next-detail-item dd,
+.next-page .next-team-links {
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
 
-  .next-page .next-slogan {
-    font-size: 54px;
-  }
+.next-page .next-project-logo {
+  justify-self: end;
+  width: min(100%, 190px);
+  max-height: 190px;
+  margin: 0;
+}
 
-  .next-contribution-pages {
-    margin-top: 64px;
-  }
+.next-page .next-project-logo {
+  width: min(100%, 250px);
+}
 
-  /* NEXT — tablet spacing */
+.next-page .project-timeline li:first-child time,
+.next-page .project-timeline li:first-child span,
+.next-page .project-timeline li:first-child p {
+  width: 130px;
+  max-width: 130px;
+}
+
+.next-page .project-timeline li:first-child {
+  padding-top: 112px;
+}
+
+.next-page .next-slogan {
+  font-size: 54px;
+}
+
+.next-page .next-contribution-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.next-page .next-contribution-content {
+  grid-column: 1;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.next-page .next-contribution-content p:last-child {
+  margin-bottom: 0;
+}
+
+.next-page .next-contribution-top > .contribution-section {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Laat de vier afbeeldingen als één rij-grid werken */
+.next-page .next-contribution-wireframes,
+.next-page .next-contribution-pages {
+  display: contents;
+}
+
+.next-page .next-contribution-wireframes img,
+.next-page .next-contribution-pages figure {
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.next-page .next-contribution-wireframes img,
+.next-page .next-contribution-pages img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* NEXT — tablet spacing */
 
 .next-page .project-text-section {
   padding-top: 7rem;
@@ -4117,11 +4199,11 @@ section {
 }
 
 .next-page .project-text-section > p:last-of-type {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .next-page .next-project-information-card {
-  margin-top: 7rem;
+  margin-top: 2rem;
 }
 
 .next-page .project-timeline-section {
@@ -4159,95 +4241,147 @@ section {
   transform: translate(0);
 }
 
-    /* Jazzzolder-projectpagina */
+/* Jazzzolder-projectpagina */
 
-  .jazzzolder-page .jazzzolder-project-details {
-    grid-template-columns: minmax(11rem, 0.75fr) minmax(0, 1.45fr);
-    column-gap: 2rem;
-  }
+.jazzzolder-page .jazzzolder-project-information-card {
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 220px);
+  column-gap: 36px;
+  align-items: center;
+  padding: 40px 44px;
+}
 
-  .jazzzolder-page .jazzzolder-project-timeline {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    row-gap: 2rem;
-  }
+.jazzzolder-page .jazzzolder-project-information-card .project-information-content {
+  min-width: 0;
+}
 
-  .jazzzolder-page .jazzzolder-project-timeline::before {
-    display: none;
-  }
+.jazzzolder-page .jazzzolder-project-details {
+  grid-template-columns: minmax(120px, 0.7fr) minmax(0, 1.15fr);
+  column-gap: 24px;
+  row-gap: 20px;
+}
 
-  .jazzzolder-page .jazzzolder-project-timeline li {
-    min-height: 10rem;
-  }
+.jazzzolder-page .jazzzolder-detail-item {
+  min-width: 0;
+}
 
-  .jazzzolder-page .jazzzolder-project-timeline li::before {
-    display: none;
-  }
+.jazzzolder-page .jazzzolder-detail-item dd,
+.jazzzolder-page .jazzzolder-team-links {
+  min-width: 0;
+  max-width: none;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
 
-  .jazzzolder-page .jazzzolder-project-timeline li:nth-child(even) {
-    justify-content: flex-start;
-  }
+.jazzzolder-page .jazzzolder-detail-item--right {
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 12px;
+}
 
-  .jazzzolder-page .jazzzolder-project-timeline time,
-  .jazzzolder-page .jazzzolder-project-timeline span,
-  .jazzzolder-page .jazzzolder-project-timeline p {
-    font-size: 0.875rem;
-  }
+.jazzzolder-page .jazzzolder-project-information-card .jazzzolder-project-logo {
+  justify-self: end;
+  width: min(100%, 190px);
+  margin: 0;
+}
 
-  .jazzzolder-page .jazzzolder-project-timeline li:first-child span,
-  .jazzzolder-page .jazzzolder-project-timeline li:first-child p {
-    width: auto;
-    max-width: 100%;
-  }
+.jazzzolder-page .jazzzolder-detail-item dd,
+.jazzzolder-page .jazzzolder-team-links {
+  white-space: normal;
+}
 
-  .jazzzolder-page .jazzzolder-detail-item dd,
-  .jazzzolder-page .jazzzolder-team-links {
-    white-space: normal;
-  }
+.jazzzolder-club-gallery {
+  width: min(86%, 760px);
+}
 
-  .jazzzolder-club-gallery {
-    width: min(86%, 760px);
-  }
+.jazzzolder-line-drawing-notes {
+  width: min(15%, 130px);
+}
 
-  .jazzzolder-line-drawing-notes {
-    width: min(15%, 130px);
-  }
+.research-briefing-section {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.75fr);
+  gap: 48px;
+}
 
-  .research-briefing-section {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.75fr);
-    gap: 48px;
-  }
+.brandsheet-section {
+  gap: 64px;
+}
 
-  .brandsheet-section {
-    gap: 64px;
-  }
+.jazzzolder-page-gallery {
+  gap: 8px;
+}
 
-  .jazzzolder-page-gallery {
-    gap: 8px;
-  }
+.figma-prototype-section,
+.feedback-adjustments-section {
+  padding-bottom: 280px;
+}
 
-  .figma-prototype-section,
-  .feedback-adjustments-section {
-    padding-bottom: 280px;
-  }
+.jazzzolder-line-drawing-music {
+  right: 4%;
+  bottom: -100px !important;
+  width: min(30%, 270px);
+}
 
-  .jazzzolder-line-drawing-music {
-    width: min(30%, 270px);
-  }
+.jazzzolder-feedback-line-drawing {
+  right: 2%;
+  bottom: -200px !important;
+  width: min(40%, 360px);
+}
 
-  .jazzzolder-feedback-line-drawing {
-    width: min(40%, 360px);
-  }
+.jazzzolder-page .jazzzolder-contribution-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.65fr);
+  grid-template-rows: auto auto;
+  align-items: start;
+  column-gap: 28px;
+  row-gap: 24px;
+  min-height: 0;
+  padding-right: 0;
+}
 
-  .jazzzolder-contribution-section {
-    min-height: 620px;
-    padding-right: min(48%, 420px);
-  }
+.jazzzolder-page .jazzzolder-contribution-content {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
 
-  .jazzzolder-contribution-line-drawing {
-    width: min(45%, 390px);
-  }
+.jazzzolder-page .jazzzolder-contribution-content p:last-child {
+  margin-bottom: 0;
+}
 
-  /* Jazzzolder — scroll animaties tablet */
+/* De foto's vormen hun eigen grid links onder de tekst */
+.jazzzolder-page .jazzzolder-contribution-images {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+}
+
+.jazzzolder-page .jazzzolder-contribution-images figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.jazzzolder-page .jazzzolder-contribution-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Line drawing rechts van het eigen fotogrid */
+.jazzzolder-page .jazzzolder-contribution-line-drawing {
+  position: static;
+  grid-column: 2;
+  grid-row: 2;
+  width: min(100%, 200px);
+  margin: 0;
+}
+
+/* Jazzzolder — scroll animaties tablet */
 
 .jazzzolder-page [data-reveal] {
   transform: translateY(1.5rem);
@@ -4265,29 +4399,29 @@ section {
   transform: translate(0);
 }
 
-  /* Figma Learning */
+/* Figma Learning */
 
-  .figma-learning-page {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+.figma-learning-page {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 
-  .figma-learning-intro,
-  .figma-learning-projects {
-    width: min(calc(100% - 64px), var(--content-width));
-  }
+.figma-learning-intro,
+.figma-learning-projects {
+  width: min(calc(100% - 64px), var(--content-width));
+}
 
-  .figma-learning-projects {
-    gap: 20px;
-    min-height: 760px;
-    padding-bottom: 220px;
-  }
+.figma-learning-projects {
+  gap: 20px;
+  min-height: 760px;
+  padding-bottom: 220px;
+}
 
-  .figma-project-card-image {
-    padding: 24px 24px 12px;
-  }
+.figma-project-card-image {
+  padding: 24px 24px 12px;
+}
 
-  .figma-learning-page .figma-project-card-title {
+.figma-learning-page .figma-project-card-title {
   min-height: 6.25rem;
   padding: 0.625rem 1rem 1.125rem;
   font-family: "Zen Loop", cursive;
@@ -4306,21 +4440,21 @@ section {
   text-transform: none;
 }
 
-  .figma-learning-pen-line-drawing {
-    right: 4%;
-    bottom: 48px;
-    width: min(42%, 340px);
-  }
+.figma-learning-pen-line-drawing {
+  right: 4%;
+  bottom: 48px;
+  width: min(42%, 340px);
+}
 
-  .figma-project-dialog {
-    width: min(calc(100% - 64px), var(--content-width));
-  }
+.figma-project-dialog {
+  width: min(calc(100% - 64px), var(--content-width));
+}
 
-  .figma-dialog-content {
-    padding: 52px;
-  }
+.figma-dialog-content {
+  padding: 52px;
+}
 
-  /* Figma Learning — scroll animaties tablet */
+/* Figma Learning — scroll animaties tablet */
 
 .figma-learning-page [data-reveal] {
   transform: translateY(1.5rem);
@@ -4338,19 +4472,19 @@ section {
   transform: translateY(-0.375rem);
 }
 
-  /* Figma Learning popups */
+/* Figma Learning popups */
 
-  .figma-project-dialog {
-    width: calc(100% - 64px);
-    max-height: calc(100vh - 48px);
-  }
+.figma-project-dialog {
+  width: calc(100% - 64px);
+  max-height: calc(100vh - 48px);
+}
 
-  .figma-dialog-content {
-    max-height: calc(100vh - 48px);
-    padding: 52px 44px 56px;
-  }
+.figma-dialog-content {
+  max-height: calc(100vh - 48px);
+  padding: 52px 44px 56px;
+}
 
-  .figma-learning-page .figma-dialog-content h2 {
+.figma-learning-page .figma-dialog-content h2 {
   margin: 0 3.625rem 2rem;
   font-family: "Zen Loop", cursive;
   font-size: 3.375rem;
@@ -4360,7 +4494,7 @@ section {
   text-transform: none;
 }
 
-  .figma-learning-page .figma-dialog-content p {
+.figma-learning-page .figma-dialog-content p {
   margin-bottom: 2.25rem;
   font-family: "Zen Kurenaido", sans-serif;
   font-size: 1.375rem;
@@ -4368,28 +4502,266 @@ section {
   line-height: 1.45;
 }
 
-  .popup-image-grid {
-    gap: 24px;
-  }
+.popup-image-grid {
+  gap: 24px;
+}
 
-  .popup-image-grid--five {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-  }
+.popup-image-grid--five {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
 
-  .popup-white-image-block {
-    min-height: 460px;
-    padding: 40px;
-  }
+.popup-white-image-block {
+  min-height: 460px;
+  padding: 40px;
+}
 
-  .popup-white-image-block img {
-    max-height: 420px;
-  }
+.popup-white-image-block img {
+  max-height: 420px;
+}
 
-  .popup-feature-video {
-    max-height: 520px;
-  }
+.popup-feature-video {
+  max-height: 520px;
+}
 } 
+
+/* =========================
+   13. Tablet 820px
+   ========================= */
+
+@media (min-width: 601px) and (max-width: 820px) {
+/* Jazzzolder pagina 820px */
+.jazzzolder-page {
+  overflow-x: clip;
+}
+
+.jazzzolder-page .jazzzolder-project-information-card {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  padding: 32px;
+}
+
+.jazzzolder-page .jazzzolder-project-information-card .jazzzolder-project-logo {
+  justify-self: start;
+  width: min(100%, 220px);
+}
+
+.jazzzolder-page .jazzzolder-project-timeline li:first-child span,
+.jazzzolder-page .jazzzolder-project-timeline li:first-child p {
+  width: 200px;
+  margin-left: 50px;
+}
+
+.jazzzolder-page .about-jazzzolder-section {
+  padding-right: 0;
+}
+
+.about-jazzzolder-section .jazzzolder-text-content {
+  padding-right: 100px;
+}
+
+.jazzzolder-page .jazzzolder-club-gallery {
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr);
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.jazzzolder-page .research-briefing-section,
+.jazzzolder-page .brandsheet-section {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 28px;
+}
+
+.jazzzolder-line-drawing-music {
+  right: 4%;
+  bottom: -100px !important;
+  width: min(30%, 270px);
+}
+
+.jazzzolder-feedback-line-drawing {
+  right: 2%;
+  bottom: 100px !important;
+  width: min(40%, 360px);
+}
+
+.jazzzolder-page .jazzzolder-contribution-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.65fr);
+  grid-template-rows: auto auto;
+  align-items: start;
+  column-gap: 28px;
+  row-gap: 24px;
+  min-height: 0;
+  padding-right: 0;
+}
+
+.jazzzolder-page .jazzzolder-contribution-content {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.jazzzolder-page .jazzzolder-contribution-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* De foto's vormen hun eigen grid links onder de tekst */
+.jazzzolder-page .jazzzolder-contribution-images {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+}
+
+.jazzzolder-page .jazzzolder-contribution-images figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.jazzzolder-page .jazzzolder-contribution-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Line drawing rechts van het eigen fotogrid */
+.jazzzolder-page .jazzzolder-contribution-line-drawing {
+  position: static;
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 300px);
+  margin: 0;
+}
+
+/* Lumière pagina 820px */
+
+.lumiere-page .project-timeline li:first-child p,
+.lumiere-page .project-timeline li:first-child span {
+  width: 175%;
+  max-width: 175%;
+}
+
+/* Houd de brede elementen binnen de viewport */
+.next-page,
+.next-page main {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.next-page .project-timeline {
+  overflow: visible;
+}
+
+.next-page .project-timeline li:first-child {
+  align-items: flex-start;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.next-page .project-timeline li:first-child time,
+.next-page .project-timeline li:first-child span,
+.next-page .project-timeline li:first-child p {
+  width: 170px;
+  max-width: 170px;
+  margin-left: -24px;
+}
+
+.next-slogan-line-drawing {
+  margin-left: -24px;
+}
+
+.next-page .next-slogan {
+  font-size: 48px !important;
+  line-height: 1.1;
+}
+
+.next-page .tablet-line-break {
+  display: inline;
+}
+
+.next-page .research-section {
+  padding-right: 0;
+}
+
+.next-page .research-section > p {
+  max-width: 100%;
+}
+
+.next-page .next-research-visuals {
+  padding-right: 210px;
+}
+
+.next-page .next-research-visuals figure {
+  flex: 0 0 180px;
+  width: 180px;
+}
+
+.next-page .next-line-drawing-research {
+  right: 14%;
+  width: min(25%, 190px);
+}
+
+.next-page .next-contribution-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.85fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.next-page .next-contribution-content {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.next-page .next-contribution-top > .contribution-section {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 18px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.next-page .next-contribution-wireframes,
+.next-page .next-contribution-pages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin: 0;
+}
+
+.next-page .next-contribution-wireframes img,
+.next-page .next-contribution-pages img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.next-page .next-contribution-pages figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.figma-learning-page .figma-learning-pen-line-drawing {
+  bottom: 80px;
+}
+}
 
 /* =========================
    14. Mobiel
@@ -6948,7 +7320,7 @@ p + a.button,
   padding-top: 0;
 }
 
-/* Tablet */
+/* Tablet: visual */
 @media (max-width: 900px) {
   .project-hero {
     grid-template-columns: minmax(0, 1fr) minmax(240px, 0.75fr);
