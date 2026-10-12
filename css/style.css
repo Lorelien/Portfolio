@@ -244,18 +244,6 @@ section {
   object-fit: contain;
 }
 
-.mobile-menu {
-  position: static;
-}
-
-.mobile-menu-toggle {
-  display: none;
-}
-
-.mobile-menu .navigation-list {
-  display: flex;
-}
-
 /* TAALWISSELAAR */
 
 .language-switcher {
@@ -294,7 +282,6 @@ section {
 .language-switcher span {
   opacity: 0.6;
 }
-
 
 /* =========================
    6. Knoppen
@@ -3521,7 +3508,7 @@ section {
     width: 48%;
   }
 
-    /* Nieuwe grotere typografie */
+  /* Nieuwe grotere typografie */
 
   h1,
   .hero-title,
@@ -3552,19 +3539,19 @@ section {
   font-size: 1.375rem;
 }
 
-  /* Navigatie */
+/* Navigatie */
 
-  .site-logo,
-  .navigation-list a {
-    font-size: 32px;
-  }
+.site-logo,
+.navigation-list a {
+  font-size: 32px;
+}
 
-  .site-logo img {
-    max-width: 118px;
-    max-height: 48px;
-  }
+.site-logo img {
+  max-width: 118px;
+  max-height: 48px;
+}
 
-  /* Hero met tekst aan beide kanten */
+/* Hero met tekst aan beide kanten */
 
   .hero-section {
     min-height: 450px;
@@ -4772,18 +4759,6 @@ body {
   font-size: 16px;
 }
 
-section,
-.site-header {
-  width: calc(100% - 32px);
-}
-
-.site-header {
-  position: relative;
-  z-index: 100;
-  width: calc(100% - 32px);
-  padding-top: 16px;
-}
-
 .back-to-top {
   margin-bottom: 3rem;
   font-size: 1.25rem;
@@ -4800,107 +4775,6 @@ section,
   width: auto;
   max-width: 76px;
   max-height: 34px;
-}
-
-/* Mobiele header: logo links, taal centraal, menu rechts */
-.main-navigation {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  min-height: 56px;
-  align-items: center;
-}
-
-.site-logo {
-  grid-column: 1;
-  justify-self: start;
-}
-
-.language-switcher {
-  position: static;
-  grid-column: 2;
-  justify-self: center;
-  margin: 0;
-  transform: none;
-}
-
-.mobile-menu {
-  position: relative;
-  grid-column: 3;
-  justify-self: end;
-  margin: 0;
-}
-
-.mobile-menu-toggle {
-  display: flex;
-  width: 42px;
-  height: 42px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  padding: 8px;
-  border: 1px solid var(--color-light);
-  border-radius: 10px;
-  background-color: var(--color-background-dark);
-  cursor: pointer;
-  list-style: none;
-}
-
-.mobile-menu-toggle::-webkit-details-marker {
-  display: none;
-}
-
-.mobile-menu-toggle::marker {
-  content: "";
-}
-
-.mobile-menu-toggle span {
-  display: block;
-  width: 21px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: var(--color-light);
-}
-
-/* Gesloten menu: links niet zichtbaar */
-.mobile-menu:not([open]) .navigation-list {
-  display: none;
-}
-
-/* Geopend menu: onder de hamburger, naar links uitgelijnd */
-.mobile-menu[open] .navigation-list {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  z-index: 200;
-  display: flex;
-  width: 180px;
-  max-width: calc(100vw - 32px);
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0;
-  margin: 0;
-  padding: 8px;
-  border: 1px solid var(--color-light);
-  border-radius: 12px;
-  background-color: var(--color-surface);
-  list-style: none;
-  transform: none;
-}
-
-.mobile-menu .navigation-list li {
-  width: 100%;
-  margin: 0;
-}
-
-.mobile-menu .navigation-list a {
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 18px;
-  line-height: 1.3;
-  white-space: nowrap;
 }
 
 h1,
@@ -7391,11 +7265,145 @@ p + a.button,
   }
 }
 
-/* Mobiel: hamburger altijd zichtbaar */
-.mobile-menu-toggle {
-  display: flex !important;
+@media (min-width: 601px) {
+  .site-header .main-navigation details.mobile-menu {
+    position: static;
+    display: contents;
+  }
+
+  .site-header .main-navigation details.mobile-menu > summary.mobile-menu-toggle {
+    display: none !important;
+  }
+
+  .site-header .main-navigation details.mobile-menu > ul.navigation-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(48px, 9vw, 128px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.mobile-menu {
-  display: block !important;
+@media (max-width: 600px) {
+  .site-header .main-navigation {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    min-height: 56px;
+  }
+
+  .site-header .site-logo {
+    grid-column: 1;
+    justify-self: start;
+    align-self: first baseline;
+    margin: 0;
+    line-height: 0;
+  }
+
+  .site-header .site-logo img {
+    display: block;
+    width: auto;
+    max-width: 75px;
+    max-height: 42px;
+    margin: 0;
+    margin-top: -80px;
+  }
+
+  .site-header .language-switcher {
+    position: static;
+    grid-column: 2;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+    transform: none;
+    margin-top: -60px;
+  }
+
+  .site-header details.mobile-menu {
+    position: relative;
+    display: block;
+    grid-column: 3;
+    justify-self: end;
+    align-self: center;
+    width: 42px;
+    margin: 0;
+    margin-top: -6px;
+  }
+
+  .site-header .mobile-menu-toggle {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 0;
+    padding: 8px;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .site-header .mobile-menu-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .site-header .mobile-menu-toggle::marker {
+    content: "";
+  }
+
+  .site-header .mobile-menu-toggle span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--color-light);
+  }
+
+  /* Mobile starts closed; override the desktop display:flex rule */
+  .site-header .mobile-menu:not([open]) > .navigation-list {
+    display: none !important;
+  }
+
+  .site-header .mobile-menu[open] > .navigation-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    left: auto;
+    z-index: 200;
+    display: flex !important;
+    width: 100px;
+    max-width: calc(100vw - 32px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 8px;
+    transform: none;
+    border: 1px solid var(--color-light);
+    border-radius: 12px;
+    background-color: var(--color-surface);
+    list-style: none;
+  }
+
+  .site-header .mobile-menu .navigation-list li {
+    width: 100%;
+    margin: 0;
+  }
+
+  .site-header .mobile-menu .navigation-list a {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 18px;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
 }

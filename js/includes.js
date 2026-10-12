@@ -16,7 +16,7 @@ async function loadComponent(placeholderId, componentPath) {
     placeholder.innerHTML = componentHtml;
 
     if (placeholderId === "navigation-placeholder") {
-      document.dispatchEvent(new Event("componentsLoaded"));
+      window.dispatchEvent(new Event("navigationLoaded"));
     }
     
     } catch (error) {

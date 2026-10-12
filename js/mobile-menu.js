@@ -1,20 +1,15 @@
-function setupMobileMenu() {
-  const mobileMenu = document.querySelector(".mobile-menu");
+function updateMobileMenu() {
+  const isMobile = window.matchMedia("(max-width: 600px)").matches;
 
-  if (!mobileMenu) {
-    return;
-  }
-
-  function updateMenuState() {
-    if (window.innerWidth <= 600) {
-      mobileMenu.removeAttribute("open");
+  document.querySelectorAll(".mobile-menu").forEach((menu) => {
+    if (isMobile) {
+      menu.removeAttribute("open");
     } else {
-      mobileMenu.setAttribute("open", "");
+      menu.setAttribute("open", "");
     }
-  }
-
-  updateMenuState();
-  window.addEventListener("resize", updateMenuState);
+  });
 }
 
-document.addEventListener("componentsLoaded", setupMobileMenu);
+document.addEventListener("DOMContentLoaded", updateMobileMenu);
+window.addEventListener("navigationLoaded", updateMobileMenu);
+window.addEventListener("resize", updateMobileMenu);
