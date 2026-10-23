@@ -1,0 +1,236 @@
+/* ========================================
+   NEXT — COMPACTE SPLIT-URL-VARIANT
+   Aanvullingen op style.css
+   ======================================== */
+
+
+/* Projectcard: vijf compacte informatierijen */
+
+.next-variant-page .next-project-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+
+.next-variant-page .next-detail-item {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 0.35em;
+  min-width: 0;
+}
+
+.next-variant-page .next-detail-item dt,
+.next-variant-page .next-detail-item dd {
+  margin: 0;
+}
+
+.next-variant-page .next-detail-item dd,
+.next-variant-page .next-team-links {
+  white-space: normal;
+}
+
+
+/* Gedeelde indeling:
+   tekst links, twee pagina-afbeeldingen rechts */
+
+.next-variant-page .nv-split-section {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.72fr);
+  align-items: start;
+  gap: clamp(40px, 7vw, 110px);
+}
+
+.next-variant-page .nv-text-column {
+  min-width: 0;
+  max-width: 650px;
+}
+
+.next-variant-page .nv-text-column h2 {
+  margin-bottom: 36px;
+}
+
+.next-variant-page .nv-text-column p {
+  margin-bottom: 24px;
+}
+
+.next-variant-page .nv-text-column ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.next-variant-page .nv-text-column li + li {
+  margin-top: 8px;
+}
+
+
+/* Beide afbeeldingen blijven naast elkaar.
+   Geen vaste hoogte en geen uitsnede. */
+
+.next-variant-page .nv-image-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(16px, 2vw, 28px);
+  min-width: 0;
+}
+
+.next-variant-page .nv-image-pair figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.next-variant-page .nv-image-pair img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-block);
+}
+
+
+/* Onderzoek en structuur:
+   behoud bestaande beeld- en pijlclasses */
+
+.next-variant-page .nv-research-section {
+  position: relative;
+}
+
+
+/* Logo-ontwikkeling:
+   iteraties links, pijl midden, definitief logo rechts */
+
+.next-variant-page .nv-logo-comparison {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(0, 0.65fr)
+    minmax(0, 0.8fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 64px);
+  margin-top: 40px;
+}
+
+.next-variant-page .nv-logo-comparison figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.next-variant-page .nv-logo-iterations img,
+.next-variant-page .nv-final-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-block);
+}
+
+.next-variant-page .nv-logo-arrow {
+  position: static;
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 0;
+  transform: none;
+  pointer-events: none;
+}
+
+.next-variant-page .nv-final-logo {
+  width: 100%;
+  max-width: 280px;
+  justify-self: center;
+}
+
+
+/* Resultaat blijft een sectie over de volledige breedte.
+   De bestaande embed-opmaak blijft behouden. */
+
+.next-variant-page .nv-result-section > p {
+  max-width: none;
+}
+
+
+/* ========================================
+   TABLET EN SMALLERE SCHERMEN
+   ======================================== */
+
+@media (max-width: 1100px) {
+  .next-variant-page .next-project-information-card {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(180px, 0.5fr);
+    gap: 32px;
+    padding: 36px;
+  }
+
+  .next-variant-page .nv-split-section {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 0.8fr);
+    gap: 32px;
+  }
+}
+
+
+/* ========================================
+   MOBIEL
+   ======================================== */
+
+@media (max-width: 760px) {
+  .next-variant-page .next-project-information-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 28px 24px;
+  }
+
+  .next-variant-page .next-project-logo {
+    width: min(100%, 240px);
+    max-height: 220px;
+  }
+
+  .next-variant-page .next-project-details {
+    gap: 16px;
+  }
+
+  .next-variant-page .nv-split-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .next-variant-page .nv-text-column {
+    max-width: none;
+  }
+
+  .next-variant-page .nv-image-pair {
+    width: min(100%, 560px);
+    justify-self: center;
+    gap: 16px;
+  }
+
+  .next-variant-page .nv-research-section {
+    padding-bottom: 0;
+  }
+
+  .next-variant-page .nv-research-section .next-wide-image {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .next-variant-page
+  .nv-research-section
+  .next-line-drawing-architecture {
+    display: none;
+  }
+
+  .next-variant-page .nv-logo-comparison {
+    grid-template-columns:
+      minmax(0, 1.3fr)
+      minmax(0, 0.8fr);
+    gap: 24px;
+  }
+
+  .next-variant-page .nv-logo-arrow {
+    display: none;
+  }
+}
