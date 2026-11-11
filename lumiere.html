@@ -445,10 +445,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </main>
 
-  <section class="next-project-nav" data-reveal="up">
-    <p>Volgend project bekijken:</p>
-    <a class="button" href="next.html">Project NEXT</a>
-  </section>
+ <section class="next-project-nav" data-reveal="up">
+  <p>Volgend project bekijken:</p>
+
+  <a
+    class="button"
+    href="next.html"
+    onclick="if (typeof window.clarity === 'function') {
+      window.clarity('event', 'lumiere_volgend_project');
+    }"
+  >
+    Project NEXT
+  </a>
+</section>
 
   <a class="back-to-top" id="backToTop">Terug naar boven</a>
 
