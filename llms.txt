@@ -1,0 +1,18 @@
+# Lorelien Michiels — UX/UI Designer Portfolio
+> Portfolio of Lorelien Michiels, 3rd-year Digital Experience Design student at Thomas More Mechelen (Belgium), specializing in UX/UI design, User-Centered Design, Figma prototyping, and digital accessibility.
+
+## Projects & Case Studies (English)
+- [Lumière Cinema Mechelen (EN)](https://www.lorelienmichiels.be/en/lumiere.html): Mobile cinema app case study featuring 21 UX Laws, Figma design variables, and custom dark mode.
+- [Terwinneke (EN)](https://www.lorelienmichiels.be/en/terwinneke.html): Responsive website redesign and accessible UI for a local community organization.
+- [NEXT (EN)](https://www.lorelienmichiels.be/en/next.html): Visual identity, branding, and design system for a startup non-profit.
+- [Jazzzolder (EN)](https://www.lorelienmichiels.be/en/jazzzolder.html): Multidisciplinary team project focusing on user research and cultural web design.
+- [Figma Learning & Micro-interactions (EN)](https://www.lorelienmichiels.be/en/figma-learning.html): Vector illustrations, carousel animations, and advanced prototyping skills.
+- [About Me & Internship (EN)](https://www.lorelienmichiels.be/en/about.html): Background, education, UX skills, design toolkit, and internship profile (Spring 2027).
+
+## Projecten & Case Studies (Nederlands)
+- [Lumière Cinema Mechelen (NL)](https://www.lorelienmichiels.be/lumiere.html): Mobiele bioscoop app met 21 UX Laws, Figma variabelen en dark mode.
+- [Terwinneke (NL)](https://www.lorelienmichiels.be/terwinneke.html): Toegankelijk en responsive herontwerp voor een lokale vereniging.
+- [NEXT (NL)](https://www.lorelienmichiels.be/next.html): Visuele identiteit en branding voor een startende organisatie.
+- [Jazzzolder (NL)](https://www.lorelienmichiels.be/jazzzolder.html): Multidisciplinair UX-onderzoek en websiteontwerp.
+- [Figma Learning & Vaardigheden (NL)](https://www.lorelienmichiels.be/figma-learning.html): Pen-tool illustraties, carousel animaties en prototyping experimenten.
+- [Over mij & Stage (NL)](https://www.lorelienmichiels.be/over-mij.html): Achtergrond, opleiding aan Thomas More, UX-skills en stagezoektocht.
